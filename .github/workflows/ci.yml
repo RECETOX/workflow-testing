@@ -41,13 +41,13 @@ jobs:
         id: cache-pip
         with:
           path: ~/.cache/pip
-          key: pip_cache_gxy_${{ env.WORFLOW_TO_TEST }}
+          key: pip_cache_gxy_testing_workflow
 
       - name: Install planemo
         run: pip3 install planemo
 
       - name: Test workflow at UMSA Galaxy
-        run: >
+        run: |
           planemo test \
           --history_name "pipeline-testing" \
           --galaxy_url ${{ secrets.GALAXY_URL }} \
