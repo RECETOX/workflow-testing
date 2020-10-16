@@ -5,9 +5,9 @@ name: Galaxy Workflow Testing for push and PR
 # events but only for the master branch.
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 env:
   WORFLOW_TO_TEST: 'LC-MS-pipeline/LC-MS-pipeline.ga'
