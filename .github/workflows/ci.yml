@@ -57,7 +57,10 @@ jobs:
           --engine external_galaxy \
           ${{ env.WORFLOW_TO_TEST }}
 
+      - name: List repo files
+        run: ls -la
+
       - uses: actions/upload-artifact@v2
         with:
           name: Workflow testing artifacts
-          path: tool_test_output.html
+          path: LC_MS_pipeline/tool_test_output.html
