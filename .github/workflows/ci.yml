@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 env:
-  WORFLOW_TO_TEST: 'LC-MS-pipeline/LC-MS-pipeline.ga'
+  WORFLOW_TO_TEST: 'LC-MS-pipeline.ga'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
@@ -48,6 +48,7 @@ jobs:
 
       - name: Test workflow at UMSA Galaxy
         run: |
+          cd LC-MS-pipeline &&
           planemo test \
           --history_name "pipeline-testing" \
           --galaxy_url ${{ secrets.GALAXY_URL }} \
@@ -59,4 +60,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Workflow testing artifacts
-          path: LC-MS-pipeline/tool_test_output.html
+          path: tool_test_output.html
