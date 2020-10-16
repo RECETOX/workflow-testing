@@ -32,6 +32,6 @@
       path: t3db.h5
   outputs:
     output_annotation:
-      file: peaks.h5
+      file: annotations.h5
       compare: sim_size
       delta: 1000
