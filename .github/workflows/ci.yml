@@ -47,7 +47,9 @@ jobs:
         run: pip3 install planemo
 
       - name: Test workflow at UMSA Galaxy
-        run: planemo test \
+        run: >
+          planemo test \
+          --history_name "pipeline-testing" \
           --galaxy_url ${{ secrets.GALAXY_URL }} \
           --galaxy_user_key ${{ secrets.GALAXY_USER_KEY }} \
           --no_shed_install \
