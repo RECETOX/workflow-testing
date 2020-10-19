@@ -60,7 +60,7 @@ jobs:
           ${{ env.WORFLOW_TO_TEST }}
 
       - name: List repo files
-          run: ls -la
+        run: ls -la
 
       - uses: actions/upload-artifact@v2
         with:
