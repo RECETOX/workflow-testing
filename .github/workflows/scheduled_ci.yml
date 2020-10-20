@@ -1,13 +1,9 @@
-# This is a basic workflow to help you get started with Actions
-name: Galaxy Workflow Testing for push and PR
+name: Weekly workflow testing
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch.
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  schedule:
+    # Run at midnight every monday
+    - cron: '0 0 * * 1'
 
 env:
   WORKFLOW_TO_TEST: 'LC_MS_pipeline/LC_MS_pipeline.ga'
@@ -46,7 +42,7 @@ jobs:
       - name: Install planemo
         run: pip3 install planemo
 
-      - name: Test all workflows with tests on UMSA Galaxy
+      - name: Test workflow at UMSA Galaxy
         run: |
           for worflow in $(find . -name '*-test.yml' | grep LC_MS | sed 's/-test.yml/.ga/' | sort); do
             workflow_file_name=`basename "$workflow"`
@@ -61,7 +57,7 @@ jobs:
           done
 
       - name: List repo files
-        run: ls -la
+        run: ls -l
 
       - uses: actions/upload-artifact@v2
         with:
