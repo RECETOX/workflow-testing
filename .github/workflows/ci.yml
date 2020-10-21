@@ -68,7 +68,7 @@ jobs:
             --no_shed_install \
             --engine external_galaxy \
             --test_output ./"$workflow_file_name"_output.html \
-            "$worflow"
+            "$workflow"
           done < files_changed.txt
 
       - name: List repo files

@@ -13,4 +13,4 @@
     output_filtered_rt:
       file: filtered_rt.h5
       compare: sim_size
-      delta: 100
+      delta: 90
