@@ -46,19 +46,30 @@ jobs:
       - name: Install planemo
         run: pip3 install planemo
 
-      - name: Test all workflows with tests on UMSA Galaxy
+      - name: Set commit range (push to the main branch, e.g. merge)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: echo ::set-env name=COMMIT_RANGE::${{ github.event.before }}..""
+
+      - name: Set commit range (pull request)
+        if: github.event_name == 'pull_request'
+        run: echo ::set-env name=COMMIT_RANGE::"HEAD~.."
+
+      - name: List of files changed in this commit
+        run: git diff ${{ env.COMMIT_RANGE }} --color=never --name-only -- '*.ga' '*-test.yml' | sed 's/-test.yml/.ga/' | uniq > files_changed.txt
+
+      - name: Run all workflows with tests on UMSA Galaxy
         run: |
-          for worflow in $(find . -name '*-test.yml' | grep LC_MS | sed 's/-test.yml/.ga/' | sort); do
+          while read workflow; do
             workflow_file_name=`basename "$workflow"`
             planemo test \
-            --history_name "pipeline-testing" \
+            --history_name "$workflow_file_name" \
             --galaxy_url ${{ secrets.GALAXY_URL }} \
             --galaxy_user_key ${{ secrets.GALAXY_USER_KEY }} \
             --no_shed_install \
             --engine external_galaxy \
             --test_output ./"$workflow_file_name"_output.html \
             "$worflow"
-          done
+          done < files_changed.txt
 
       - name: List repo files
         run: ls -la
