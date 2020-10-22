@@ -5,14 +5,11 @@ on:
     # Run at midnight every monday
     - cron: '0 0 * * 1'
 
-env:
-  WORKFLOW_TO_TEST: 'LC_MS_pipeline/LC_MS_pipeline.ga'
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
   setup:
     name: Setup cache and test workflow
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [ '3.x' ]
@@ -42,7 +39,7 @@ jobs:
       - name: Install planemo
         run: pip3 install planemo
 
-      - name: Test workflow at UMSA Galaxy
+      - name: Run workflows tests on UMSA Galaxy
         run: |
           for worflow in $(find . -name '*-test.yml' | grep LC_MS | sed 's/-test.yml/.ga/' | sort); do
             workflow_file_name=`basename "$workflow"`

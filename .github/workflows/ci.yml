@@ -9,9 +9,6 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  WORKFLOW_TO_TEST: 'LC_MS_pipeline/LC_MS_pipeline.ga'
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
   setup:
@@ -48,16 +45,23 @@ jobs:
 
       - name: Set commit range (push to the main branch, e.g. merge)
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: echo ::set-env name=COMMIT_RANGE::${{ github.event.before }}..""
+        run: echo "COMMIT_RANGE=${{ github.event.before }}.." >> $GITHUB_ENV
 
       - name: Set commit range (pull request)
         if: github.event_name == 'pull_request'
-        run: echo ::set-env name=COMMIT_RANGE::"HEAD~.."
+        run: echo "COMMIT_RANGE=HEAD~.." >> $GITHUB_ENV
 
       - name: List of files changed in this commit
-        run: git diff ${{ env.COMMIT_RANGE }} --color=never --name-only -- '*.ga' '*-test.yml' | sed 's/-test.yml/.ga/' | uniq > files_changed.txt
+        run: git diff $COMMIT_RANGE --color=never --name-only -- '*.ga' '*-test.yml' | sed 's/-test.yml/.ga/' | uniq > files_changed.txt
 
-      - name: Run all workflows with tests on UMSA Galaxy
+      - name: Check wheter change file is created
+        id: files_changed_exists
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "files_changed.txt"
+
+      - name: Run workflows tests on UMSA Galaxy
+        if: steps.files_changed_exists.outputs.files_exists == 'true'
         run: |
           while read workflow; do
             workflow_file_name=`basename "$workflow"`
@@ -75,6 +79,7 @@ jobs:
         run: ls -la
 
       - uses: actions/upload-artifact@v2
+        if: steps.files_changed_exists.outputs.files_exists == 'true'
         with:
           name: Workflow testing artifacts
           path: ./*output.html
