@@ -13,7 +13,7 @@ on:
 jobs:
   setup:
     name: Setup cache and test workflow
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [ '3.x' ]
@@ -65,13 +65,15 @@ jobs:
         run: |
           while read workflow; do
             workflow_file_name=`basename "$workflow"`
+            workflow_file_name_no_ext=`basename -s .ga "$workflow_file_name"`
             planemo test \
-            --history_name "$workflow_file_name" \
+            --history_name "$workflow_file_name_no_ext" \
             --galaxy_url ${{ secrets.GALAXY_URL }} \
             --galaxy_user_key ${{ secrets.GALAXY_USER_KEY }} \
             --no_shed_install \
             --engine external_galaxy \
-            --test_output ./"$workflow_file_name"_output.html \
+            --test_output "$workflow_file_name_no_ext"_output.html \
+            --summary compact \
             "$workflow"
           done < files_changed.txt
 

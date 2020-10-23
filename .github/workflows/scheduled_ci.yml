@@ -3,7 +3,7 @@ name: Weekly workflow testing
 on:
   schedule:
     # Run at midnight every monday
-    - cron: '0 0 * * 1'
+    - cron: '0 1 * * 6'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
@@ -43,13 +43,15 @@ jobs:
         run: |
           for worflow in $(find . -name '*-test.yml' | grep LC_MS | sed 's/-test.yml/.ga/' | sort); do
             workflow_file_name=`basename "$workflow"`
+            workflow_file_name_no_ext=`basename -s .ga "$workflow_file_name"`
             planemo test \
-            --history_name "pipeline-testing" \
+            --history_name "$workflow_file_name_no_ext" \
             --galaxy_url ${{ secrets.GALAXY_URL }} \
             --galaxy_user_key ${{ secrets.GALAXY_USER_KEY }} \
             --no_shed_install \
             --engine external_galaxy \
-            --test_output ./"$workflow_file_name"_output.html \
+            --test_output ./"$workflow_file_name_no_ext"_output.html \
+            --summary compact \
             "$worflow"
           done
 
