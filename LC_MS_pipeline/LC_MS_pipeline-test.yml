@@ -34,4 +34,4 @@
     output_annotation:
       file: annotations.h5
       compare: sim_size
-      delta: 900
+      delta: 1000
