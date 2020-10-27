@@ -2,7 +2,7 @@ name: Weekly workflow testing
 
 on:
   schedule:
-    # Run at midnight every monday
+    # Run at midnight every saturday
     - cron: '0 1 * * 6'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
@@ -46,7 +46,7 @@ jobs:
 
       - name: Run workflows tests on UMSA Galaxy
         run: |
-          for worflow in $(find . -name '*-test.yml' | grep LC_MS | sed 's/-test.yml/.ga/' | sort); do
+          for worflow in $(find . -name '*-test.yml' | sed 's/-test.yml/.ga/' | sort); do
             workflow_file_name=`basename "$workflow"`
             workflow_file_name_no_ext=`basename -s .ga "$workflow_file_name"`
             planemo test \
@@ -55,7 +55,7 @@ jobs:
             --galaxy_user_key ${{ secrets.GALAXY_USER_KEY }} \
             --no_shed_install \
             --engine external_galaxy \
-            --test_output ./"$workflow_file_name_no_ext"_output.html \
+            --test_output "$workflow_file_name_no_ext"_output.html \
             "$worflow"
           done
 
