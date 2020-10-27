@@ -17,7 +17,7 @@ How to create workflow test(s) can be found at the official source of
 Bug reports and pull requests are welcome on GitHub at https://github.com/RECETOX/workflow-testing.
 
 
-##TODO's
-- Add linting for *-test.yml
-- Delete user histories periodically
-- Don't fail the pipeline when any workflow fails
+## TODO's
+- Add linting for *-test.yml (low priority)
+- Delete user histories periodically (medium priority)
+- Don't fail the pipeline when any workflow fails (low priority)
