@@ -61,7 +61,7 @@ jobs:
           git diff $COMMIT_RANGE --color=never --name-only -- '*.ga' '*-test.yml' | sed 's/-test.yml/.ga/' | uniq > files_changed.txt
           find files_changed.txt -size 0 -delete
 
-      - name: Check wheter change file is created
+      - name: Check whether change file is created
         id: files_changed_exists
         uses: andstor/file-existence-action@v1
         with:
