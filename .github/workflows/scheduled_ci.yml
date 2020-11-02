@@ -38,15 +38,25 @@ jobs:
           path: ~/.cache/pip
           key: pip_cache_gxy_testing_workflow
 
-      - name: Install setuptools and wheel
-        run: pip3 install setuptools wheel
+      - name: Install setuptools
+        run: pip3 install setuptools
 
       - name: Install planemo
         run: pip3 install planemo
 
+      - uses: microsoft/variable-substitution@v1
+        with:
+          files: 'galaxy-instance.json'
+        env:
+          galaxy_url: ${{ secrets.GALAXY_URL }}
+          user_api_key: ${{ secrets.GALAXY_USER_KEY }}
+
+      - name: Purge user histories in Galaxy
+        run: python delete_user_history.py
+
       - name: Run workflows tests on UMSA Galaxy
         run: |
-          for worflow in $(find . -name '*-test.yml' | sed 's/-test.yml/.ga/' | sort); do
+          for workflow in $(find . -name '*-test.yml' | sed 's/-test.yml/.ga/' | sort); do
             workflow_file_name=`basename "$workflow"`
             workflow_file_name_no_ext=`basename -s .ga "$workflow_file_name"`
             planemo test \
@@ -56,7 +66,7 @@ jobs:
             --no_shed_install \
             --engine external_galaxy \
             --test_output "$workflow_file_name_no_ext"_output.html \
-            "$worflow"
+            "$workflow" || continue
           done
 
       - name: List repo files
