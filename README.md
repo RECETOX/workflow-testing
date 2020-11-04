@@ -19,5 +19,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/RECETO
 
 ## TODO's
 - Add linting for *-test.yml (low priority)
-- Delete user histories periodically (medium priority)
-- Don't fail the pipeline when any workflow fails (low priority)
