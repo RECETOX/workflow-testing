@@ -1,0 +1,262 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "Pipeline to create QSAR-ready SMILES from InChI.",
+    "format-version": "0.1",
+    "name": "InChI to QSAR-ready SMILES",
+    "steps": {
+        "0": {
+            "annotation": "List of input InChI identifiers.",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "List of input InChI identifiers.",
+                    "name": "input_data1"
+                }
+            ],
+            "label": "input_data1",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 245.5,
+                "height": 61,
+                "left": 520,
+                "right": 720,
+                "top": 184.5,
+                "width": 200,
+                "x": 520,
+                "y": 184.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "4aae8524-226f-4c26-a8de-afdbfbb7c4de",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "761e3b47-534b-4b46-a28f-b6dba994d540"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "Remove stereochemistry, charge, isotopes.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "infile": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": "InChI to InChI conversion",
+            "name": "Compound conversion",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "text"
+                }
+            ],
+            "position": {
+                "bottom": 407.484375,
+                "height": 152,
+                "left": 600.984375,
+                "right": 800.984375,
+                "top": 255.484375,
+                "width": 200,
+                "x": 600.984375,
+                "y": 255.484375
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "1c66bf08f687",
+                "name": "openbabel_compound_convert",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"appendtotitle\": \"\", \"dative_bonds\": \"false\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"oformat\": {\"oformat_opts_selector\": \"inchi\", \"__current_case__\": 36, \"inchi_key\": \"false\", \"inchi_name\": \"false\", \"inchi_unique\": \"false\", \"inchi_unique_sort\": \"false\", \"inchi_truncate\": [\"/nostereo\", \"/nochg\", \"/noiso\"], \"inchi_additional\": null}, \"ph\": \"-1.0\", \"remove_h\": \"false\", \"split\": \"false\", \"unique\": {\"unique_opts_selector\": \"\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "3.1.1+galaxy0",
+            "type": "tool",
+            "uuid": "ad969b70-e3fb-4ae7-b139-7dbff49a151e",
+            "workflow_outputs": [
+                {
+                    "label": "outfile2",
+                    "output_name": "outfile",
+                    "uuid": "cfbccb7a-cb85-4aee-8932-60c72f911550"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "Conversion of InChI to canonical SMILES.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "infile": {
+                    "id": 1,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [],
+            "label": "InChI to SMILES conversion",
+            "name": "Compound conversion",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "text"
+                }
+            ],
+            "position": {
+                "bottom": 530.234375,
+                "height": 152,
+                "left": 693,
+                "right": 893,
+                "top": 378.234375,
+                "width": 200,
+                "x": 693,
+                "y": 378.234375
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "1c66bf08f687",
+                "name": "openbabel_compound_convert",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"appendtotitle\": \"\", \"dative_bonds\": \"false\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"oformat\": {\"oformat_opts_selector\": \"can\", \"__current_case__\": 10, \"can_exp_h\": \"false\", \"can_iso_chi\": \"false\", \"can_rad\": \"false\", \"can_atomclass_out\": \"false\"}, \"ph\": \"-1.0\", \"remove_h\": \"false\", \"split\": \"false\", \"unique\": {\"unique_opts_selector\": \"\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "3.1.1+galaxy0",
+            "type": "tool",
+            "uuid": "31b283be-2bb9-4f0d-a326-ee295d0a972f",
+            "workflow_outputs": [
+                {
+                    "label": "outfile3",
+                    "output_name": "outfile",
+                    "uuid": "c28d6785-c75c-4022-8be1-c92daa514e1c"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "Remove salts and other fragments. Output is indexed table with QSAR-ready SMILES.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_remions/openbabel_remIons/3.1.1+galaxy2",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "infile": {
+                    "id": 2,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [],
+            "label": "Remove salts and fragments",
+            "name": "Remove counterions and fragments",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 660.875,
+                "height": 112,
+                "left": 833.375,
+                "right": 1033.375,
+                "top": 548.875,
+                "width": 200,
+                "x": 833.375,
+                "y": 548.875
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_remions/openbabel_remIons/3.1.1+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "4e3b2049a4d3",
+                "name": "openbabel_remions",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"index\": \"true\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "3.1.1+galaxy2",
+            "type": "tool",
+            "uuid": "5b73caad-90ed-49a6-8501-a235779308e4",
+            "workflow_outputs": [
+                {
+                    "label": "outfile4",
+                    "output_name": "outfile",
+                    "uuid": "c28c0895-0d85-4de6-b421-d190675f2eb4"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "Remove organometallic and anorganic compounds from the indexed table. Output is indexed table.",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "infile": {
+                    "id": 3,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Filter organometallics and/or anorganics",
+                    "name": "infile"
+                }
+            ],
+            "label": "Remove organometallics and anorganics",
+            "name": "Filter organometallics and/or anorganics",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "smi"
+                }
+            ],
+            "position": {
+                "bottom": 809.875,
+                "height": 132,
+                "left": 921.5,
+                "right": 1121.5,
+                "top": 677.875,
+                "width": 200,
+                "x": 921.5,
+                "y": 677.875
+            },
+            "post_job_actions": {
+                "RenameDatasetActionoutfile": {
+                    "action_arguments": {
+                        "newname": "Filter_Organometallics_Anorganics.smi"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "987357c6941c",
+                "name": "filter_compounds",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"anorg\": \"true\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"metorg\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "3.1.1+galaxy0",
+            "type": "tool",
+            "uuid": "a7b46a7a-cd60-4222-960d-5fa7e3bcae0d",
+            "workflow_outputs": [
+                {
+                    "label": "outfile_final",
+                    "output_name": "outfile",
+                    "uuid": "3a328428-8b9a-4d64-8b06-adf9d44b076d"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "2c7b28db-8b17-4ac5-aeac-5804e7b25913",
+    "version": 1
+}
