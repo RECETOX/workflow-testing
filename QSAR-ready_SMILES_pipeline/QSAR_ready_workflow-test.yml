@@ -5,6 +5,6 @@
       path: "https://github.com/RECETOX/workflow-test-data/raw/main/QSAR-ready_SMILES_pipeline/pubchem_reduced_failedInChIFiltered.inchi"
   outputs:
     outfile_final:
-      file: "https://github.com/RECETOX/workflow-test-data/raw/main/QSAR-ready_SMILES_pipeline/final_table.smi"
+      file: "final_table.smi"
       compare: sim_size
       delta: 1000
