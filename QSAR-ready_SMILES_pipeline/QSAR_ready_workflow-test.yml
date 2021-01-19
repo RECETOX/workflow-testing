@@ -1,0 +1,10 @@
+- doc: QSAR_ready_SMILES_workflow_test
+  job:
+    input_data1:
+      class: File
+      path: "https://github.com/RECETOX/workflow-test-data/raw/main/QSAR-ready_SMILES_pipeline/pubchem_reduced_failedInChIFiltered.inchi"
+  outputs:
+    outfile_final:
+      file: "final_table.smi"
+      compare: sim_size
+      delta: 1000
