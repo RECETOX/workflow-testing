@@ -6,5 +6,4 @@
   outputs:
     outfile_final:
       file: "pubchem1000-smiles.tsv"
-      compare: diff
-      lines_diff: 0
+      compare: contains
