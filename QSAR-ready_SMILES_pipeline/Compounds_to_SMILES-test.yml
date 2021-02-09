@@ -4,6 +4,6 @@
       class: File
       path: "https://github.com/RECETOX/workflow-test-data/raw/main/QSAR-ready_SMILES_pipeline/pubchem1000.parquet"
   outputs:
-    outfile_final:
+    merged_smiles:
       file: "pubchem1000-smiles.tsv"
       compare: contains

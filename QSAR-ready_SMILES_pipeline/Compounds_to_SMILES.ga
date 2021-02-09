@@ -648,7 +648,7 @@
             "uuid": "188438c9-51fc-4d3c-95b8-2e491dcc668c",
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "merged_smiles",
                     "output_name": "output",
                     "uuid": "2c8b5c55-263a-49ab-b15c-d81da43bf995"
                 }
