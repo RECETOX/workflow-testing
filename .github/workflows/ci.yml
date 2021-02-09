@@ -87,7 +87,8 @@ jobs:
         run: ls -la
 
       - uses: actions/upload-artifact@v2
-        if: steps.files_changed_exists.outputs.files_exists == 'true'
+        if: ${{ always() }}
         with:
           name: Workflow testing artifacts
           path: ./*output.html
+          if-no-files-found: ignore

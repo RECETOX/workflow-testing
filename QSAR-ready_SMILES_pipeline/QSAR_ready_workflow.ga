@@ -20,27 +20,21 @@
             "name": "Input dataset",
             "outputs": [],
             "position": {
-                "bottom": 245.5,
-                "height": 61,
-                "left": 520,
-                "right": 720,
-                "top": 184.5,
+                "bottom": 599.5,
+                "height": 63,
+                "left": 904,
+                "right": 1104,
+                "top": 536.5,
                 "width": 200,
-                "x": 520,
-                "y": 184.5
+                "x": 904,
+                "y": 536.5
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false}",
+            "tool_state": "{\"optional\": false, \"format\": [\"inchi\"]}",
             "tool_version": null,
             "type": "data_input",
-            "uuid": "4aae8524-226f-4c26-a8de-afdbfbb7c4de",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "761e3b47-534b-4b46-a28f-b6dba994d540"
-                }
-            ]
+            "uuid": "d5263cf5-42b8-4209-8682-a482cdcb6889",
+            "workflow_outputs": []
         },
         "1": {
             "annotation": "Remove stereochemistry, charge, isotopes.",
@@ -53,7 +47,12 @@
                     "output_name": "output"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Compound conversion",
+                    "name": "infile"
+                }
+            ],
             "label": "InChI to InChI conversion",
             "name": "Compound conversion",
             "outputs": [
@@ -63,32 +62,38 @@
                 }
             ],
             "position": {
-                "bottom": 407.484375,
-                "height": 152,
-                "left": 600.984375,
-                "right": 800.984375,
-                "top": 255.484375,
+                "bottom": 765.484375,
+                "height": 158,
+                "left": 984.984375,
+                "right": 1184.984375,
+                "top": 607.484375,
                 "width": 200,
-                "x": 600.984375,
-                "y": 255.484375
+                "x": 984.984375,
+                "y": 607.484375
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "DeleteIntermediatesActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "DeleteIntermediatesAction",
+                    "output_name": "outfile"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "1c66bf08f687",
+                "changeset_revision": "e2c36f62e22f",
                 "name": "openbabel_compound_convert",
                 "owner": "bgruening",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"appendtotitle\": \"\", \"dative_bonds\": \"false\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"oformat\": {\"oformat_opts_selector\": \"inchi\", \"__current_case__\": 36, \"inchi_key\": \"false\", \"inchi_name\": \"false\", \"inchi_unique\": \"false\", \"inchi_unique_sort\": \"false\", \"inchi_truncate\": [\"/nostereo\", \"/nochg\", \"/noiso\"], \"inchi_additional\": null}, \"ph\": \"-1.0\", \"remove_h\": \"false\", \"split\": \"false\", \"unique\": {\"unique_opts_selector\": \"\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"appendtotitle\": \"\", \"dative_bonds\": \"false\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"oformat\": {\"oformat_opts_selector\": \"inchi\", \"__current_case__\": 36, \"inchi_key\": \"false\", \"inchi_name\": \"false\", \"inchi_unique\": \"false\", \"inchi_unique_sort\": \"false\", \"inchi_truncate\": [\"/nostereo\", \"/nochg\", \"/noiso\"], \"inchi_additional\": null}, \"ph\": \"-1.0\", \"remove_h\": \"false\", \"split\": \"false\", \"unique\": {\"unique_opts_selector\": \"\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "3.1.1+galaxy0",
             "type": "tool",
-            "uuid": "ad969b70-e3fb-4ae7-b139-7dbff49a151e",
+            "uuid": "d836b668-7305-44ba-ab6b-10469fd7281f",
             "workflow_outputs": [
                 {
                     "label": "outfile2",
                     "output_name": "outfile",
-                    "uuid": "cfbccb7a-cb85-4aee-8932-60c72f911550"
+                    "uuid": "2220c548-95eb-434b-b2c9-0584c5bfd32d"
                 }
             ]
         },
@@ -113,19 +118,25 @@
                 }
             ],
             "position": {
-                "bottom": 530.234375,
-                "height": 152,
-                "left": 693,
-                "right": 893,
-                "top": 378.234375,
+                "bottom": 888.234375,
+                "height": 158,
+                "left": 1077,
+                "right": 1277,
+                "top": 730.234375,
                 "width": 200,
-                "x": 693,
-                "y": 378.234375
+                "x": 1077,
+                "y": 730.234375
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "DeleteIntermediatesActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "DeleteIntermediatesAction",
+                    "output_name": "outfile"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "1c66bf08f687",
+                "changeset_revision": "e2c36f62e22f",
                 "name": "openbabel_compound_convert",
                 "owner": "bgruening",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
@@ -133,12 +144,12 @@
             "tool_state": "{\"appendtotitle\": \"\", \"dative_bonds\": \"false\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"oformat\": {\"oformat_opts_selector\": \"can\", \"__current_case__\": 10, \"can_exp_h\": \"false\", \"can_iso_chi\": \"false\", \"can_rad\": \"false\", \"can_atomclass_out\": \"false\"}, \"ph\": \"-1.0\", \"remove_h\": \"false\", \"split\": \"false\", \"unique\": {\"unique_opts_selector\": \"\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "3.1.1+galaxy0",
             "type": "tool",
-            "uuid": "31b283be-2bb9-4f0d-a326-ee295d0a972f",
+            "uuid": "7cbc19fe-f9c7-4a14-a56a-ef7d9babc1d9",
             "workflow_outputs": [
                 {
                     "label": "outfile3",
                     "output_name": "outfile",
-                    "uuid": "c28d6785-c75c-4022-8be1-c92daa514e1c"
+                    "uuid": "312e63f5-fc3e-413a-bce8-34d893c2ccdf"
                 }
             ]
         },
@@ -163,16 +174,22 @@
                 }
             ],
             "position": {
-                "bottom": 660.875,
-                "height": 112,
-                "left": 833.375,
-                "right": 1033.375,
-                "top": 548.875,
+                "bottom": 1016.875,
+                "height": 116,
+                "left": 1217.375,
+                "right": 1417.375,
+                "top": 900.875,
                 "width": 200,
-                "x": 833.375,
-                "y": 548.875
+                "x": 1217.375,
+                "y": 900.875
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "DeleteIntermediatesActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "DeleteIntermediatesAction",
+                    "output_name": "outfile"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_remions/openbabel_remIons/3.1.1+galaxy2",
             "tool_shed_repository": {
                 "changeset_revision": "4e3b2049a4d3",
@@ -183,12 +200,12 @@
             "tool_state": "{\"index\": \"true\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "3.1.1+galaxy2",
             "type": "tool",
-            "uuid": "5b73caad-90ed-49a6-8501-a235779308e4",
+            "uuid": "70e85f67-1069-438c-ac79-8f6fc5db408f",
             "workflow_outputs": [
                 {
                     "label": "outfile4",
                     "output_name": "outfile",
-                    "uuid": "c28c0895-0d85-4de6-b421-d190675f2eb4"
+                    "uuid": "111fddb3-f06f-44af-8bf2-c7078a92c1ac"
                 }
             ]
         },
@@ -203,12 +220,7 @@
                     "output_name": "outfile"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool Filter organometallics and/or anorganics",
-                    "name": "infile"
-                }
-            ],
+            "inputs": [],
             "label": "Remove organometallics and anorganics",
             "name": "Filter organometallics and/or anorganics",
             "outputs": [
@@ -218,16 +230,21 @@
                 }
             ],
             "position": {
-                "bottom": 809.875,
-                "height": 132,
-                "left": 921.5,
-                "right": 1121.5,
-                "top": 677.875,
+                "bottom": 1166.875,
+                "height": 137,
+                "left": 1305.5,
+                "right": 1505.5,
+                "top": 1029.875,
                 "width": 200,
-                "x": 921.5,
-                "y": 677.875
+                "x": 1305.5,
+                "y": 1029.875
             },
             "post_job_actions": {
+                "DeleteIntermediatesActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "DeleteIntermediatesAction",
+                    "output_name": "outfile"
+                },
                 "RenameDatasetActionoutfile": {
                     "action_arguments": {
                         "newname": "Filter_Organometallics_Anorganics.smi"
@@ -243,20 +260,20 @@
                 "owner": "recetox",
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"anorg\": \"true\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"metorg\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"anorg\": \"true\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"metorg\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "3.1.1+galaxy0",
             "type": "tool",
-            "uuid": "a7b46a7a-cd60-4222-960d-5fa7e3bcae0d",
+            "uuid": "5c8a497d-3a70-4c89-b0bd-19237de40bda",
             "workflow_outputs": [
                 {
                     "label": "outfile_final",
                     "output_name": "outfile",
-                    "uuid": "3a328428-8b9a-4d64-8b06-adf9d44b076d"
+                    "uuid": "3589f5ad-b16f-4ae3-9f6d-4e883bf099f1"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "2c7b28db-8b17-4ac5-aeac-5804e7b25913",
-    "version": 1
+    "uuid": "33f6ad7c-c6f2-4c1f-a113-ce95b9962d3f",
+    "version": 4
 }
