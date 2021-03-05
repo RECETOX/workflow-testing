@@ -1,0 +1,980 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "Retip prediction on compound database",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Retip descriptors"
+                }
+            ],
+            "label": "Retip descriptors",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 503.5,
+                "height": 84,
+                "left": 540,
+                "right": 740,
+                "top": 419.5,
+                "width": 200,
+                "x": 540,
+                "y": 419.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "0ac4fbb4-d4aa-43b5-9bf8-b8de5dccc417",
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Retip model"
+                }
+            ],
+            "label": "Retip model",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 631.5,
+                "height": 63,
+                "left": 539,
+                "right": 739,
+                "top": 568.5,
+                "width": 200,
+                "x": 539,
+                "y": 568.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "fa4e7b90-9dd9-435d-a77a-f50b23fc856e",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 2,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Compounds"
+                }
+            ],
+            "label": "Compounds",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 917.5,
+                "height": 63,
+                "left": 483,
+                "right": 683,
+                "top": 854.5,
+                "width": 200,
+                "x": 483,
+                "y": 854.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "15419e3f-d295-48e5-a392-bcbf75f3cc50",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "id": 3,
+            "input_connections": {
+                "compounds": {
+                    "id": 2,
+                    "input_subworkflow_step_id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Compounds to SMILES",
+            "outputs": [],
+            "position": {
+                "bottom": 1281,
+                "height": 532,
+                "left": 723,
+                "right": 923,
+                "top": 749,
+                "width": 200,
+                "x": 723,
+                "y": 749
+            },
+            "subworkflow": {
+                "a_galaxy_workflow": "true",
+                "annotation": "",
+                "format-version": "0.1",
+                "name": "Compounds to SMILES",
+                "steps": {
+                    "0": {
+                        "annotation": "",
+                        "content_id": null,
+                        "errors": null,
+                        "id": 0,
+                        "input_connections": {},
+                        "inputs": [
+                            {
+                                "description": "",
+                                "name": "compounds"
+                            }
+                        ],
+                        "label": "compounds",
+                        "name": "Input dataset",
+                        "outputs": [],
+                        "position": {
+                            "bottom": 290.75,
+                            "height": 63,
+                            "left": 277.984375,
+                            "right": 477.984375,
+                            "top": 227.75,
+                            "width": 200,
+                            "x": 277.984375,
+                            "y": 227.75
+                        },
+                        "tool_id": null,
+                        "tool_state": "{\"optional\": false}",
+                        "tool_version": null,
+                        "type": "data_input",
+                        "uuid": "f6d58f3b-6971-427c-8a47-7c135f8840b2",
+                        "workflow_outputs": []
+                    },
+                    "1": {
+                        "annotation": "",
+                        "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "errors": null,
+                        "id": 1,
+                        "input_connections": {
+                            "tables_0|file": {
+                                "id": 0,
+                                "output_name": "output"
+                            }
+                        },
+                        "inputs": [],
+                        "label": "Extract recetox_cid and inchi",
+                        "name": "Query",
+                        "outputs": [
+                            {
+                                "name": "output",
+                                "type": "data"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 365.75,
+                            "height": 158,
+                            "left": 528,
+                            "right": 728,
+                            "top": 207.75,
+                            "width": 200,
+                            "x": 528,
+                            "y": 207.75
+                        },
+                        "post_job_actions": {
+                            "DeleteIntermediatesActionoutput": {
+                                "action_arguments": {},
+                                "action_type": "DeleteIntermediatesAction",
+                                "output_name": "output"
+                            }
+                        },
+                        "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "tool_shed_repository": {
+                            "changeset_revision": "0369de831b32",
+                            "name": "query",
+                            "owner": "recetox",
+                            "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                        },
+                        "tool_state": "{\"query\": \"select (row_number() over (order by c.recetox_cid))-1 as rn, c.recetox_cid, c.iupac_inchi from c\", \"result\": {\"format\": \"tsv\", \"__current_case__\": 5}, \"tables\": [{\"__index__\": 0, \"file\": {\"__class__\": \"ConnectedValue\"}, \"format\": null, \"name\": \"c\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "0.1",
+                        "type": "tool",
+                        "uuid": "efe18044-b49e-4ea1-91cc-ac57c199f580",
+                        "workflow_outputs": [
+                            {
+                                "label": null,
+                                "output_name": "output",
+                                "uuid": "e0dc3491-ac63-4040-abb8-b4349e056f9f"
+                            }
+                        ]
+                    },
+                    "2": {
+                        "annotation": "",
+                        "content_id": "Remove beginning1",
+                        "errors": null,
+                        "id": 2,
+                        "input_connections": {
+                            "input": {
+                                "id": 1,
+                                "output_name": "output"
+                            }
+                        },
+                        "inputs": [],
+                        "label": "Remove header",
+                        "name": "Remove beginning",
+                        "outputs": [
+                            {
+                                "name": "out_file1",
+                                "type": "input"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 526.25,
+                            "height": 95,
+                            "left": 604,
+                            "right": 804,
+                            "top": 431.25,
+                            "width": 200,
+                            "x": 604,
+                            "y": 431.25
+                        },
+                        "post_job_actions": {
+                            "DeleteIntermediatesActionout_file1": {
+                                "action_arguments": {},
+                                "action_type": "DeleteIntermediatesAction",
+                                "output_name": "out_file1"
+                            }
+                        },
+                        "tool_id": "Remove beginning1",
+                        "tool_state": "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"num_lines\": \"1\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "1.0.0",
+                        "type": "tool",
+                        "uuid": "45951e0f-83ff-4987-aa49-606e5e54cc9b",
+                        "workflow_outputs": [
+                            {
+                                "label": null,
+                                "output_name": "out_file1",
+                                "uuid": "34596b0a-6610-4138-9fb4-c5d312fa0a83"
+                            }
+                        ]
+                    },
+                    "3": {
+                        "annotation": "",
+                        "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0",
+                        "errors": null,
+                        "id": 3,
+                        "input_connections": {
+                            "input": {
+                                "id": 2,
+                                "output_name": "out_file1"
+                            }
+                        },
+                        "inputs": [],
+                        "label": "Extract inchi",
+                        "name": "Advanced Cut",
+                        "outputs": [
+                            {
+                                "name": "output",
+                                "type": "tabular"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 669.75,
+                            "height": 95,
+                            "left": 637,
+                            "right": 837,
+                            "top": 574.75,
+                            "width": 200,
+                            "x": 637,
+                            "y": 574.75
+                        },
+                        "post_job_actions": {
+                            "ChangeDatatypeActionoutput": {
+                                "action_arguments": {
+                                    "newtype": "inchi"
+                                },
+                                "action_type": "ChangeDatatypeAction",
+                                "output_name": "output"
+                            },
+                            "DeleteIntermediatesActionoutput": {
+                                "action_arguments": {},
+                                "action_type": "DeleteIntermediatesAction",
+                                "output_name": "output"
+                            }
+                        },
+                        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0",
+                        "tool_shed_repository": {
+                            "changeset_revision": "ddf54b12c295",
+                            "name": "text_processing",
+                            "owner": "bgruening",
+                            "tool_shed": "toolshed.g2.bx.psu.edu"
+                        },
+                        "tool_state": "{\"complement\": \"\", \"cut_type_options\": {\"cut_element\": \"-f\", \"__current_case__\": 0, \"list\": \"4\"}, \"delimiter\": \"\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "1.1.0",
+                        "type": "tool",
+                        "uuid": "4a27af0b-b3e5-4863-85b7-4366f97dbeee",
+                        "workflow_outputs": [
+                            {
+                                "label": null,
+                                "output_name": "output",
+                                "uuid": "f350ebae-7a9f-48b7-83c9-59ff80590ba3"
+                            }
+                        ]
+                    },
+                    "4": {
+                        "annotation": "",
+                        "id": 4,
+                        "input_connections": {
+                            "input_data1": {
+                                "id": 3,
+                                "input_subworkflow_step_id": 0,
+                                "output_name": "output"
+                            }
+                        },
+                        "inputs": [],
+                        "label": null,
+                        "name": "InChI to QSAR-ready SMILES",
+                        "outputs": [],
+                        "position": {
+                            "bottom": 1058,
+                            "height": 335,
+                            "left": 697,
+                            "right": 897,
+                            "top": 723,
+                            "width": 200,
+                            "x": 697,
+                            "y": 723
+                        },
+                        "subworkflow": {
+                            "a_galaxy_workflow": "true",
+                            "annotation": "",
+                            "format-version": "0.1",
+                            "name": "InChI to QSAR-ready SMILES",
+                            "steps": {
+                                "0": {
+                                    "annotation": "List of input InChI identifiers.",
+                                    "content_id": null,
+                                    "errors": null,
+                                    "id": 0,
+                                    "input_connections": {},
+                                    "inputs": [
+                                        {
+                                            "description": "List of input InChI identifiers.",
+                                            "name": "input_data1"
+                                        }
+                                    ],
+                                    "label": "input_data1",
+                                    "name": "Input dataset",
+                                    "outputs": [],
+                                    "position": {
+                                        "bottom": 599.5,
+                                        "height": 63,
+                                        "left": 904,
+                                        "right": 1104,
+                                        "top": 536.5,
+                                        "width": 200,
+                                        "x": 904,
+                                        "y": 536.5
+                                    },
+                                    "tool_id": null,
+                                    "tool_state": "{\"optional\": false, \"format\": [\"inchi\"]}",
+                                    "tool_version": null,
+                                    "type": "data_input",
+                                    "uuid": "d5263cf5-42b8-4209-8682-a482cdcb6889",
+                                    "workflow_outputs": []
+                                },
+                                "1": {
+                                    "annotation": "Remove stereochemistry, charge, isotopes.",
+                                    "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+                                    "errors": null,
+                                    "id": 1,
+                                    "input_connections": {
+                                        "infile": {
+                                            "id": 0,
+                                            "output_name": "output"
+                                        }
+                                    },
+                                    "inputs": [
+                                        {
+                                            "description": "runtime parameter for tool Compound conversion",
+                                            "name": "infile"
+                                        }
+                                    ],
+                                    "label": "InChI to InChI conversion",
+                                    "name": "Compound conversion",
+                                    "outputs": [
+                                        {
+                                            "name": "outfile",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "position": {
+                                        "bottom": 765.484375,
+                                        "height": 158,
+                                        "left": 984.984375,
+                                        "right": 1184.984375,
+                                        "top": 607.484375,
+                                        "width": 200,
+                                        "x": 984.984375,
+                                        "y": 607.484375
+                                    },
+                                    "post_job_actions": {
+                                        "DeleteIntermediatesActionoutfile": {
+                                            "action_arguments": {},
+                                            "action_type": "DeleteIntermediatesAction",
+                                            "output_name": "outfile"
+                                        }
+                                    },
+                                    "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+                                    "tool_shed_repository": {
+                                        "changeset_revision": "e2c36f62e22f",
+                                        "name": "openbabel_compound_convert",
+                                        "owner": "bgruening",
+                                        "tool_shed": "toolshed.g2.bx.psu.edu"
+                                    },
+                                    "tool_state": "{\"appendtotitle\": \"\", \"dative_bonds\": \"false\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"oformat\": {\"oformat_opts_selector\": \"inchi\", \"__current_case__\": 36, \"inchi_key\": \"false\", \"inchi_name\": \"false\", \"inchi_unique\": \"false\", \"inchi_unique_sort\": \"false\", \"inchi_truncate\": [\"/nostereo\", \"/nochg\", \"/noiso\"], \"inchi_additional\": null}, \"ph\": \"-1.0\", \"remove_h\": \"false\", \"split\": \"false\", \"unique\": {\"unique_opts_selector\": \"\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                                    "tool_version": "3.1.1+galaxy0",
+                                    "type": "tool",
+                                    "uuid": "d836b668-7305-44ba-ab6b-10469fd7281f",
+                                    "workflow_outputs": [
+                                        {
+                                            "label": "outfile2",
+                                            "output_name": "outfile",
+                                            "uuid": "2220c548-95eb-434b-b2c9-0584c5bfd32d"
+                                        }
+                                    ]
+                                },
+                                "2": {
+                                    "annotation": "Conversion of InChI to canonical SMILES.",
+                                    "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+                                    "errors": null,
+                                    "id": 2,
+                                    "input_connections": {
+                                        "infile": {
+                                            "id": 1,
+                                            "output_name": "outfile"
+                                        }
+                                    },
+                                    "inputs": [],
+                                    "label": "InChI to SMILES conversion",
+                                    "name": "Compound conversion",
+                                    "outputs": [
+                                        {
+                                            "name": "outfile",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "position": {
+                                        "bottom": 888.234375,
+                                        "height": 158,
+                                        "left": 1077,
+                                        "right": 1277,
+                                        "top": 730.234375,
+                                        "width": 200,
+                                        "x": 1077,
+                                        "y": 730.234375
+                                    },
+                                    "post_job_actions": {
+                                        "DeleteIntermediatesActionoutfile": {
+                                            "action_arguments": {},
+                                            "action_type": "DeleteIntermediatesAction",
+                                            "output_name": "outfile"
+                                        }
+                                    },
+                                    "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0",
+                                    "tool_shed_repository": {
+                                        "changeset_revision": "e2c36f62e22f",
+                                        "name": "openbabel_compound_convert",
+                                        "owner": "bgruening",
+                                        "tool_shed": "toolshed.g2.bx.psu.edu"
+                                    },
+                                    "tool_state": "{\"appendtotitle\": \"\", \"dative_bonds\": \"false\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"oformat\": {\"oformat_opts_selector\": \"can\", \"__current_case__\": 10, \"can_exp_h\": \"false\", \"can_iso_chi\": \"false\", \"can_rad\": \"false\", \"can_atomclass_out\": \"false\"}, \"ph\": \"-1.0\", \"remove_h\": \"false\", \"split\": \"false\", \"unique\": {\"unique_opts_selector\": \"\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                                    "tool_version": "3.1.1+galaxy0",
+                                    "type": "tool",
+                                    "uuid": "7cbc19fe-f9c7-4a14-a56a-ef7d9babc1d9",
+                                    "workflow_outputs": [
+                                        {
+                                            "label": "outfile3",
+                                            "output_name": "outfile",
+                                            "uuid": "312e63f5-fc3e-413a-bce8-34d893c2ccdf"
+                                        }
+                                    ]
+                                },
+                                "3": {
+                                    "annotation": "Remove salts and other fragments. Output is indexed table with QSAR-ready SMILES.",
+                                    "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_remions/openbabel_remIons/3.1.1+galaxy2",
+                                    "errors": null,
+                                    "id": 3,
+                                    "input_connections": {
+                                        "infile": {
+                                            "id": 2,
+                                            "output_name": "outfile"
+                                        }
+                                    },
+                                    "inputs": [],
+                                    "label": "Remove salts and fragments",
+                                    "name": "Remove counterions and fragments",
+                                    "outputs": [
+                                        {
+                                            "name": "outfile",
+                                            "type": "input"
+                                        }
+                                    ],
+                                    "position": {
+                                        "bottom": 1016.875,
+                                        "height": 116,
+                                        "left": 1217.375,
+                                        "right": 1417.375,
+                                        "top": 900.875,
+                                        "width": 200,
+                                        "x": 1217.375,
+                                        "y": 900.875
+                                    },
+                                    "post_job_actions": {
+                                        "DeleteIntermediatesActionoutfile": {
+                                            "action_arguments": {},
+                                            "action_type": "DeleteIntermediatesAction",
+                                            "output_name": "outfile"
+                                        }
+                                    },
+                                    "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_remions/openbabel_remIons/3.1.1+galaxy2",
+                                    "tool_shed_repository": {
+                                        "changeset_revision": "4e3b2049a4d3",
+                                        "name": "openbabel_remions",
+                                        "owner": "bgruening",
+                                        "tool_shed": "toolshed.g2.bx.psu.edu"
+                                    },
+                                    "tool_state": "{\"index\": \"true\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                                    "tool_version": "3.1.1+galaxy2",
+                                    "type": "tool",
+                                    "uuid": "70e85f67-1069-438c-ac79-8f6fc5db408f",
+                                    "workflow_outputs": [
+                                        {
+                                            "label": "outfile4",
+                                            "output_name": "outfile",
+                                            "uuid": "111fddb3-f06f-44af-8bf2-c7078a92c1ac"
+                                        }
+                                    ]
+                                },
+                                "4": {
+                                    "annotation": "Remove organometallic and anorganic compounds from the indexed table. Output is indexed table.",
+                                    "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+                                    "errors": null,
+                                    "id": 4,
+                                    "input_connections": {
+                                        "infile": {
+                                            "id": 3,
+                                            "output_name": "outfile"
+                                        }
+                                    },
+                                    "inputs": [],
+                                    "label": "Remove organometallics and anorganics",
+                                    "name": "Filter organometallics and/or anorganics",
+                                    "outputs": [
+                                        {
+                                            "name": "outfile",
+                                            "type": "smi"
+                                        }
+                                    ],
+                                    "position": {
+                                        "bottom": 1166.875,
+                                        "height": 137,
+                                        "left": 1305.5,
+                                        "right": 1505.5,
+                                        "top": 1029.875,
+                                        "width": 200,
+                                        "x": 1305.5,
+                                        "y": 1029.875
+                                    },
+                                    "post_job_actions": {
+                                        "DeleteIntermediatesActionoutfile": {
+                                            "action_arguments": {},
+                                            "action_type": "DeleteIntermediatesAction",
+                                            "output_name": "outfile"
+                                        },
+                                        "RenameDatasetActionoutfile": {
+                                            "action_arguments": {
+                                                "newname": "Filter_Organometallics_Anorganics.smi"
+                                            },
+                                            "action_type": "RenameDatasetAction",
+                                            "output_name": "outfile"
+                                        }
+                                    },
+                                    "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+                                    "tool_shed_repository": {
+                                        "changeset_revision": "987357c6941c",
+                                        "name": "filter_compounds",
+                                        "owner": "recetox",
+                                        "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                                    },
+                                    "tool_state": "{\"anorg\": \"true\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"metorg\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                                    "tool_version": "3.1.1+galaxy0",
+                                    "type": "tool",
+                                    "uuid": "5c8a497d-3a70-4c89-b0bd-19237de40bda",
+                                    "workflow_outputs": [
+                                        {
+                                            "label": "outfile_final",
+                                            "output_name": "outfile",
+                                            "uuid": "3589f5ad-b16f-4ae3-9f6d-4e883bf099f1"
+                                        }
+                                    ]
+                                }
+                            },
+                            "tags": "",
+                            "uuid": "33f6ad7c-c6f2-4c1f-a113-ce95b9962d3f"
+                        },
+                        "tool_id": "ff5476bcf6c921fa",
+                        "type": "subworkflow",
+                        "uuid": "3de31ffc-2e71-4b76-a601-bd992a74265b",
+                        "workflow_outputs": [
+                            {
+                                "label": null,
+                                "output_name": "outfile2",
+                                "uuid": "c502e114-c38e-4e62-8290-87338d9f318d"
+                            },
+                            {
+                                "label": null,
+                                "output_name": "outfile3",
+                                "uuid": "f713554a-0194-48a0-9ef9-8e64ea620b93"
+                            },
+                            {
+                                "label": null,
+                                "output_name": "outfile4",
+                                "uuid": "4846d62a-11d6-4eb3-b593-08fbb7f25d60"
+                            },
+                            {
+                                "label": null,
+                                "output_name": "outfile_final",
+                                "uuid": "1952c8c6-d57d-4867-8b49-6e860ef5a7e0"
+                            }
+                        ]
+                    },
+                    "5": {
+                        "annotation": "",
+                        "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1",
+                        "errors": null,
+                        "id": 5,
+                        "input_connections": {
+                            "infile": {
+                                "id": 4,
+                                "output_name": "outfile_final"
+                            }
+                        },
+                        "inputs": [
+                            {
+                                "description": "runtime parameter for tool Text transformation",
+                                "name": "infile"
+                            }
+                        ],
+                        "label": "Add header back",
+                        "name": "Text transformation",
+                        "outputs": [
+                            {
+                                "name": "output",
+                                "type": "input"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 1212.25,
+                            "height": 116,
+                            "left": 993,
+                            "right": 1193,
+                            "top": 1096.25,
+                            "width": 200,
+                            "x": 993,
+                            "y": 1096.25
+                        },
+                        "post_job_actions": {
+                            "DeleteIntermediatesActionoutput": {
+                                "action_arguments": {},
+                                "action_type": "DeleteIntermediatesAction",
+                                "output_name": "output"
+                            }
+                        },
+                        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1",
+                        "tool_shed_repository": {
+                            "changeset_revision": "ddf54b12c295",
+                            "name": "text_processing",
+                            "owner": "bgruening",
+                            "tool_shed": "toolshed.g2.bx.psu.edu"
+                        },
+                        "tool_state": "{\"adv_opts\": {\"adv_opts_selector\": \"basic\", \"__current_case__\": 0}, \"code\": \"1i\\\\\\nrn\\\\tqsar_smiles\\n\", \"infile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "1.1.1",
+                        "type": "tool",
+                        "uuid": "1a953902-2d16-4219-9783-647df973a6ad",
+                        "workflow_outputs": [
+                            {
+                                "label": null,
+                                "output_name": "output",
+                                "uuid": "ffbd67a7-9d44-49fd-b933-e7af28f75e2d"
+                            }
+                        ]
+                    },
+                    "6": {
+                        "annotation": "",
+                        "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "errors": null,
+                        "id": 6,
+                        "input_connections": {
+                            "tables_0|file": {
+                                "id": 1,
+                                "output_name": "output"
+                            },
+                            "tables_1|file": {
+                                "id": 5,
+                                "output_name": "output"
+                            }
+                        },
+                        "inputs": [],
+                        "label": "Merge in SMILES",
+                        "name": "Query",
+                        "outputs": [
+                            {
+                                "name": "output",
+                                "type": "data"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 699.5,
+                            "height": 168,
+                            "left": 1217.984375,
+                            "right": 1417.984375,
+                            "top": 531.5,
+                            "width": 200,
+                            "x": 1217.984375,
+                            "y": 531.5
+                        },
+                        "post_job_actions": {
+                            "DeleteIntermediatesActionoutput": {
+                                "action_arguments": {},
+                                "action_type": "DeleteIntermediatesAction",
+                                "output_name": "output"
+                            }
+                        },
+                        "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "tool_shed_repository": {
+                            "changeset_revision": "0369de831b32",
+                            "name": "query",
+                            "owner": "recetox",
+                            "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                        },
+                        "tool_state": "{\"query\": \"select o.recetox_cid, o.iupac_inchi, s.qsar_smiles from o join s on o.rn=s.rn where s.qsar_smiles is not null\", \"result\": {\"format\": \"tsv\", \"__current_case__\": 5}, \"tables\": [{\"__index__\": 0, \"file\": {\"__class__\": \"RuntimeValue\"}, \"format\": null, \"name\": \"o\"}, {\"__index__\": 1, \"file\": {\"__class__\": \"RuntimeValue\"}, \"format\": null, \"name\": \"s\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "0.1",
+                        "type": "tool",
+                        "uuid": "036d92f1-0f77-4ec1-884e-d3b30bc4e98d",
+                        "workflow_outputs": [
+                            {
+                                "label": null,
+                                "output_name": "output",
+                                "uuid": "94afb311-e11e-40c9-a13c-5a7cb84d1f2f"
+                            }
+                        ]
+                    }
+                },
+                "tags": "",
+                "uuid": "925b8ea3-fc34-4986-bcc1-bfdffabe9c44"
+            },
+            "tool_id": "cbbbf59e8f08c98c",
+            "type": "subworkflow",
+            "uuid": "f29b71f1-3ded-4d80-9572-a5d09e202d26",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "1:output",
+                    "uuid": "b0392e62-7a4c-4e36-8600-51bd53eeb336"
+                },
+                {
+                    "label": null,
+                    "output_name": "2:out_file1",
+                    "uuid": "23efe6bc-66fe-424b-9538-cfe46a87f87d"
+                },
+                {
+                    "label": null,
+                    "output_name": "3:output",
+                    "uuid": "4026b669-45ee-4510-928a-6b836e327e49"
+                },
+                {
+                    "label": "Convert to inchi from input dataset(s)",
+                    "output_name": "4:outfile2",
+                    "uuid": "a33b5542-1423-4c88-a6c4-779c87616ce9"
+                },
+                {
+                    "label": "Convert to can from input dataset(s)",
+                    "output_name": "4:outfile3",
+                    "uuid": "03b9f6af-caa8-46ce-955e-929d0394a1dc"
+                },
+                {
+                    "label": null,
+                    "output_name": "4:outfile4",
+                    "uuid": "8bc3489e-5237-4180-9694-337c207a9d99"
+                },
+                {
+                    "label": null,
+                    "output_name": "4:outfile_final",
+                    "uuid": "fb554a50-20b6-4c7c-90b6-ec98eb8ffa7f"
+                },
+                {
+                    "label": null,
+                    "output_name": "5:output",
+                    "uuid": "2167a7b0-8987-4ce3-8771-1d7b8018be12"
+                },
+                {
+                    "label": null,
+                    "output_name": "6:output",
+                    "uuid": "82a2379b-f687-4d78-a781-406f0570d6bb"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "tables_0|file": {
+                    "id": 3,
+                    "output_name": "6:output"
+                }
+            },
+            "inputs": [],
+            "label": "Drop empty SMILES",
+            "name": "Query",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "data"
+                }
+            ],
+            "position": {
+                "bottom": 835.5,
+                "height": 158,
+                "left": 987,
+                "right": 1187,
+                "top": 677.5,
+                "width": 200,
+                "x": 987,
+                "y": 677.5
+            },
+            "post_job_actions": {
+                "ChangeDatatypeActionoutput": {
+                    "action_arguments": {
+                        "newtype": "tabular"
+                    },
+                    "action_type": "ChangeDatatypeAction",
+                    "output_name": "output"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+            "tool_shed_repository": {
+                "changeset_revision": "0369de831b32",
+                "name": "query",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"query\": \"select recetox_cid, iupac_inchi molecular_formula, qsar_smiles from s where qsar_smiles is not null\", \"result\": {\"format\": \"tsv\", \"__current_case__\": 5}, \"tables\": [{\"__index__\": 0, \"file\": {\"__class__\": \"ConnectedValue\"}, \"format\": null, \"name\": \"s\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1",
+            "type": "tool",
+            "uuid": "1545cf38-2884-47d6-bf64-4a9075a7ed0a",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "adb9a706-039d-4f72-995b-f0eff4f696a7"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_apply/retip_apply/0.5.4+galaxy2",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "descr_train": {
+                    "id": 0,
+                    "output_name": "output"
+                },
+                "input_smiles": {
+                    "id": 4,
+                    "output_name": "output"
+                },
+                "model_h5": {
+                    "id": 1,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Retip prediction",
+                    "name": "descr_train"
+                },
+                {
+                    "description": "runtime parameter for tool Retip prediction",
+                    "name": "input_smiles"
+                },
+                {
+                    "description": "runtime parameter for tool Retip prediction",
+                    "name": "model_h5"
+                }
+            ],
+            "label": null,
+            "name": "Retip prediction",
+            "outputs": [
+                {
+                    "name": "output_good",
+                    "type": "input"
+                },
+                {
+                    "name": "output_bad",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 600.5,
+                "height": 230,
+                "left": 1225,
+                "right": 1425,
+                "top": 370.5,
+                "width": 200,
+                "x": 1225,
+                "y": 370.5
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutput_bad": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_bad"
+                },
+                "HideDatasetActionoutput_good": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_good"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_apply/retip_apply/0.5.4+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "c550dae786fd",
+                "name": "retip_apply",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"descr_train\": {\"__class__\": \"RuntimeValue\"}, \"input_smiles\": {\"__class__\": \"RuntimeValue\"}, \"model_h5\": {\"__class__\": \"RuntimeValue\"}, \"name_col\": \"recetox_cid\", \"smiles_col\": \"qsar_smiles\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.5.4+galaxy3",
+            "type": "tool",
+            "uuid": "681724d5-b379-4250-b46f-3a576280db82",
+            "workflow_outputs": []
+        }
+    },
+    "tags": [],
+    "uuid": "c8aca462-9b8e-457a-a1f4-9a2b1e1445d5",
+    "version": 8
+}
