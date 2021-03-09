@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true",
     "annotation": "",
     "format-version": "0.1",
-    "name": "LC_MS_pipeline",
+    "name": "LC 2021",
     "steps": {
         "0": {
             "annotation": "",
@@ -13,28 +13,28 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "input_data1"
+                    "name": "MZ profiles"
                 }
             ],
-            "label": "input_data1",
-            "name": "input_data1",
+            "label": "MZ profiles",
+            "name": "Input dataset collection",
             "outputs": [],
             "position": {
-                "left": 206,
-                "top": 130.5
+                "bottom": 488.5,
+                "height": 63,
+                "left": 490,
+                "right": 690,
+                "top": 425.5,
+                "width": 200,
+                "x": 490,
+                "y": 425.5
             },
             "tool_id": null,
-            "tool_state": "{\"name\": \"input_data1\"}",
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
             "tool_version": null,
-            "type": "data_input",
-            "uuid": "2dfb6e97-e420-4c30-add0-78c58b2bc52f",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "25881404-1fed-4eee-9a4e-d065a9c0a591"
-                }
-            ]
+            "type": "data_collection_input",
+            "uuid": "c466232b-6bdc-44db-83ce-629a6e6e2905",
+            "workflow_outputs": []
         },
         "1": {
             "annotation": "",
@@ -45,28 +45,28 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "input_data2"
+                    "name": "Compounds database"
                 }
             ],
-            "label": "input_data2",
-            "name": "input_data2",
+            "label": "Compounds database",
+            "name": "Input dataset",
             "outputs": [],
             "position": {
-                "left": 201.5,
-                "top": 220.5
+                "bottom": 645.03125,
+                "height": 84,
+                "left": 487.96875,
+                "right": 687.96875,
+                "top": 561.03125,
+                "width": 200,
+                "x": 487.96875,
+                "y": 561.03125
             },
             "tool_id": null,
-            "tool_state": "{\"name\": \"input_data2\"}",
+            "tool_state": "{\"optional\": false}",
             "tool_version": null,
             "type": "data_input",
-            "uuid": "bcc32ef3-a610-43f8-a51e-aa57a67b2533",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "8f66683d-6f2e-4935-a878-824fd8b4df58"
-                }
-            ]
+            "uuid": "f6d58f3b-6971-427c-8a47-7c135f8840b2",
+            "workflow_outputs": []
         },
         "2": {
             "annotation": "",
@@ -77,26 +77,32 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "input_data3"
+                    "name": "Adduct database"
                 }
             ],
-            "label": "input_data3",
-            "name": "input_data3",
+            "label": "Adduct database",
+            "name": "Input dataset",
             "outputs": [],
             "position": {
-                "left": 202.5,
-                "top": 312.5
+                "bottom": 773.5,
+                "height": 84,
+                "left": 484.46875,
+                "right": 684.46875,
+                "top": 689.5,
+                "width": 200,
+                "x": 484.46875,
+                "y": 689.5
             },
             "tool_id": null,
-            "tool_state": "{\"name\": \"input_data3\"}",
+            "tool_state": "{\"optional\": false}",
             "tool_version": null,
             "type": "data_input",
-            "uuid": "5407ef23-e8fb-4728-9b35-8b46efb6c452",
+            "uuid": "1b7ef1ac-b4ce-4959-afb1-59ea2d3de45b",
             "workflow_outputs": [
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "ee046ec7-85c3-4dd6-a380-dd980d2d5920"
+                    "uuid": "0ba0cf16-6ceb-4e5b-8a95-d53ccdeb1b40"
                 }
             ]
         },
@@ -109,81 +115,39 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "adduct_database"
+                    "name": "Compounds with predicted RT"
                 }
             ],
-            "label": "adduct_database",
-            "name": "adduct_database",
+            "label": "Compounds with predicted RT",
+            "name": "Input dataset",
             "outputs": [],
             "position": {
-                "left": 206.5,
-                "top": 411.5
+                "bottom": 959.5,
+                "height": 84,
+                "left": 502.5,
+                "right": 702.5,
+                "top": 875.5,
+                "width": 200,
+                "x": 502.5,
+                "y": 875.5
             },
             "tool_id": null,
-            "tool_state": "{\"name\": \"adduct_database\"}",
+            "tool_state": "{\"optional\": false}",
             "tool_version": null,
             "type": "data_input",
-            "uuid": "6e0eb91e-eb08-4769-8b65-1ff927c6bff9",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "92547e10-a4f6-4eca-a686-7ada4cc89e3d"
-                }
-            ]
+            "uuid": "c16ba46f-ee12-4849-b47f-ae677c83f042",
+            "workflow_outputs": []
         },
         "4": {
             "annotation": "",
-            "content_id": null,
-            "errors": null,
-            "id": 4,
-            "input_connections": {},
-            "inputs": [
-                {
-                    "description": "",
-                    "name": "compounds_database"
-                }
-            ],
-            "label": "compounds_database",
-            "name": "compounds_database",
-            "outputs": [],
-            "position": {
-                "left": 209.5,
-                "top": 508.5
-            },
-            "tool_id": null,
-            "tool_state": "{\"name\": \"compounds_database\"}",
-            "tool_version": null,
-            "type": "data_input",
-            "uuid": "ae898979-6ada-4530-a12c-7ac88f7785d3",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "20cdbb45-10be-4a99-a3bf-06273876c6f6"
-                }
-            ]
-        },
-        "5": {
-            "annotation": "",
             "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/6.6.6+galaxy1",
             "errors": null,
-            "id": 5,
+            "id": 4,
             "input_connections": {
-                "files": [
-                    {
-                        "id": 0,
-                        "output_name": "output"
-                    },
-                    {
-                        "id": 1,
-                        "output_name": "output"
-                    },
-                    {
-                        "id": 2,
-                        "output_name": "output"
-                    }
-                ]
+                "files": {
+                    "id": 0,
+                    "output_name": "output"
+                }
             },
             "inputs": [],
             "label": null,
@@ -195,8 +159,14 @@
                 }
             ],
             "position": {
-                "left": 506,
-                "top": 206.5
+                "bottom": 514.53125,
+                "height": 116,
+                "left": 730.53125,
+                "right": 930.53125,
+                "top": 398.53125,
+                "width": 200,
+                "x": 730.53125,
+                "y": 398.53125
             },
             "post_job_actions": {},
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/6.6.6+galaxy1",
@@ -206,72 +176,402 @@
                 "owner": "recetox",
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"feature_detection\": {\"shape_model\": \"bi-Gaussian\", \"BIC_factor\": \"2.0\", \"peak_estim_method\": \"moment\", \"min_bandwidth\": \"\", \"max_bandwidth\": \"\", \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\", \"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\", \"component_eliminate\": \"0.01\", \"moment_power\": \"1.0\"}, \"files\": {\"__class__\": \"ConnectedValue\"}, \"noise_filtering\": {\"min_exp\": \"2\", \"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"1e-05\", \"baseline_correct\": \"0.0\", \"baseline_correct_noise_percentile\": \"0.05\", \"intensity_weighted\": \"false\"}, \"peak_alignment\": {\"align_chr_tol\": \"\", \"align_mz_tol\": \"\", \"max_align_mz_diff\": \"0.01\"}, \"weak_signal_recovery\": {\"recover_mz_range\": \"\", \"recover_chr_range\": \"\", \"use_observed_range\": \"true\", \"recover_min_count\": \"3\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"feature_detection\": {\"shape_model\": \"bi-Gaussian\", \"BIC_factor\": \"2.0\", \"peak_estim_method\": \"moment\", \"min_bandwidth\": null, \"max_bandwidth\": null, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\", \"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\", \"component_eliminate\": \"0.01\", \"moment_power\": \"1.0\"}, \"files\": {\"__class__\": \"ConnectedValue\"}, \"noise_filtering\": {\"min_exp\": \"2\", \"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"1e-05\", \"baseline_correct\": \"0.0\", \"baseline_correct_noise_percentile\": \"0.05\", \"intensity_weighted\": \"false\"}, \"peak_alignment\": {\"align_chr_tol\": null, \"align_mz_tol\": null, \"max_align_mz_diff\": \"0.01\"}, \"weak_signal_recovery\": {\"recover_mz_range\": null, \"recover_chr_range\": null, \"use_observed_range\": \"true\", \"recover_min_count\": \"3\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "6.6.6+galaxy1",
             "type": "tool",
-            "uuid": "fc8d7731-2ba4-4bdf-844e-e6c3fc44c439",
+            "uuid": "b4c754b0-25bb-4d7f-aaf1-ed6157321add",
             "workflow_outputs": [
                 {
                     "label": null,
                     "output_name": "peaks",
-                    "uuid": "35f6a5c9-8c0e-4f53-8e8f-329af6652da2"
+                    "uuid": "6e758916-94b0-4323-b061-4dfc6309617b"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/xmsannotator_simple/xmsannotator_simple/1.3.2+galaxy2",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "adduct_table": {
+                    "id": 2,
+                    "output_name": "output"
+                },
+                "compound_table": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "peak_table": {
+                    "id": 4,
+                    "output_name": "peaks"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool xMSannotator (simple)",
+                    "name": "adduct_table"
+                }
+            ],
+            "label": null,
+            "name": "xMSannotator (simple)",
+            "outputs": [
+                {
+                    "name": "annotation_parquet",
+                    "type": "parquet"
+                }
+            ],
+            "position": {
+                "bottom": 660.515625,
+                "height": 199,
+                "left": 974.53125,
+                "right": 1174.53125,
+                "top": 461.515625,
+                "width": 200,
+                "x": 974.53125,
+                "y": 461.515625
+            },
+            "post_job_actions": {},
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/xmsannotator_simple/xmsannotator_simple/1.3.2+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "412d8bb4b54d",
+                "name": "xmsannotator_simple",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adduct_table\": {\"__class__\": \"RuntimeValue\"}, \"compound_table\": {\"__class__\": \"ConnectedValue\"}, \"mass_tolerance_ppm\": \"5\", \"peak_table\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.3.2+galaxy2",
+            "type": "tool",
+            "uuid": "c8858477-2ec6-4029-acaf-bcadb9e3b8b7",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "annotation_parquet",
+                    "uuid": "e4d0bbb8-ca6f-4205-aef0-5a75413ca433"
                 }
             ]
         },
         "6": {
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/xmsannotator_simple/xmsannotator_simple/1.3.2+galaxy0",
-            "errors": null,
             "id": 6,
             "input_connections": {
-                "adducts": {
-                    "id": 3,
-                    "output_name": "output"
-                },
-                "compounds": {
-                    "id": 4,
-                    "output_name": "output"
-                },
-                "peaks": {
+                "annotations": {
                     "id": 5,
-                    "output_name": "peaks"
+                    "input_subworkflow_step_id": 0,
+                    "output_name": "annotation_parquet"
+                },
+                "compounds with rtp": {
+                    "id": 3,
+                    "input_subworkflow_step_id": 1,
+                    "output_name": "output"
                 }
             },
             "inputs": [],
             "label": null,
-            "name": "xMSannotator (simple)",
-            "outputs": [
-                {
-                    "name": "annotation",
-                    "type": "h5"
-                }
-            ],
+            "name": "Retip filter on xMSAnnotator",
+            "outputs": [],
             "position": {
-                "left": 766.5,
-                "top": 366.5
+                "bottom": 972,
+                "height": 324,
+                "left": 1238.5,
+                "right": 1438.5,
+                "top": 648,
+                "width": 200,
+                "x": 1238.5,
+                "y": 648
             },
-            "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/xmsannotator_simple/xmsannotator_simple/1.3.2+galaxy0",
-            "tool_shed_repository": {
-                "changeset_revision": "041052875af0",
-                "name": "xmsannotator_simple",
-                "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            "subworkflow": {
+                "a_galaxy_workflow": "true",
+                "annotation": "",
+                "format-version": "0.1",
+                "name": "Retip filter on xMSAnnotator",
+                "steps": {
+                    "0": {
+                        "annotation": "",
+                        "content_id": null,
+                        "errors": null,
+                        "id": 0,
+                        "input_connections": {},
+                        "inputs": [
+                            {
+                                "description": "",
+                                "name": "annotations"
+                            }
+                        ],
+                        "label": "annotations",
+                        "name": "Input dataset",
+                        "outputs": [],
+                        "position": {
+                            "bottom": 565.5,
+                            "height": 63,
+                            "left": 610,
+                            "right": 810,
+                            "top": 502.5,
+                            "width": 200,
+                            "x": 610,
+                            "y": 502.5
+                        },
+                        "tool_id": null,
+                        "tool_state": "{\"optional\": false}",
+                        "tool_version": null,
+                        "type": "data_input",
+                        "uuid": "fa098412-58ad-48de-9739-987b8d5b52b3",
+                        "workflow_outputs": []
+                    },
+                    "1": {
+                        "annotation": "",
+                        "content_id": null,
+                        "errors": null,
+                        "id": 1,
+                        "input_connections": {},
+                        "inputs": [
+                            {
+                                "description": "",
+                                "name": "compounds with rtp"
+                            }
+                        ],
+                        "label": "compounds with rtp",
+                        "name": "Input dataset",
+                        "outputs": [],
+                        "position": {
+                            "bottom": 711.5,
+                            "height": 84,
+                            "left": 606,
+                            "right": 806,
+                            "top": 627.5,
+                            "width": 200,
+                            "x": 606,
+                            "y": 627.5
+                        },
+                        "tool_id": null,
+                        "tool_state": "{\"optional\": false}",
+                        "tool_version": null,
+                        "type": "data_input",
+                        "uuid": "e6cd5d92-c086-42b0-b7be-f53a9916f563",
+                        "workflow_outputs": []
+                    },
+                    "2": {
+                        "annotation": "",
+                        "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "errors": null,
+                        "id": 2,
+                        "input_connections": {
+                            "tables_0|file": {
+                                "id": 0,
+                                "output_name": "output"
+                            },
+                            "tables_1|file": {
+                                "id": 1,
+                                "output_name": "output"
+                            }
+                        },
+                        "inputs": [],
+                        "label": "Join with RTP",
+                        "name": "Query",
+                        "outputs": [
+                            {
+                                "name": "output",
+                                "type": "data"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 689.5,
+                            "height": 168,
+                            "left": 910,
+                            "right": 1110,
+                            "top": 521.5,
+                            "width": 200,
+                            "x": 910,
+                            "y": 521.5
+                        },
+                        "post_job_actions": {
+                            "ChangeDatatypeActionoutput": {
+                                "action_arguments": {
+                                    "newtype": "tsv"
+                                },
+                                "action_type": "ChangeDatatypeAction",
+                                "output_name": "output"
+                            },
+                            "RenameDatasetActionoutput": {
+                                "action_arguments": {
+                                    "newname": "annotations_rtp"
+                                },
+                                "action_type": "RenameDatasetAction",
+                                "output_name": "output"
+                            }
+                        },
+                        "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "tool_shed_repository": {
+                            "changeset_revision": "0369de831b32",
+                            "name": "query",
+                            "owner": "recetox",
+                            "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                        },
+                        "tool_state": "{\"query\": \"select a.*, c.rtp from a,c where a.compound = c.recetox_cid\", \"result\": {\"format\": \"tsv\", \"__current_case__\": 5}, \"tables\": [{\"__index__\": 0, \"file\": {\"__class__\": \"ConnectedValue\"}, \"format\": null, \"name\": \"a\"}, {\"__index__\": 1, \"file\": {\"__class__\": \"ConnectedValue\"}, \"format\": null, \"name\": \"c\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "0.1",
+                        "type": "tool",
+                        "uuid": "5253f4f7-60ce-4971-a9f8-c64340824596",
+                        "workflow_outputs": [
+                            {
+                                "label": "annotations_rtp",
+                                "output_name": "output",
+                                "uuid": "173f4802-edb4-4b90-b586-8ab466276fb8"
+                            }
+                        ]
+                    },
+                    "3": {
+                        "annotation": "",
+                        "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "errors": null,
+                        "id": 3,
+                        "input_connections": {
+                            "tables_0|file": {
+                                "id": 0,
+                                "output_name": "output"
+                            },
+                            "tables_1|file": {
+                                "id": 1,
+                                "output_name": "output"
+                            }
+                        },
+                        "inputs": [],
+                        "label": "Annotations without RTP",
+                        "name": "Query",
+                        "outputs": [
+                            {
+                                "name": "output",
+                                "type": "data"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 965.5,
+                            "height": 189,
+                            "left": 930,
+                            "right": 1130,
+                            "top": 776.5,
+                            "width": 200,
+                            "x": 930,
+                            "y": 776.5
+                        },
+                        "post_job_actions": {
+                            "RenameDatasetActionoutput": {
+                                "action_arguments": {
+                                    "newname": "annotations_without_rtp"
+                                },
+                                "action_type": "RenameDatasetAction",
+                                "output_name": "output"
+                            }
+                        },
+                        "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+                        "tool_shed_repository": {
+                            "changeset_revision": "0369de831b32",
+                            "name": "query",
+                            "owner": "recetox",
+                            "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                        },
+                        "tool_state": "{\"query\": \"select a.* from a left outer join c on a.compound = c.recetox_cid where c.rtp is null\", \"result\": {\"format\": \"tsv\", \"__current_case__\": 5}, \"tables\": [{\"__index__\": 0, \"file\": {\"__class__\": \"ConnectedValue\"}, \"format\": null, \"name\": \"a\"}, {\"__index__\": 1, \"file\": {\"__class__\": \"ConnectedValue\"}, \"format\": null, \"name\": \"c\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "0.1",
+                        "type": "tool",
+                        "uuid": "ad2a1187-1e11-46d3-8847-ee747626f942",
+                        "workflow_outputs": [
+                            {
+                                "label": "annotations_without_rtp",
+                                "output_name": "output",
+                                "uuid": "2e9e94d0-b526-4db8-9cd6-7e65dccc022a"
+                            }
+                        ]
+                    },
+                    "4": {
+                        "annotation": "",
+                        "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_filter_rt/retip_filter_rt/0.5.4+galaxy0",
+                        "errors": null,
+                        "id": 4,
+                        "input_connections": {
+                            "input": {
+                                "id": 2,
+                                "output_name": "output"
+                            }
+                        },
+                        "inputs": [],
+                        "label": null,
+                        "name": "Retip filter",
+                        "outputs": [
+                            {
+                                "name": "filtered",
+                                "type": "tsv"
+                            },
+                            {
+                                "name": "dropped",
+                                "type": "tsv"
+                            }
+                        ],
+                        "position": {
+                            "bottom": 765.5,
+                            "height": 168,
+                            "left": 1205,
+                            "right": 1405,
+                            "top": 597.5,
+                            "width": 200,
+                            "x": 1205,
+                            "y": 597.5
+                        },
+                        "post_job_actions": {},
+                        "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_filter_rt/retip_filter_rt/0.5.4+galaxy0",
+                        "tool_shed_repository": {
+                            "changeset_revision": "b7af3b9f5199",
+                            "name": "retip_filter_rt",
+                            "owner": "recetox",
+                            "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                        },
+                        "tool_state": "{\"filtering_mode\": \"order\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"rt_column\": \"rt\", \"rtp_column\": \"rtp\", \"tolerance\": \"10\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+                        "tool_version": "0.5.4+galaxy3",
+                        "type": "tool",
+                        "uuid": "050dab74-410e-451d-813a-da13a8b84735",
+                        "workflow_outputs": [
+                            {
+                                "label": null,
+                                "output_name": "filtered",
+                                "uuid": "bf0a8aa3-9657-4ed6-b025-763e7aba7af3"
+                            },
+                            {
+                                "label": null,
+                                "output_name": "dropped",
+                                "uuid": "b88ab3b1-32c7-4d6f-b1d4-a81d8286f044"
+                            }
+                        ]
+                    }
+                },
+                "tags": "",
+                "uuid": "813b18d9-ca20-421e-bdbb-69fdc2a7cd77"
             },
-            "tool_state": "{\"adducts\": {\"__class__\": \"ConnectedValue\"}, \"compounds\": {\"__class__\": \"ConnectedValue\"}, \"mz_tolerance_ppm\": \"5.0\", \"peaks\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "1.3.2+galaxy0",
-            "type": "tool",
-            "uuid": "4178f82e-fe78-414e-8d5f-fb605184a38d",
+            "tool_id": "8c959c9304a2bc4b",
+            "type": "subworkflow",
+            "uuid": "5b2f07cc-7afc-401e-9580-2abe399331b2",
             "workflow_outputs": [
                 {
-                    "label": "output_annotation",
-                    "output_name": "annotation"
-
+                    "label": null,
+                    "output_name": "annotations_rtp",
+                    "uuid": "25f8cdc3-37d5-4073-a4cd-3d293e9f1558"
+                },
+                {
+                    "label": null,
+                    "output_name": "annotations_without_rtp",
+                    "uuid": "c5b8a452-3850-407d-97c4-eaf79fce7f73"
+                },
+                {
+                    "label": "Filtered compounds",
+                    "output_name": "4:filtered",
+                    "uuid": "966efaee-6326-4182-a431-1a8ad3c4494a"
+                },
+                {
+                    "label": "Dropped compounds",
+                    "output_name": "4:dropped",
+                    "uuid": "1acbf39e-b269-4af1-9c3b-e2f5037eccee"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "56f695be-0e5e-4a1e-a49d-c5bca38d4ba8",
-    "version": 6
+    "uuid": "0d4f6e04-6f92-4780-a1b5-bf55862f88f5",
+    "version": 18
 }
