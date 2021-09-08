@@ -3,17 +3,17 @@
   job:
     mzml_collection:
       class: Collection
-        collection_type: list
-        elements:
-          - identifier: el1
-            class: File
-            path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy5-%5B12_qc_32x_dil_milliq.mzml%5D.mzml
-          - identifier: el2
-            class: File
-            path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy3-%5B10_qc_16x_dil_milliq.mzml%5D.mzml
-          - identifier: el3
-            class: File
-            path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy4-%5B11_qc_8x_dil_milliq.mzml%5D.mzml
+      collection_type: list
+      elements:
+        - identifier: el1
+          class: File
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy5-%5B12_qc_32x_dil_milliq.mzml%5D.mzml
+        - identifier: el2
+          class: File
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy3-%5B10_qc_16x_dil_milliq.mzml%5D.mzml
+        - identifier: el3
+          class: File
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy4-%5B11_qc_8x_dil_milliq.mzml%5D.mzml
     ref_alcanes:
       class: File
       path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy2-_Alkanes_20210325.csv_.csv

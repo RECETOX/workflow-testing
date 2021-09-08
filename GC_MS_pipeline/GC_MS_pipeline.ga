@@ -13,27 +13,27 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "mzml_collection"
+                    "name": "ref_alcanes"
                 }
             ],
-            "label": "mzml_collection",
-            "name": "Input dataset collection",
+            "label": "ref_alcanes",
+            "name": "Input dataset",
             "outputs": [],
             "position": {
-                "bottom": 210.5,
+                "bottom": 166.5,
                 "height": 61,
-                "left": -497.5,
-                "right": -297.5,
-                "top": 149.5,
+                "left": 257.5,
+                "right": 457.5,
+                "top": 105.5,
                 "width": 200,
-                "x": -497.5,
-                "y": 149.5
+                "x": 257.5,
+                "y": 105.5
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
+            "tool_state": "{\"optional\": false}",
             "tool_version": null,
-            "type": "data_collection_input",
-            "uuid": "02e6be1b-c8a6-4c09-b61c-ea2d9911a746",
+            "type": "data_input",
+            "uuid": "36ad208a-2c85-4c86-a0f9-97495c995305",
             "workflow_outputs": []
         },
         "1": {
@@ -45,27 +45,27 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "ref_alcanes"
+                    "name": "ref_spectra"
                 }
             ],
-            "label": "ref_alcanes",
+            "label": "ref_spectra",
             "name": "Input dataset",
             "outputs": [],
             "position": {
-                "bottom": 233.5,
+                "bottom": 693.5,
                 "height": 61,
-                "left": 703.5,
-                "right": 903.5,
-                "top": 172.5,
+                "left": 257.5,
+                "right": 457.5,
+                "top": 632.5,
                 "width": 200,
-                "x": 703.5,
-                "y": 172.5
+                "x": 257.5,
+                "y": 632.5
             },
             "tool_id": null,
             "tool_state": "{\"optional\": false}",
             "tool_version": null,
             "type": "data_input",
-            "uuid": "36ad208a-2c85-4c86-a0f9-97495c995305",
+            "uuid": "cc79aac6-efdd-47c9-8d75-6a45d0d16a2f",
             "workflow_outputs": []
         },
         "2": {
@@ -77,27 +77,27 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "ref_spectra"
+                    "name": "mzml_collection"
                 }
             ],
-            "label": "ref_spectra",
-            "name": "Input dataset",
+            "label": "mzml_collection",
+            "name": "Input dataset collection",
             "outputs": [],
             "position": {
-                "bottom": 760.5,
+                "bottom": 143.5,
                 "height": 61,
-                "left": 703.5,
-                "right": 903.5,
-                "top": 699.5,
+                "left": -943.5,
+                "right": -743.5,
+                "top": 82.5,
                 "width": 200,
-                "x": 703.5,
-                "y": 699.5
+                "x": -943.5,
+                "y": 82.5
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false}",
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
             "tool_version": null,
-            "type": "data_input",
-            "uuid": "cc79aac6-efdd-47c9-8d75-6a45d0d16a2f",
+            "type": "data_collection_input",
+            "uuid": "02e6be1b-c8a6-4c09-b61c-ea2d9911a746",
             "workflow_outputs": []
         },
         "3": {
@@ -107,7 +107,7 @@
             "id": 3,
             "input_connections": {
                 "files": {
-                    "id": 0,
+                    "id": 2,
                     "output_name": "output"
                 }
             },
@@ -133,14 +133,14 @@
                 }
             ],
             "position": {
-                "bottom": 534.5,
+                "bottom": 467.5,
                 "height": 402,
-                "left": -187.5,
-                "right": 12.5,
-                "top": 132.5,
+                "left": -633.5,
+                "right": -433.5,
+                "top": 65.5,
                 "width": 200,
-                "x": -187.5,
-                "y": 132.5
+                "x": -633.5,
+                "y": 65.5
             },
             "post_job_actions": {},
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/0.9.3+galaxy1",
@@ -158,22 +158,22 @@
                 {
                     "label": "apLCMS Unsupervised extracted_features on input dataset(s)",
                     "output_name": "extracted_features",
-                    "uuid": "6a8d380d-e727-4039-9fbb-4b55001ae0ec"
+                    "uuid": "f261a9a8-a6f2-4694-83ac-5e6f3d58ecbc"
                 },
                 {
                     "label": "apLCMS Unsupervised recovered_feature_sample_table on input dataset(s)",
                     "output_name": "recovered_feature_sample_table",
-                    "uuid": "336c4c60-377b-4a23-892f-e1e548e4179f"
+                    "uuid": "3e7c1be8-8ff5-4ef0-be2e-009ceb08fe88"
                 },
                 {
                     "label": "apLCMS Unsupervised aligned_feature_sample_table on input dataset(s)",
                     "output_name": "aligned_feature_sample_table",
-                    "uuid": "47accebc-16af-48b4-ab19-8c8e49d9645e"
+                    "uuid": "a5649a1e-47a7-44a4-87b0-d1e4b2e7cc37"
                 },
                 {
                     "label": "apLCMS Unsupervised corrected_features on input dataset(s)",
                     "output_name": "corrected_features",
-                    "uuid": "20c5b19e-3289-41eb-979c-bb289d06251b"
+                    "uuid": "73fe2d84-fb13-4e1d-af67-63eb1ae3fbc6"
                 }
             ]
         },
@@ -198,14 +198,14 @@
                 }
             ],
             "position": {
-                "bottom": 444.5,
+                "bottom": 377.5,
                 "height": 92,
-                "left": 81.5,
-                "right": 281.5,
-                "top": 352.5,
+                "left": -364.5,
+                "right": -164.5,
+                "top": 285.5,
                 "width": 200,
-                "x": 81.5,
-                "y": 352.5
+                "x": -364.5,
+                "y": 285.5
             },
             "post_job_actions": {},
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy0",
@@ -223,7 +223,7 @@
                 {
                     "label": null,
                     "output_name": "out_file",
-                    "uuid": "d63b4550-0a6a-4e86-9974-f33e06a0e3da"
+                    "uuid": "07c7babb-07e9-4bc3-8c40-f807a800240b"
                 }
             ]
         },
@@ -260,14 +260,14 @@
                 }
             ],
             "position": {
-                "bottom": 733.5,
+                "bottom": 666.5,
                 "height": 342,
-                "left": 354.5,
-                "right": 554.5,
-                "top": 391.5,
+                "left": -91.5,
+                "right": 108.5,
+                "top": 324.5,
                 "width": 200,
-                "x": 354.5,
-                "y": 391.5
+                "x": -91.5,
+                "y": 324.5
             },
             "post_job_actions": {},
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.2+galaxy0",
@@ -285,22 +285,22 @@
                 {
                     "label": "Mass spectra from RAMClustR on input dataset(s)",
                     "output_name": "mass_spectra",
-                    "uuid": "2d5069fe-96a7-486f-96e1-eb50ee51d8fe"
+                    "uuid": "ad6ed350-3221-40ac-9835-e4a4efa76c91"
                 },
                 {
                     "label": "Spec Abundance of input dataset(s)",
                     "output_name": "spec_abundance",
-                    "uuid": "766fbd21-4b56-4e6f-a50e-3cc12f9cdebd"
+                    "uuid": "1ec5625e-e17b-4c43-b592-93cb9958d874"
                 },
                 {
                     "label": "RAMClustR on input dataset(s)",
                     "output_name": "result",
-                    "uuid": "7b0362f2-d539-4c33-b034-c757caa615cd"
+                    "uuid": "dcf6b2be-259a-4dea-8e56-9979a5922e44"
                 },
                 {
                     "label": "Metadata for RAMClustR on input dataset(s)",
                     "output_name": "method_metadata",
-                    "uuid": "931bf71a-3877-4e2f-87aa-1ecd0063b141"
+                    "uuid": "12085251-a2e9-4b9c-9875-cf612952ba4f"
                 }
             ]
         },
@@ -325,14 +325,14 @@
                 }
             ],
             "position": {
-                "bottom": 455.5,
+                "bottom": 388.5,
                 "height": 92,
-                "left": 637.5,
-                "right": 837.5,
-                "top": 363.5,
+                "left": 191.5,
+                "right": 391.5,
+                "top": 296.5,
                 "width": 200,
-                "x": 637.5,
-                "y": 363.5
+                "x": 191.5,
+                "y": 296.5
             },
             "post_job_actions": {
                 "ChangeDatatypeActionoutput": {
@@ -359,7 +359,7 @@
                 {
                     "label": "compound_list",
                     "output_name": "output",
-                    "uuid": "00f54e48-24ba-4dee-87bf-6e59873ef5f9"
+                    "uuid": "28dc7446-a7cb-4211-bb82-dbf275293b85"
                 }
             ]
         },
@@ -374,7 +374,7 @@
                     "output_name": "output"
                 },
                 "reference_section|reference": {
-                    "id": 1,
+                    "id": 0,
                     "output_name": "output"
                 }
             },
@@ -388,14 +388,14 @@
                 }
             ],
             "position": {
-                "bottom": 510.5,
+                "bottom": 443.5,
                 "height": 122,
-                "left": 945.5,
-                "right": 1145.5,
-                "top": 388.5,
+                "left": 499.5,
+                "right": 699.5,
+                "top": 321.5,
                 "width": 200,
-                "x": 945.5,
-                "y": 388.5
+                "x": 499.5,
+                "y": 321.5
             },
             "post_job_actions": {},
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.0+galaxy0",
@@ -413,7 +413,7 @@
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "b422a0da-5276-40ac-bb71-5bc262384446"
+                    "uuid": "76ae4cbc-edc7-4dcf-8dc6-4ba81181daa5"
                 }
             ]
         },
@@ -428,11 +428,20 @@
                     "output_name": "output"
                 },
                 "symmetric|references": {
-                    "id": 2,
+                    "id": 1,
                     "output_name": "output"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchMS",
+                    "name": "queries"
+                },
+                {
+                    "description": "runtime parameter for tool matchMS",
+                    "name": "symmetric"
+                }
+            ],
             "label": null,
             "name": "matchMS",
             "outputs": [
@@ -446,14 +455,14 @@
                 }
             ],
             "position": {
-                "bottom": 649.5,
-                "height": 192,
-                "left": 1238.5,
-                "right": 1438.5,
-                "top": 457.5,
+                "bottom": 542.5,
+                "height": 152,
+                "left": 792.5,
+                "right": 992.5,
+                "top": 390.5,
                 "width": 200,
-                "x": 1238.5,
-                "y": 457.5
+                "x": 792.5,
+                "y": 390.5
             },
             "post_job_actions": {},
             "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.9.0+galaxy1",
@@ -463,25 +472,25 @@
                 "owner": "recetox",
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"algorithm\": {\"tolerance\": \"0.1\", \"mz_power\": \"0.0\", \"intensity_power\": \"1.0\"}, \"queries\": {\"__class__\": \"ConnectedValue\"}, \"similarity_metric\": \"CosineGreedy\", \"symmetric\": {\"is_symmetric\": \"false\", \"__current_case__\": 0, \"references\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"algorithm\": {\"tolerance\": \"0.1\", \"mz_power\": \"0.0\", \"intensity_power\": \"1.0\"}, \"queries\": {\"__class__\": \"RuntimeValue\"}, \"similarity_metric\": \"CosineGreedy\", \"symmetric\": {\"is_symmetric\": \"false\", \"__current_case__\": 0, \"references\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.9.0+galaxy1",
             "type": "tool",
-            "uuid": "9ed38d1b-929c-4e53-add4-acfe642841d4",
+            "uuid": "6a5ab06a-dee6-4de4-b46e-efab0d56ac6e",
             "workflow_outputs": [
                 {
-                    "label": "CosineGreedy scores of input dataset(s)",
+                    "label": "scores",
                     "output_name": "similarity_scores",
-                    "uuid": "418fee0a-1eae-4bf8-b52b-64807945b5c9"
+                    "uuid": "01f655a2-3001-4ca0-963e-4b38e647d614"
                 },
                 {
-                    "label": "CosineGreedy matches of input dataset(s)",
+                    "label": "matches",
                     "output_name": "similarity_matches",
-                    "uuid": "0cdf11b3-8b40-4edc-9fa5-49987440d073"
+                    "uuid": "acb6eedb-7c6c-40ef-9999-81e2f596a5fc"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "419a5d3c-e47a-442a-880e-41f199067301",
-    "version": 17
+    "uuid": "44af14fe-68c1-4327-9353-6ede54846960",
+    "version": 18
 }
