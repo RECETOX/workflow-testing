@@ -1,0 +1,487 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "GC - October Prototype",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "mzml_collection"
+                }
+            ],
+            "label": "mzml_collection",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "bottom": 210.5,
+                "height": 61,
+                "left": -497.5,
+                "right": -297.5,
+                "top": 149.5,
+                "width": 200,
+                "x": -497.5,
+                "y": 149.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "02e6be1b-c8a6-4c09-b61c-ea2d9911a746",
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "ref_alcanes"
+                }
+            ],
+            "label": "ref_alcanes",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 233.5,
+                "height": 61,
+                "left": 703.5,
+                "right": 903.5,
+                "top": 172.5,
+                "width": 200,
+                "x": 703.5,
+                "y": 172.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "36ad208a-2c85-4c86-a0f9-97495c995305",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 2,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "ref_spectra"
+                }
+            ],
+            "label": "ref_spectra",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 760.5,
+                "height": 61,
+                "left": 703.5,
+                "right": 903.5,
+                "top": 699.5,
+                "width": 200,
+                "x": 703.5,
+                "y": 699.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "cc79aac6-efdd-47c9-8d75-6a45d0d16a2f",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/0.9.3+galaxy1",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "files": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "apLCMS Unsupervised",
+            "outputs": [
+                {
+                    "name": "corrected_features",
+                    "type": "input"
+                },
+                {
+                    "name": "extracted_features",
+                    "type": "input"
+                },
+                {
+                    "name": "recovered_feature_sample_table",
+                    "type": "parquet"
+                },
+                {
+                    "name": "aligned_feature_sample_table",
+                    "type": "parquet"
+                }
+            ],
+            "position": {
+                "bottom": 534.5,
+                "height": 402,
+                "left": -187.5,
+                "right": 12.5,
+                "top": 132.5,
+                "width": 200,
+                "x": -187.5,
+                "y": 132.5
+            },
+            "post_job_actions": {},
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/0.9.3+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "7e0838248fbd",
+                "name": "recetox_aplcms_unsupervised",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"feature_detection\": {\"shape_model\": \"bi-Gaussian\", \"BIC_factor\": \"2.0\", \"peak_estim_method\": \"moment\", \"min_bandwidth\": null, \"max_bandwidth\": null, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\", \"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\", \"component_eliminate\": \"0.01\", \"moment_power\": \"1.0\"}, \"files\": {\"__class__\": \"ConnectedValue\"}, \"noise_filtering\": {\"min_exp\": \"2\", \"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"1e-05\", \"baseline_correct\": \"0.0\", \"baseline_correct_noise_percentile\": \"0.05\", \"intensity_weighted\": \"false\"}, \"peak_alignment\": {\"align_chr_tol\": null, \"align_mz_tol\": null, \"max_align_mz_diff\": \"0.01\"}, \"weak_signal_recovery\": {\"recover_mz_range\": null, \"recover_chr_range\": null, \"use_observed_range\": \"true\", \"recover_min_count\": \"3\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.9.3+galaxy1",
+            "type": "tool",
+            "uuid": "d4325b00-0330-4082-a44b-f66c07e3ab1a",
+            "workflow_outputs": [
+                {
+                    "label": "apLCMS Unsupervised extracted_features on input dataset(s)",
+                    "output_name": "extracted_features",
+                    "uuid": "6a8d380d-e727-4039-9fbb-4b55001ae0ec"
+                },
+                {
+                    "label": "apLCMS Unsupervised recovered_feature_sample_table on input dataset(s)",
+                    "output_name": "recovered_feature_sample_table",
+                    "uuid": "336c4c60-377b-4a23-892f-e1e548e4179f"
+                },
+                {
+                    "label": "apLCMS Unsupervised aligned_feature_sample_table on input dataset(s)",
+                    "output_name": "aligned_feature_sample_table",
+                    "uuid": "47accebc-16af-48b4-ab19-8c8e49d9645e"
+                },
+                {
+                    "label": "apLCMS Unsupervised corrected_features on input dataset(s)",
+                    "output_name": "corrected_features",
+                    "uuid": "20c5b19e-3289-41eb-979c-bb289d06251b"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy0",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "aplcms_dataframe": {
+                    "id": 3,
+                    "output_name": "recovered_feature_sample_table"
+                }
+            },
+            "inputs": [],
+            "label": "parquet to csv",
+            "name": "apLCMS to RamClustR converter",
+            "outputs": [
+                {
+                    "name": "out_file",
+                    "type": "csv"
+                }
+            ],
+            "position": {
+                "bottom": 444.5,
+                "height": 92,
+                "left": 81.5,
+                "right": 281.5,
+                "top": 352.5,
+                "width": 200,
+                "x": 81.5,
+                "y": 352.5
+            },
+            "post_job_actions": {},
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "9ea34e24474f",
+                "name": "aplcms_to_ramclustr_converter",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"aplcms_dataframe\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.0+galaxy0",
+            "type": "tool",
+            "uuid": "c2c6f980-0400-40ee-a596-6f27d88df9d2",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_file",
+                    "uuid": "d63b4550-0a6a-4e86-9974-f33e06a0e3da"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "this is a ramclustr step annotation",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.2+galaxy0",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "filetype|ms_csv|ms": {
+                    "id": 4,
+                    "output_name": "out_file"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "RAMClustR",
+            "outputs": [
+                {
+                    "name": "mass_spectra",
+                    "type": "input"
+                },
+                {
+                    "name": "result",
+                    "type": "RData"
+                },
+                {
+                    "name": "spec_abundance",
+                    "type": "csv"
+                },
+                {
+                    "name": "method_metadata",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 733.5,
+                "height": 342,
+                "left": 354.5,
+                "right": 554.5,
+                "top": 391.5,
+                "width": 200,
+                "x": 354.5,
+                "y": 391.5
+            },
+            "post_job_actions": {},
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.2+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "15e173c5762c",
+                "name": "ramclustr",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"filetype\": {\"type_choice\": \"csv\", \"__current_case__\": 1, \"ms_csv\": {\"ms\": {\"__class__\": \"ConnectedValue\"}, \"idmsms\": {\"__class__\": \"RuntimeValue\"}, \"sample_name_column\": \"1\", \"feature_delimiter\": \"_\", \"retention_time_column\": \"2\", \"st\": \"1.0\"}, \"required\": {\"sr\": \"0.5\", \"deepSplit\": \"false\", \"blocksize\": \"2000\", \"mult\": \"5\", \"hmax\": \"0.3\", \"collapse\": \"true\", \"usePheno\": \"true\", \"normalize\": \"none\", \"qc_inj_range\": \"20\", \"minModuleSize\": \"2\", \"linkage\": \"average\", \"mzdec\": \"3\", \"cor_method\": \"pearson\", \"rt_only_low_n\": \"true\", \"replace_zeros\": \"true\", \"merge_msp\": \"true\"}, \"optional\": {\"fftempdir\": \"\", \"maxt\": null}, \"metadata\": {\"batch_order_qc\": {\"__class__\": \"RuntimeValue\"}}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.2.2+galaxy0",
+            "type": "tool",
+            "uuid": "dcaf36cf-7e0a-4ba5-8e68-77b36fd8686f",
+            "workflow_outputs": [
+                {
+                    "label": "Mass spectra from RAMClustR on input dataset(s)",
+                    "output_name": "mass_spectra",
+                    "uuid": "2d5069fe-96a7-486f-96e1-eb50ee51d8fe"
+                },
+                {
+                    "label": "Spec Abundance of input dataset(s)",
+                    "output_name": "spec_abundance",
+                    "uuid": "766fbd21-4b56-4e6f-a50e-3cc12f9cdebd"
+                },
+                {
+                    "label": "RAMClustR on input dataset(s)",
+                    "output_name": "result",
+                    "uuid": "7b0362f2-d539-4c33-b034-c757caa615cd"
+                },
+                {
+                    "label": "Metadata for RAMClustR on input dataset(s)",
+                    "output_name": "method_metadata",
+                    "uuid": "931bf71a-3877-4e2f-87aa-1ecd0063b141"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "__EXTRACT_DATASET__",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "input": {
+                    "id": 5,
+                    "output_name": "mass_spectra"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "Extract Dataset",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "data"
+                }
+            ],
+            "position": {
+                "bottom": 455.5,
+                "height": 92,
+                "left": 637.5,
+                "right": 837.5,
+                "top": 363.5,
+                "width": 200,
+                "x": 637.5,
+                "y": 363.5
+            },
+            "post_job_actions": {
+                "ChangeDatatypeActionoutput": {
+                    "action_arguments": {
+                        "newtype": "msp"
+                    },
+                    "action_type": "ChangeDatatypeAction",
+                    "output_name": "output"
+                },
+                "RenameDatasetActionoutput": {
+                    "action_arguments": {
+                        "newname": "ramclustr_compound_list"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "output"
+                }
+            },
+            "tool_id": "__EXTRACT_DATASET__",
+            "tool_state": "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"which\": {\"which_dataset\": \"first\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "5d9c5af6-16f7-41c7-997b-5bb8d4f85590",
+            "workflow_outputs": [
+                {
+                    "label": "compound_list",
+                    "output_name": "output",
+                    "uuid": "00f54e48-24ba-4dee-87bf-6e59873ef5f9"
+                }
+            ]
+        },
+        "7": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.0+galaxy0",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "query_section|query": {
+                    "id": 6,
+                    "output_name": "output"
+                },
+                "reference_section|reference": {
+                    "id": 1,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "RIAssigner",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 510.5,
+                "height": 122,
+                "left": 945.5,
+                "right": 1145.5,
+                "top": 388.5,
+                "width": 200,
+                "x": 945.5,
+                "y": 388.5
+            },
+            "post_job_actions": {},
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "97c0aae5eb69",
+                "name": "riassigner",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"method\": \"kovats\", \"query_section\": {\"query\": {\"__class__\": \"ConnectedValue\"}, \"query_rt_units\": \"seconds\"}, \"reference_section\": {\"reference\": {\"__class__\": \"ConnectedValue\"}, \"reference_rt_units\": \"seconds\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.3.0+galaxy0",
+            "type": "tool",
+            "uuid": "083c6443-055c-4bb4-bc99-206ad95e9621",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "b422a0da-5276-40ac-bb71-5bc262384446"
+                }
+            ]
+        },
+        "8": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.9.0+galaxy1",
+            "errors": null,
+            "id": 8,
+            "input_connections": {
+                "queries": {
+                    "id": 7,
+                    "output_name": "output"
+                },
+                "symmetric|references": {
+                    "id": 2,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "matchMS",
+            "outputs": [
+                {
+                    "name": "similarity_scores",
+                    "type": "csv"
+                },
+                {
+                    "name": "similarity_matches",
+                    "type": "csv"
+                }
+            ],
+            "position": {
+                "bottom": 649.5,
+                "height": 192,
+                "left": 1238.5,
+                "right": 1438.5,
+                "top": 457.5,
+                "width": 200,
+                "x": 1238.5,
+                "y": 457.5
+            },
+            "post_job_actions": {},
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.9.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "57959596262d",
+                "name": "matchms",
+                "owner": "recetox",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"algorithm\": {\"tolerance\": \"0.1\", \"mz_power\": \"0.0\", \"intensity_power\": \"1.0\"}, \"queries\": {\"__class__\": \"ConnectedValue\"}, \"similarity_metric\": \"CosineGreedy\", \"symmetric\": {\"is_symmetric\": \"false\", \"__current_case__\": 0, \"references\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.9.0+galaxy1",
+            "type": "tool",
+            "uuid": "9ed38d1b-929c-4e53-add4-acfe642841d4",
+            "workflow_outputs": [
+                {
+                    "label": "CosineGreedy scores of input dataset(s)",
+                    "output_name": "similarity_scores",
+                    "uuid": "418fee0a-1eae-4bf8-b52b-64807945b5c9"
+                },
+                {
+                    "label": "CosineGreedy matches of input dataset(s)",
+                    "output_name": "similarity_matches",
+                    "uuid": "0cdf11b3-8b40-4edc-9fa5-49987440d073"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "419a5d3c-e47a-442a-880e-41f199067301",
+    "version": 17
+}
