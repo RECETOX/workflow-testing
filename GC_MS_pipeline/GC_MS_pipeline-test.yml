@@ -24,8 +24,8 @@
     scores:
       file: scores.csv
       compare: sim_size
-      delta: 100
+      delta: 10
     matches:
       file: matches.csv
       compare: sim_size
-      delta: 100
+      delta: 10
