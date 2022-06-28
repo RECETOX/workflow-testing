@@ -1,0 +1,707 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "GC_training_material",
+    "steps": {
+        "0": {
+            "annotation": "Input collection of profile mzML data.",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "Input collection of profile mzML data.",
+                    "name": "Input Dataset Collection"
+                }
+            ],
+            "label": "Input Dataset Collection",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "bottom": 618.171875,
+                "height": 82.171875,
+                "left": 102.5,
+                "right": 302.5,
+                "top": 536,
+                "width": 200,
+                "x": 102.5,
+                "y": 536
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "f5757928-7119-486a-9f86-dde7f2969456",
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Reference Alkanes"
+                }
+            ],
+            "label": "Reference Alkanes",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 1032.171875,
+                "height": 82.171875,
+                "left": 1784.5,
+                "right": 1984.5,
+                "top": 950,
+                "width": 200,
+                "x": 1784.5,
+                "y": 950
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "3bef1ee1-bb3c-4bf8-9852-b3e25f23d256",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 2,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Reference Spectral Library"
+                }
+            ],
+            "label": "Reference Spectral Library",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 922.171875,
+                "height": 82.171875,
+                "left": 2064.5,
+                "right": 2264.5,
+                "top": 840,
+                "width": 200,
+                "x": 2064.5,
+                "y": 840
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "e4e4b467-7726-4ce0-b907-6d97fed8b5d3",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_extract_features/recetox_aplcms_extract_features/0.9.4+galaxy0",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "file": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - extract features",
+                    "name": "file"
+                }
+            ],
+            "label": null,
+            "name": "RECETOX apLCMS - extract features",
+            "outputs": [
+                {
+                    "name": "feature_sample_table",
+                    "type": "parquet"
+                }
+            ],
+            "position": {
+                "bottom": 447.34375,
+                "height": 154.34375,
+                "left": 360.5,
+                "right": 560.5,
+                "top": 293,
+                "width": 200,
+                "x": 360.5,
+                "y": 293
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_extract_features/recetox_aplcms_extract_features/0.9.4+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "d78dc8992e5a",
+                "name": "recetox_aplcms_extract_features",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"feature_detection\": {\"shape_model\": \"bi-Gaussian\", \"BIC_factor\": \"2.0\", \"peak_estim_method\": \"moment\", \"min_bandwidth\": null, \"max_bandwidth\": null, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\", \"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\", \"component_eliminate\": \"0.01\", \"moment_power\": \"1.0\"}, \"file\": {\"__class__\": \"RuntimeValue\"}, \"noise_filtering\": {\"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"1e-05\", \"baseline_correct\": \"0.0\", \"baseline_correct_noise_percentile\": \"0.05\", \"intensity_weighted\": \"false\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.9.4+galaxy0",
+            "type": "tool",
+            "uuid": "c2b8124c-3967-4720-b6b7-942667a9623a",
+            "workflow_outputs": [
+                {
+                    "label": "RECETOX apLCMS - extract features on input dataset(s)",
+                    "output_name": "feature_sample_table",
+                    "uuid": "fda625a2-ff43-497c-8d73-7fc854592126"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_adjust_time/recetox_aplcms_adjust_time/0.9.4+galaxy0",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "files": {
+                    "id": 3,
+                    "output_name": "feature_sample_table"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - adjust time",
+                    "name": "files"
+                }
+            ],
+            "label": null,
+            "name": "RECETOX apLCMS - adjust time",
+            "outputs": [
+                {
+                    "name": "corrected_feature_tables",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 389.734375,
+                "height": 174.734375,
+                "left": 629.5,
+                "right": 829.5,
+                "top": 215,
+                "width": 200,
+                "x": 629.5,
+                "y": 215
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_adjust_time/recetox_aplcms_adjust_time/0.9.4+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "e5a53ff3f2ed",
+                "name": "recetox_aplcms_adjust_time",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_tol\": \"1e-05\", \"peak_alignment\": {\"align_chr_tol\": null, \"align_mz_tol\": null, \"max_align_mz_diff\": \"0.01\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.9.4+galaxy0",
+            "type": "tool",
+            "uuid": "7c23ae52-6a83-42cd-b497-80d6090f96c0",
+            "workflow_outputs": [
+                {
+                    "label": "RECETOX apLCMS - adjust time corrected_feature_tables on input dataset(s)",
+                    "output_name": "corrected_feature_tables",
+                    "uuid": "5e595cfd-4684-43bb-8c6f-599d0c0a365f"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.9.4+galaxy0",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "corrected_files": {
+                    "id": 4,
+                    "output_name": "corrected_feature_tables"
+                },
+                "ms_files": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - align features",
+                    "name": "corrected_files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - align features",
+                    "name": "ms_files"
+                }
+            ],
+            "label": null,
+            "name": "RECETOX apLCMS - align features",
+            "outputs": [
+                {
+                    "name": "tolerances",
+                    "type": "parquet"
+                },
+                {
+                    "name": "rt_cross_table",
+                    "type": "parquet"
+                },
+                {
+                    "name": "int_cross_table",
+                    "type": "parquet"
+                }
+            ],
+            "position": {
+                "bottom": 1069.640625,
+                "height": 408.640625,
+                "left": 946.5,
+                "right": 1146.5,
+                "top": 661,
+                "width": 200,
+                "x": 946.5,
+                "y": 661
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.9.4+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "57c644d3f24c",
+                "name": "recetox_aplcms_align_features",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"corrected_files\": {\"__class__\": \"RuntimeValue\"}, \"min_exp\": \"2\", \"ms_files\": {\"__class__\": \"RuntimeValue\"}, \"mz_tol\": \"1e-05\", \"peak_alignment\": {\"align_chr_tol\": null, \"align_mz_tol\": null, \"max_align_mz_diff\": \"0.01\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.9.4+galaxy0",
+            "type": "tool",
+            "uuid": "7c7d15e6-d1cc-4528-80a3-c60ac25e3669",
+            "workflow_outputs": [
+                {
+                    "label": "RECETOX apLCMS - align features on input dataset(s) (rt cross table)",
+                    "output_name": "rt_cross_table",
+                    "uuid": "0a5c3518-a48c-4e65-b38b-17a278211a69"
+                },
+                {
+                    "label": "RECETOX apLCMS - align features on input dataset(s) (int cross table)",
+                    "output_name": "int_cross_table",
+                    "uuid": "e2a309cb-5f9f-486d-9311-283d509c4023"
+                },
+                {
+                    "label": "RECETOX apLCMS - align features on input dataset(s) (tolerances)",
+                    "output_name": "tolerances",
+                    "uuid": "ee2bffbd-c5e6-4898-819d-08245c410cf1"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/0.9.4+galaxy0",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "corrected_files": {
+                    "id": 4,
+                    "output_name": "corrected_feature_tables"
+                },
+                "extracted_files": {
+                    "id": 3,
+                    "output_name": "feature_sample_table"
+                },
+                "int_cross_table_file": {
+                    "id": 5,
+                    "output_name": "int_cross_table"
+                },
+                "ms_files": {
+                    "id": 0,
+                    "output_name": "output"
+                },
+                "rt_cross_table_file": {
+                    "id": 5,
+                    "output_name": "rt_cross_table"
+                },
+                "tolerances_file": {
+                    "id": 5,
+                    "output_name": "tolerances"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "corrected_files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "extracted_files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "int_cross_table_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "ms_files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "rt_cross_table_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "tolerances_file"
+                }
+            ],
+            "label": null,
+            "name": "RECETOX apLCMS - recover weaker signals",
+            "outputs": [
+                {
+                    "name": "extracted_features",
+                    "type": "input"
+                },
+                {
+                    "name": "corrected_features",
+                    "type": "input"
+                },
+                {
+                    "name": "recovered_feature_sample_table",
+                    "type": "parquet"
+                },
+                {
+                    "name": "aligned_feature_sample_table",
+                    "type": "parquet"
+                }
+            ],
+            "position": {
+                "bottom": 1035.328125,
+                "height": 703.328125,
+                "left": 1226.5,
+                "right": 1426.5,
+                "top": 332,
+                "width": 200,
+                "x": 1226.5,
+                "y": 332
+            },
+            "post_job_actions": {
+                "HideDatasetActionaligned_feature_sample_table": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "aligned_feature_sample_table"
+                },
+                "HideDatasetActioncorrected_features": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "corrected_features"
+                },
+                "HideDatasetActionextracted_features": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "extracted_features"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/0.9.4+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "067a308223e3",
+                "name": "recetox_aplcms_recover_weaker_signals",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"corrected_files\": {\"__class__\": \"RuntimeValue\"}, \"extracted_files\": {\"__class__\": \"RuntimeValue\"}, \"int_cross_table_file\": {\"__class__\": \"RuntimeValue\"}, \"max_bandwidth\": null, \"min_bandwidth\": null, \"ms_files\": {\"__class__\": \"RuntimeValue\"}, \"mz_tol\": \"1e-05\", \"output_format\": {\"out_format\": \"false\"}, \"rt_cross_table_file\": {\"__class__\": \"RuntimeValue\"}, \"tolerances_file\": {\"__class__\": \"RuntimeValue\"}, \"weak_signal_recovery\": {\"recover_mz_range\": null, \"recover_chr_range\": null, \"use_observed_range\": \"true\", \"recover_min_count\": \"3\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.9.4+galaxy0",
+            "type": "tool",
+            "uuid": "e5c9c734-1b28-4d17-a8a2-081b8c258ff9",
+            "workflow_outputs": [
+                {
+                    "label": "RECETOX apLCMS - recover weaker signals recovered_feature_sample_table on input dataset(s)",
+                    "output_name": "recovered_feature_sample_table",
+                    "uuid": "6ccb43b7-cd28-4081-ab02-4436cae040f4"
+                }
+            ]
+        },
+        "7": {
+            "annotation": "Reformat the peak table to a csv with 'mz_rt' feature identifiers on columns and samples on rows.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy1",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "aplcms_dataframe": {
+                    "id": 6,
+                    "output_name": "recovered_feature_sample_table"
+                }
+            },
+            "inputs": [],
+            "label": "Reformatting for RAMClustR",
+            "name": "apLCMS to RamClustR converter",
+            "outputs": [
+                {
+                    "name": "out_file",
+                    "type": "csv"
+                }
+            ],
+            "position": {
+                "bottom": 741.5625,
+                "height": 113.5625,
+                "left": 1504.5,
+                "right": 1704.5,
+                "top": 628,
+                "width": 200,
+                "x": 1504.5,
+                "y": 628
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "c6c0f6027e34",
+                "name": "aplcms_to_ramclustr_converter",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"aplcms_dataframe\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.0+galaxy1",
+            "type": "tool",
+            "uuid": "d545d4ad-1305-4c7f-980f-cde44496b9d4",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_file",
+                    "uuid": "91d643c5-4d1c-40cb-924d-5c91a60fbf5e"
+                }
+            ]
+        },
+        "8": {
+            "annotation": "The peaks are deconvoluted across samples using RAMClustR to create an MSP of deconvoluted features.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.4+galaxy0",
+            "errors": null,
+            "id": 8,
+            "input_connections": {
+                "filetype|ms_csv|ms": {
+                    "id": 7,
+                    "output_name": "out_file"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RAMClustR",
+                    "name": "extras"
+                }
+            ],
+            "label": "Peak Deconvolution via RAMClustR",
+            "name": "RAMClustR",
+            "outputs": [
+                {
+                    "name": "spec_abundance",
+                    "type": "csv"
+                },
+                {
+                    "name": "mass_spectra_merged",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 935.6875,
+                "height": 306.6875,
+                "left": 1782.5,
+                "right": 1982.5,
+                "top": 629,
+                "width": 200,
+                "x": 1782.5,
+                "y": 629
+            },
+            "post_job_actions": {
+                "HideDatasetActionspec_abundance": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "spec_abundance"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.4+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "9a0d83c1b4b3",
+                "name": "ramclustr",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"clustering\": {\"linkage\": \"average\", \"minModuleSize\": \"2\", \"hmax\": \"0.3\", \"deepSplit\": \"false\"}, \"extras\": {\"rt_only_low_n\": \"true\", \"replace_zeros\": \"true\", \"ExpDes\": {\"__class__\": \"RuntimeValue\"}}, \"filetype\": {\"type_choice\": \"csv\", \"__current_case__\": 1, \"ms_csv\": {\"ms\": {\"__class__\": \"RuntimeValue\"}, \"idmsms\": {\"__class__\": \"RuntimeValue\"}}, \"required\": {\"st\": \"1.0\", \"sr\": \"0.5\", \"cor_method\": \"pearson\", \"maxt\": \"60.0\"}}, \"msp_output_details\": {\"merge_msp\": \"true\", \"mzdec\": \"6\"}, \"normalisation\": {\"normalisation_method\": {\"normalize\": \"none\", \"__current_case__\": 3}}, \"performance\": {\"blocksize\": \"2000\", \"mult\": \"5\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.2.4+galaxy0",
+            "type": "tool",
+            "uuid": "51e5be4b-c846-474d-a3ce-1c82497c8a30",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "mass_spectra_merged",
+                    "uuid": "f2a62f3a-6ba9-4a2c-b1bd-c29a58e82d7a"
+                }
+            ]
+        },
+        "9": {
+            "annotation": "Add retention indices using a reference alkane list measured on the same run.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.2+galaxy1",
+            "errors": null,
+            "id": 9,
+            "input_connections": {
+                "query_section|query": {
+                    "id": 8,
+                    "output_name": "mass_spectra_merged"
+                },
+                "reference_section|reference": {
+                    "id": 1,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": "Compute Retention Indices",
+            "name": "RIAssigner",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 828.953125,
+                "height": 143.953125,
+                "left": 2060.5,
+                "right": 2260.5,
+                "top": 685,
+                "width": 200,
+                "x": 2060.5,
+                "y": 685
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.2+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "f6bf8f1f3224",
+                "name": "riassigner",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"method\": \"kovats\", \"query_section\": {\"query\": {\"__class__\": \"ConnectedValue\"}, \"query_rt_units\": \"seconds\"}, \"reference_section\": {\"reference\": {\"__class__\": \"ConnectedValue\"}, \"reference_rt_units\": \"min\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.3.2+galaxy1",
+            "type": "tool",
+            "uuid": "351565c7-6c3a-44ba-97ff-b719bb29f9c7",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "3795ba10-076a-4708-ac0d-b58088209262"
+                }
+            ]
+        },
+        "10": {
+            "annotation": "Match the deconvoluted spectra against a reference library using matchms.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.14.0+galaxy1",
+            "errors": null,
+            "id": 10,
+            "input_connections": {
+                "queries": {
+                    "id": 9,
+                    "output_name": "output"
+                },
+                "symmetric|references": {
+                    "id": 2,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": "Identification via Library Matching",
+            "name": "matchMS similarity",
+            "outputs": [
+                {
+                    "name": "similarity_scores",
+                    "type": "tsv"
+                },
+                {
+                    "name": "similarity_matches",
+                    "type": "tsv"
+                }
+            ],
+            "position": {
+                "bottom": 724.34375,
+                "height": 174.34375,
+                "left": 2338.5,
+                "right": 2538.5,
+                "top": 550,
+                "width": 200,
+                "x": 2338.5,
+                "y": 550
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.14.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "30e680e555d4",
+                "name": "matchms",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"algorithm\": {\"tolerance\": \"0.1\", \"mz_power\": \"0.0\", \"intensity_power\": \"1.0\"}, \"queries\": {\"__class__\": \"ConnectedValue\"}, \"ri_filtering\": {\"is_true\": \"false\", \"__current_case__\": 1}, \"similarity_metric\": \"CosineHungarian\", \"symmetric\": {\"is_symmetric\": \"false\", \"__current_case__\": 0, \"references\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.14.0+galaxy1",
+            "type": "tool",
+            "uuid": "bb03828d-5242-4a5b-9ef9-5bd39c07058b",
+            "workflow_outputs": [
+                {
+                    "label": "Scores Table",
+                    "output_name": "similarity_scores",
+                    "uuid": "da800c90-13c7-4860-95d8-06f7e7d01f72"
+                },
+                {
+                    "label": "Matches Table",
+                    "output_name": "similarity_matches",
+                    "uuid": "07b0d02b-c3a1-42a3-8336-a5b89fa3b109"
+                }
+            ]
+        },
+        "11": {
+            "annotation": "Filter the annotation table to only contain the top matches and put in a user friendly format.",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_formatter/matchms_formatter/0.1.3",
+            "errors": null,
+            "id": 11,
+            "input_connections": {
+                "matches": {
+                    "id": 10,
+                    "output_name": "similarity_matches"
+                },
+                "scores": {
+                    "id": 10,
+                    "output_name": "similarity_scores"
+                }
+            },
+            "inputs": [],
+            "label": "Reformat & Filter",
+            "name": "matchms output formatter",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 730.5625,
+                "height": 123.5625,
+                "left": 2616.5,
+                "right": 2816.5,
+                "top": 607,
+                "width": 200,
+                "x": 2616.5,
+                "y": 607
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_formatter/matchms_formatter/0.1.3",
+            "tool_shed_repository": {
+                "changeset_revision": "60f34912b3de",
+                "name": "matchms_formatter",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"matches\": {\"__class__\": \"ConnectedValue\"}, \"method\": {\"selection\": \"get-top-k-data\", \"__current_case__\": 1, \"k\": \"3\"}, \"scores\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.1.3",
+            "type": "tool",
+            "uuid": "11c13042-d616-4896-bf54-eec347fa8873",
+            "workflow_outputs": [
+                {
+                    "label": "Top Annotations",
+                    "output_name": "output",
+                    "uuid": "e33f4720-d203-466b-b94b-7367617fd061"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "65706c08-a47c-4f5b-b3aa-bda9ae5f611b",
+    "version": 21
+}
