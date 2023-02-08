@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true",
     "annotation": "",
     "format-version": "0.1",
-    "name": "aplcms-hybrid",
+    "name": "apLCMS hybrid",
     "steps": {
         "0": {
             "annotation": "",
@@ -27,8 +27,14 @@
             "tool_state": "{\"optional\": false, \"tag\": \"\", \"collection_type\": \"list\"}",
             "tool_version": null,
             "type": "data_collection_input",
-            "uuid": "3a94af47-4115-4d0b-9ebb-56859518c635",
-            "workflow_outputs": []
+            "uuid": "2db2d350-301f-4be7-a1fd-0a8d77802788",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "b357fb54-b0f3-4bec-b7ec-529060513dd8"
+                }
+            ]
         },
         "1": {
             "annotation": "",
@@ -39,22 +45,28 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "known_table"
+                    "name": "known_table.parquet"
                 }
             ],
-            "label": "known_table",
+            "label": "known_table.parquet",
             "name": "Input dataset",
             "outputs": [],
             "position": {
-                "left": 2077.5605100493185,
-                "top": 1087.569764206529
+                "left": 1900.2861383135214,
+                "top": 1081.294669613817
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false, \"format\": [\"parquet\"], \"tag\": \"\"}",
+            "tool_state": "{\"optional\": false, \"tag\": \"\"}",
             "tool_version": null,
             "type": "data_input",
-            "uuid": "da74f6a4-89fa-4b9a-83f5-20eb68e8a162",
-            "workflow_outputs": []
+            "uuid": "87365277-062a-4e96-aefb-410bc7975260",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "facc58e7-340a-4981-9d3b-887f26abc8e9"
+                }
+            ]
         },
         "2": {
             "annotation": "",
@@ -67,7 +79,12 @@
                     "output_name": "output"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - remove noise",
+                    "name": "input_file"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - remove noise",
             "outputs": [
@@ -77,22 +94,22 @@
                 }
             ],
             "position": {
-                "left": 289.05960168252443,
-                "top": 118.85471450549926
+                "left": 270.8869901337847,
+                "top": 146.2804114869735
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_remove_noise",
-            "tool_state": "{\"baseline_correct\": \"0.0\", \"baseline_correct_noise_percentile\": \"0.05\", \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"intensity_weighted\": \"false\", \"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"1e-05\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "921c072c-63b3-43b5-9a97-27c86dffcaa6",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_file",
-                    "uuid": "dd8f036e-e19e-449a-96ff-7c85d89f56e2"
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_remove_noise",
+            "tool_state": "{\"baseline_correct\": \"0.0\", \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_weighted\": \"false\", \"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"1e-05\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "7d788a77-34d9-44af-8fbf-0ce9c0f38a28",
+            "workflow_outputs": []
         },
         "3": {
             "annotation": "",
@@ -120,22 +137,22 @@
                 }
             ],
             "position": {
-                "left": 542.0390720473986,
-                "top": 142.64427483414795
+                "left": 558.7267568694672,
+                "top": 194.77824591771713
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
+                }
+            },
             "tool_id": "recetox_aplcms_generate_feature_table",
             "tool_state": "{\"BIC_factor\": \"2.0\", \"bandwidth\": \"0.5\", \"component_eliminate\": \"0.01\", \"max_bandwidth\": null, \"min_bandwidth\": null, \"moment_power\": \"1.0\", \"peak_estim_method\": \"moment\", \"profile\": {\"__class__\": \"RuntimeValue\"}, \"sd_cut_max\": \"500.0\", \"sd_cut_min\": \"0.01\", \"shape\": {\"shape_model\": \"bi-Gaussian\", \"__current_case__\": 0, \"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
+            "tool_version": "0.10.1+galaxy0",
             "type": "tool",
-            "uuid": "fe334d68-023a-465e-8d84-63c31f9088e9",
-            "workflow_outputs": [
-                {
-                    "label": "RECETOX apLCMS - generate feature table on input dataset(s)",
-                    "output_name": "output_file",
-                    "uuid": "5e0202bf-f4ed-4ddb-8c83-5f6c406f3443"
-                }
-            ]
+            "uuid": "e354a798-fac8-45e7-82d6-5382ed7c59f7",
+            "workflow_outputs": []
         },
         "4": {
             "annotation": "",
@@ -148,7 +165,12 @@
                     "output_name": "output_file"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute clusters",
+                    "name": "files"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - compute clusters",
             "outputs": [
@@ -162,27 +184,27 @@
                 }
             ],
             "position": {
-                "left": 826.2569491423706,
-                "top": 326.39666509361894
+                "left": 815.1287684624793,
+                "top": 420.74391770260496
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_compute_clusters",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"mz_tol_relative\": null, \"rt_tol_relative\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "093c163a-69ea-4c89-af09-7b4f063e2632",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "clustered_feature_tables",
-                    "uuid": "36a6a142-d516-471d-bc72-5f82b211ebd4"
+            "post_job_actions": {
+                "HideDatasetActionclustered_feature_tables": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "clustered_feature_tables"
                 },
-                {
-                    "label": null,
-                    "output_name": "tolerances",
-                    "uuid": "7b770963-bc5f-4249-bfbc-61151578fdbb"
+                "HideDatasetActiontolerances": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tolerances"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_compute_clusters",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"tolerances_input_method\": {\"input_method\": \"direct\", \"__current_case__\": 0, \"mz_tol_relative\": null, \"rt_tol_relative\": null}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "795808e2-e3f2-4de2-ad75-8cffd0518a52",
+            "workflow_outputs": []
         },
         "5": {
             "annotation": "",
@@ -195,7 +217,12 @@
                     "output_name": "clustered_feature_tables"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute template",
+                    "name": "files"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - compute template",
             "outputs": [
@@ -205,22 +232,22 @@
                 }
             ],
             "position": {
-                "left": 1152.0484625960194,
-                "top": 368.2494776208971
+                "left": 1108.4764013986212,
+                "top": 385.44346232270965
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_compute_template",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "6e7c6934-fed0-4d54-9e73-1e97d8532497",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_file",
-                    "uuid": "3a203ef9-5adb-423c-bba9-5f8e5b15e99e"
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_compute_template",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "15ed1452-ceb4-40a3-a9ad-933682742b4a",
+            "workflow_outputs": []
         },
         "6": {
             "annotation": "",
@@ -241,7 +268,20 @@
                     "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - correct time",
+                    "name": "features_table"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - correct time",
+                    "name": "template"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - correct time",
+                    "name": "tolerances"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - correct time",
             "outputs": [
@@ -251,22 +291,22 @@
                 }
             ],
             "position": {
-                "left": 1397.6723441864522,
-                "top": 586.2662885442123
+                "left": 1393.2761327391522,
+                "top": 598.6767224487824
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_correct_time",
-            "tool_state": "{\"features_table\": {\"__class__\": \"ConnectedValue\"}, \"template\": {\"__class__\": \"ConnectedValue\"}, \"tolerances\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "d6121147-d749-4189-9d7e-ebc86337e258",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_file",
-                    "uuid": "1a15aac0-c398-485b-b327-a7ce9eddc271"
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_correct_time",
+            "tool_state": "{\"features_table\": {\"__class__\": \"RuntimeValue\"}, \"template\": {\"__class__\": \"RuntimeValue\"}, \"tolerances\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "f51ee4ab-4cd8-470a-8c9e-e30368d0ddbb",
+            "workflow_outputs": []
         },
         "7": {
             "annotation": "",
@@ -277,9 +317,22 @@
                 "files": {
                     "id": 6,
                     "output_name": "output_file"
+                },
+                "tolerances_input_method|input_tolerances": {
+                    "id": 4,
+                    "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute clusters",
+                    "name": "files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute clusters",
+                    "name": "tolerances_input_method"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - compute clusters",
             "outputs": [
@@ -293,27 +346,27 @@
                 }
             ],
             "position": {
-                "left": 1716.6666212028626,
-                "top": 707.2160603613825
+                "left": 1643.9198833678402,
+                "top": 416.1301968946986
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_compute_clusters",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"mz_tol_relative\": null, \"rt_tol_relative\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "aff758f2-a948-48c6-bcfd-120ca86391e8",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "clustered_feature_tables",
-                    "uuid": "5c9ce9f6-e1f8-4ec5-be3a-1d55ad1c553b"
+            "post_job_actions": {
+                "HideDatasetActionclustered_feature_tables": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "clustered_feature_tables"
                 },
-                {
-                    "label": null,
-                    "output_name": "tolerances",
-                    "uuid": "3c6cee86-0e1b-470f-b6cc-901809ae570a"
+                "HideDatasetActiontolerances": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tolerances"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_compute_clusters",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"tolerances_input_method\": {\"input_method\": \"file\", \"__current_case__\": 1, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "cc43b90f-6557-4bda-8280-9bad2e293cd7",
+            "workflow_outputs": []
         },
         "8": {
             "annotation": "",
@@ -330,7 +383,16 @@
                     "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - align features",
+                    "name": "files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - align features",
+                    "name": "input_tolerances"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - align features",
             "outputs": [
@@ -348,32 +410,32 @@
                 }
             ],
             "position": {
-                "left": 2082.867840814856,
-                "top": 460.5214209529938
+                "left": 1973.3190249987413,
+                "top": 267.668106013613
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_align_features",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"input_tolerances\": {\"__class__\": \"ConnectedValue\"}, \"min_occurrence\": \"2\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "57bfec11-d9bf-4b8d-a44d-4ec1de19841e",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "metadata_file",
-                    "uuid": "f3fe1f70-e21d-4da4-9643-8e418c8b0dbf"
+            "post_job_actions": {
+                "HideDatasetActionintensity_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "intensity_file"
                 },
-                {
-                    "label": null,
-                    "output_name": "rt_file",
-                    "uuid": "c4c99a86-a034-4038-b4a8-685bed73e48c"
+                "HideDatasetActionmetadata_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "metadata_file"
                 },
-                {
-                    "label": null,
-                    "output_name": "intensity_file",
-                    "uuid": "ca27312c-ad34-4760-94bd-dce7e660b24c"
+                "HideDatasetActionrt_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "rt_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_align_features",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}, \"min_occurrence\": \"2\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "3401662e-c1c2-4bd2-ab54-c8d0a3878613",
+            "workflow_outputs": []
         },
         "9": {
             "annotation": "",
@@ -402,7 +464,28 @@
                     "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "intensity_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "known_table"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "metadata_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "rt_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "tolerances"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - merge known table",
             "outputs": [
@@ -420,32 +503,32 @@
                 }
             ],
             "position": {
-                "left": 2442.923604443086,
-                "top": 527.1880933026359
+                "left": 2327.9327589043205,
+                "top": 409.3347966926801
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_merge_known_table",
-            "tool_state": "{\"direction\": {\"selection\": \"FALSE\", \"__current_case__\": 1}, \"intensity_file\": {\"__class__\": \"ConnectedValue\"}, \"known_table\": {\"__class__\": \"ConnectedValue\"}, \"match_tol_ppm\": null, \"metadata_file\": {\"__class__\": \"ConnectedValue\"}, \"rt_file\": {\"__class__\": \"ConnectedValue\"}, \"tolerances\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "c7dae9ed-76e9-40ca-ac08-a79a28dc8c60",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_metadata_file",
-                    "uuid": "f1e3b029-bf44-458b-a9b8-d43e38ca5e63"
+            "post_job_actions": {
+                "HideDatasetActionoutput_intensity_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_intensity_file"
                 },
-                {
-                    "label": null,
-                    "output_name": "output_rt_file",
-                    "uuid": "de769ac9-afd0-40fe-8691-c0984e6f0f53"
+                "HideDatasetActionoutput_metadata_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_metadata_file"
                 },
-                {
-                    "label": null,
-                    "output_name": "output_intensity_file",
-                    "uuid": "fba45ee5-134d-4ac1-9910-b76924a69a1b"
+                "HideDatasetActionoutput_rt_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_rt_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_merge_known_table",
+            "tool_state": "{\"direction\": {\"selection\": \"FALSE\", \"__current_case__\": 1}, \"intensity_file\": {\"__class__\": \"RuntimeValue\"}, \"known_table\": {\"__class__\": \"RuntimeValue\"}, \"match_tol_ppm\": null, \"metadata_file\": {\"__class__\": \"RuntimeValue\"}, \"rt_file\": {\"__class__\": \"RuntimeValue\"}, \"tolerances\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "8742bbdd-c154-4792-9bdf-f2419e68b2ed",
+            "workflow_outputs": []
         },
         "10": {
             "annotation": "",
@@ -482,7 +565,36 @@
                     "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "corrected_files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "extracted_files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "input_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "intensity_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "metadata_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "rt_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - recover weaker signals",
+                    "name": "tolerances"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - recover weaker signals",
             "outputs": [
@@ -492,22 +604,22 @@
                 }
             ],
             "position": {
-                "left": 2763.0819821490913,
-                "top": 258.6592349260212
+                "left": 2751.7525013935906,
+                "top": 21.387681428966573
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_recover_weaker_signals",
-            "tool_state": "{\"bandwidth\": \"0.5\", \"corrected_files\": {\"__class__\": \"ConnectedValue\"}, \"extracted_files\": {\"__class__\": \"ConnectedValue\"}, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"intensity_file\": {\"__class__\": \"ConnectedValue\"}, \"intensity_weighted\": \"false\", \"max_bandwidth\": null, \"metadata_file\": {\"__class__\": \"ConnectedValue\"}, \"min_bandwidth\": null, \"mz_tol\": \"1e-05\", \"recover_min_count\": \"3\", \"recover_mz_range\": null, \"recover_rt_range\": null, \"rt_file\": {\"__class__\": \"ConnectedValue\"}, \"tolerances\": {\"__class__\": \"ConnectedValue\"}, \"use_observed_range\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "ceff9890-c589-42d9-8d0c-94c1619814f7",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_file",
-                    "uuid": "dfb69b82-8638-4208-8a05-5d047df5a324"
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_recover_weaker_signals",
+            "tool_state": "{\"bandwidth\": \"0.5\", \"corrected_files\": {\"__class__\": \"RuntimeValue\"}, \"extracted_files\": {\"__class__\": \"RuntimeValue\"}, \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_weighted\": \"false\", \"max_bandwidth\": null, \"metadata_file\": {\"__class__\": \"RuntimeValue\"}, \"min_bandwidth\": null, \"mz_tol\": \"1e-05\", \"recover_min_count\": \"3\", \"recover_mz_range\": null, \"recover_rt_range\": null, \"rt_file\": {\"__class__\": \"RuntimeValue\"}, \"tolerances\": {\"__class__\": \"RuntimeValue\"}, \"use_observed_range\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "fdd759a4-e265-44ea-b7bc-535e41a2dfb5",
+            "workflow_outputs": []
         },
         "11": {
             "annotation": "",
@@ -518,9 +630,22 @@
                 "files": {
                     "id": 10,
                     "output_name": "output_file"
+                },
+                "tolerances_input_method|input_tolerances": {
+                    "id": 7,
+                    "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute clusters",
+                    "name": "files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute clusters",
+                    "name": "tolerances_input_method"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - compute clusters",
             "outputs": [
@@ -534,27 +659,27 @@
                 }
             ],
             "position": {
-                "left": 3074.9999318042937,
-                "top": 276.3966821425453
+                "left": 3052.2531992376084,
+                "top": 393.13304066146367
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_compute_clusters",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"mz_tol_relative\": null, \"rt_tol_relative\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "3100fe94-a3c2-4a0c-9ae7-3d46f2b07094",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "clustered_feature_tables",
-                    "uuid": "ac67b74f-4933-4d6d-9be8-4abe8f168835"
+            "post_job_actions": {
+                "HideDatasetActionclustered_feature_tables": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "clustered_feature_tables"
                 },
-                {
-                    "label": null,
-                    "output_name": "tolerances",
-                    "uuid": "fe06914a-e3af-491c-ac5a-664704422f49"
+                "HideDatasetActiontolerances": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tolerances"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_compute_clusters",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"tolerances_input_method\": {\"input_method\": \"file\", \"__current_case__\": 1, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "5456bd04-5d09-49f7-a332-f3ae629d0500",
+            "workflow_outputs": []
         },
         "12": {
             "annotation": "",
@@ -567,7 +692,12 @@
                     "output_name": "clustered_feature_tables"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute template",
+                    "name": "files"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - compute template",
             "outputs": [
@@ -577,22 +707,22 @@
                 }
             ],
             "position": {
-                "left": 3367.27206267458,
-                "top": 105.54001451204601
+                "left": 3332.010064513896,
+                "top": 144.20600203485435
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_compute_template",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "591d79d1-4c98-4492-bb19-36b50775a1f9",
-            "workflow_outputs": [
-                {
-                    "label": "RECETOX apLCMS - compute template on input dataset(s)",
-                    "output_name": "output_file",
-                    "uuid": "2c65197a-3eb2-41bb-a962-a00333b70cc7"
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_compute_template",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "0327f9be-ad3f-4f70-b13e-7d6c298ee47c",
+            "workflow_outputs": []
         },
         "13": {
             "annotation": "",
@@ -613,7 +743,20 @@
                     "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - correct time",
+                    "name": "features_table"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - correct time",
+                    "name": "template"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - correct time",
+                    "name": "tolerances"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - correct time",
             "outputs": [
@@ -623,22 +766,22 @@
                 }
             ],
             "position": {
-                "left": 3677.7466502269544,
-                "top": 220.1116977457226
+                "left": 3618.419237914513,
+                "top": 297.3533597626909
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_correct_time",
-            "tool_state": "{\"features_table\": {\"__class__\": \"ConnectedValue\"}, \"template\": {\"__class__\": \"ConnectedValue\"}, \"tolerances\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "11124d04-c4d7-4ee4-bd2d-a506c732b969",
-            "workflow_outputs": [
-                {
-                    "label": "RECETOX apLCMS - correct time on input dataset(s)",
-                    "output_name": "output_file",
-                    "uuid": "1a40963c-06e1-443d-a8b8-05c151ef35b0"
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_correct_time",
+            "tool_state": "{\"features_table\": {\"__class__\": \"RuntimeValue\"}, \"template\": {\"__class__\": \"RuntimeValue\"}, \"tolerances\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "03f56df6-88eb-4ffe-90c3-5db2617c597c",
+            "workflow_outputs": []
         },
         "14": {
             "annotation": "",
@@ -649,9 +792,22 @@
                 "files": {
                     "id": 13,
                     "output_name": "output_file"
+                },
+                "tolerances_input_method|input_tolerances": {
+                    "id": 11,
+                    "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute clusters",
+                    "name": "files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - compute clusters",
+                    "name": "tolerances_input_method"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - compute clusters",
             "outputs": [
@@ -665,27 +821,27 @@
                 }
             ],
             "position": {
-                "left": 4012.8958078736023,
-                "top": 281.42458100558645
+                "left": 3909.656737495387,
+                "top": 428.50500933602103
             },
-            "post_job_actions": {},
-            "tool_id": "recetox_aplcms_compute_clusters",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"mz_tol_relative\": null, \"rt_tol_relative\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
-            "type": "tool",
-            "uuid": "2e7af886-1d21-48c0-a856-8911c1cd4191",
-            "workflow_outputs": [
-                {
-                    "label": "RECETOX apLCMS - compute clusters corrected_feature_tables on input dataset(s)",
-                    "output_name": "clustered_feature_tables",
-                    "uuid": "961f7fbf-9ab5-4c5e-a295-b73e973a7398"
+            "post_job_actions": {
+                "HideDatasetActionclustered_feature_tables": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "clustered_feature_tables"
                 },
-                {
-                    "label": "RECETOX apLCMS - compute clusters on input dataset(s) (updated tolerances)",
-                    "output_name": "tolerances",
-                    "uuid": "abad96ef-e774-4a4f-9740-3dbf1ecd60d6"
+                "HideDatasetActiontolerances": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tolerances"
                 }
-            ]
+            },
+            "tool_id": "recetox_aplcms_compute_clusters",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"tolerances_input_method\": {\"input_method\": \"file\", \"__current_case__\": 1, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
+            "type": "tool",
+            "uuid": "dd812018-94d2-4ab8-bc5d-bd599bbdc509",
+            "workflow_outputs": []
         },
         "15": {
             "annotation": "",
@@ -702,7 +858,16 @@
                     "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - align features",
+                    "name": "files"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - align features",
+                    "name": "input_tolerances"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - align features",
             "outputs": [
@@ -720,30 +885,30 @@
                 }
             ],
             "position": {
-                "left": 4396.974020164105,
-                "top": 114.01298991794681
+                "left": 4241.452229381117,
+                "top": 295.9585230749562
             },
             "post_job_actions": {},
             "tool_id": "recetox_aplcms_align_features",
-            "tool_state": "{\"files\": {\"__class__\": \"ConnectedValue\"}, \"input_tolerances\": {\"__class__\": \"ConnectedValue\"}, \"min_occurrence\": \"2\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}, \"min_occurrence\": \"2\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
             "type": "tool",
-            "uuid": "00a57359-4d5f-4f59-a313-ce804f62becd",
+            "uuid": "6801f727-cd5a-4fa0-a768-34f0f411e926",
             "workflow_outputs": [
                 {
-                    "label": "RECETOX apLCMS - align features on input dataset(s) (metadata table)",
+                    "label": "metadata_table",
                     "output_name": "metadata_file",
-                    "uuid": "42e226ce-9c15-43fa-874b-03d5f602b7bf"
+                    "uuid": "a1c69b58-ee03-4f17-b61b-d77646654840"
                 },
                 {
-                    "label": "RECETOX apLCMS - align features on input dataset(s) (rt table)",
+                    "label": "rt_table",
                     "output_name": "rt_file",
-                    "uuid": "eac06e88-07a4-446c-b31f-c9e234c5b4ef"
+                    "uuid": "d13c8fee-307f-4acc-96a6-87e2545cc3b7"
                 },
                 {
-                    "label": "RECETOX apLCMS - align features on input dataset(s) (intensity table)",
+                    "label": "intensity_table",
                     "output_name": "intensity_file",
-                    "uuid": "f26bca86-7fd9-4080-8937-cbe617b689d2"
+                    "uuid": "5a2c1587-50d9-45eb-be53-f85c05496579"
                 }
             ]
         },
@@ -774,7 +939,28 @@
                     "output_name": "tolerances"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "intensity_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "known_table"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "metadata_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "rt_file"
+                },
+                {
+                    "description": "runtime parameter for tool RECETOX apLCMS - merge known table",
+                    "name": "tolerances"
+                }
+            ],
             "label": null,
             "name": "RECETOX apLCMS - merge known table",
             "outputs": [
@@ -788,30 +974,31 @@
                 }
             ],
             "position": {
-                "left": 4763.081982149091,
-                "top": 348.09125335522856
+                "left": 4558.726855102012,
+                "top": 544.0987189951882
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput_pairing": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_pairing"
+                }
+            },
             "tool_id": "recetox_aplcms_merge_known_table",
-            "tool_state": "{\"direction\": {\"selection\": \"TRUE\", \"__current_case__\": 0, \"new_feature_min_count\": \"2\"}, \"intensity_file\": {\"__class__\": \"ConnectedValue\"}, \"known_table\": {\"__class__\": \"ConnectedValue\"}, \"match_tol_ppm\": null, \"metadata_file\": {\"__class__\": \"ConnectedValue\"}, \"rt_file\": {\"__class__\": \"ConnectedValue\"}, \"tolerances\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.0+galaxy0",
+            "tool_state": "{\"direction\": {\"selection\": \"TRUE\", \"__current_case__\": 0, \"new_feature_min_count\": \"2\"}, \"intensity_file\": {\"__class__\": \"RuntimeValue\"}, \"known_table\": {\"__class__\": \"RuntimeValue\"}, \"match_tol_ppm\": null, \"metadata_file\": {\"__class__\": \"RuntimeValue\"}, \"rt_file\": {\"__class__\": \"RuntimeValue\"}, \"tolerances\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.10.1+galaxy0",
             "type": "tool",
-            "uuid": "75e187a7-ccef-4339-8aad-9850dede4aca",
+            "uuid": "0be6009f-ff57-456a-892c-e39879796489",
             "workflow_outputs": [
                 {
-                    "label": "RECETOX apLCMS - merge known table on input dataset(s) (known table)",
+                    "label": "merged_known_table",
                     "output_name": "output_known_table",
-                    "uuid": "87df1af7-eb84-41e8-868b-08508f8f936b"
-                },
-                {
-                    "label": "RECETOX apLCMS - merge known table on input dataset(s) (pairing)",
-                    "output_name": "output_pairing",
-                    "uuid": "1a9ccefd-db7c-431f-991a-5c3c4a25704e"
+                    "uuid": "26b1d85b-5ddf-440c-9bb6-2f22c41900bf"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "268c6e09-74dd-4e8b-ad45-cc9403dd75cf",
-    "version": 3
+    "uuid": "13c256bf-d3d5-48b9-b644-df20cef09eb9",
+    "version": 1
 }
