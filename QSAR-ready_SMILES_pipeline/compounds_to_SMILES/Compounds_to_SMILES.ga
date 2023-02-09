@@ -38,7 +38,7 @@
         },
         "1": {
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
             "errors": null,
             "id": 1,
             "input_connections": {
@@ -73,12 +73,12 @@
                     "output_name": "output"
                 }
             },
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
             "tool_shed_repository": {
                 "changeset_revision": "0369de831b32",
                 "name": "query",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"query\": \"select (row_number() over (order by c.recetox_cid))-1 as rn, c.recetox_cid, c.iupac_inchi from c\", \"result\": {\"format\": \"tsv\", \"__current_case__\": 2}, \"tables\": [{\"__index__\": 0, \"file\": {\"__class__\": \"ConnectedValue\"}, \"format\": null, \"name\": \"c\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.1",
@@ -442,7 +442,7 @@
                     },
                     "4": {
                         "annotation": "Remove organometallic and anorganic compounds from the indexed table. Output is indexed table.",
-                        "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+                        "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
                         "errors": null,
                         "id": 4,
                         "input_connections": {
@@ -484,12 +484,12 @@
                                 "output_name": "outfile"
                             }
                         },
-                        "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+                        "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
                         "tool_shed_repository": {
                             "changeset_revision": "987357c6941c",
                             "name": "filter_compounds",
                             "owner": "recetox",
-                            "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                            "tool_shed": "toolshed.g2.bx.psu.edu"
                         },
                         "tool_state": "{\"anorg\": \"true\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"metorg\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
                         "tool_version": "3.1.1+galaxy0",
@@ -596,7 +596,7 @@
         },
         "6": {
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
             "errors": null,
             "id": 6,
             "input_connections": {
@@ -635,12 +635,12 @@
                     "output_name": "output"
                 }
             },
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/query/query/0.1",
             "tool_shed_repository": {
                 "changeset_revision": "0369de831b32",
                 "name": "query",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"query\": \"select o.recetox_cid, o.iupac_inchi, s.smiles from o join s on o.rn=s.rn where s.smiles is not null\", \"result\": {\"format\": \"tsv\", \"__current_case__\": 2}, \"tables\": [{\"__index__\": 0, \"file\": {\"__class__\": \"RuntimeValue\"}, \"format\": null, \"name\": \"o\"}, {\"__index__\": 1, \"file\": {\"__class__\": \"RuntimeValue\"}, \"format\": null, \"name\": \"s\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.1",

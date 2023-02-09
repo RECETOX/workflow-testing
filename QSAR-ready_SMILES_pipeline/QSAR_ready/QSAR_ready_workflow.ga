@@ -211,7 +211,7 @@
         },
         "4": {
             "annotation": "Remove organometallic and anorganic compounds from the indexed table. Output is indexed table.",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
             "errors": null,
             "id": 4,
             "input_connections": {
@@ -253,12 +253,12 @@
                     "output_name": "outfile"
                 }
             },
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/filter_compounds/filter_orgmet_anorg/3.1.1+galaxy0",
             "tool_shed_repository": {
                 "changeset_revision": "987357c6941c",
                 "name": "filter_compounds",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"anorg\": \"true\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"metorg\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "3.1.1+galaxy0",
