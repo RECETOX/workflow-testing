@@ -609,17 +609,17 @@
             "uuid": "46934faa-b902-488a-b4a2-8bc7233577d7",
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "metadata_table",
                     "output_name": "metadata_file",
                     "uuid": "456a88d8-b0e7-41fb-8b36-b8c68642838c"
                 },
                 {
-                    "label": null,
+                    "label": "rt_table",
                     "output_name": "rt_file",
                     "uuid": "f7244d49-e120-44f2-92e7-ab4c24d72c59"
                 },
                 {
-                    "label": null,
+                    "label": "intensity_table",
                     "output_name": "intensity_file",
                     "uuid": "c84244c8-0eb9-41c2-9bc8-e28574cc2af3"
                 }
