@@ -17,6 +17,6 @@
       path: https://github.com/RECETOX/workflow-test-data/raw/main/LC_MS_pipeline/t3db.h5
   outputs:
     output_annotation:
-      file: annotations.h5
+      file: test-data/annotations.h5
       compare: sim_size
       delta: 900

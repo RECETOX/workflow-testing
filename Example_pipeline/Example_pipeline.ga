@@ -1,220 +1,153 @@
 {
-    "a_galaxy_workflow": "true",
-    "annotation": "",
-    "format-version": "0.1",
-    "name": "Example_pipeline",
-    "steps": {
-        "0": {
-            "annotation": "",
-            "content_id": null,
-            "errors": null,
-            "id": 0,
-            "input_connections": {},
-            "inputs": [
-                {
-                    "description": "",
-                    "name": "input_data1"
-                }
-            ],
-            "label": "input_data1",
-            "name": "Input dataset",
-            "outputs": [],
-            "position": {
-                "left": 218,
-                "top": 103.5
-            },
-            "tool_id": null,
-            "tool_state": "{\"name\": \"input_data1\"}",
-            "tool_version": null,
-            "type": "data_input",
-            "uuid": "2dfb6e97-e420-4c30-add0-78c58b2bc52f",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "e58bb77a-810f-4005-a78a-89f113d4edbd"
-                }
-            ]
-        },
-        "1": {
-            "annotation": "",
-            "content_id": null,
-            "errors": null,
-            "id": 1,
-            "input_connections": {},
-            "inputs": [
-                {
-                    "description": "",
-                    "name": "input_data2"
-                }
-            ],
-            "label": "input_data2",
-            "name": "Input dataset",
-            "outputs": [],
-            "position": {
-                "left": 216.5,
-                "top": 189.5
-            },
-            "tool_id": null,
-            "tool_state": "{\"name\": \"input_data2\"}",
-            "tool_version": null,
-            "type": "data_input",
-            "uuid": "bcc32ef3-a610-43f8-a51e-aa57a67b2533",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "c2b6bcb0-56c6-483f-9cec-25d9627fa7aa"
-                }
-            ]
-        },
-        "2": {
-            "annotation": "",
-            "content_id": null,
-            "errors": null,
-            "id": 2,
-            "input_connections": {},
-            "inputs": [
-                {
-                    "description": "",
-                    "name": "input_data3"
-                }
-            ],
-            "label": "input_data3",
-            "name": "Input dataset",
-            "outputs": [],
-            "position": {
-                "left": 216.5,
-                "top": 266.5
-            },
-            "tool_id": null,
-            "tool_state": "{\"name\": \"input_data3\"}",
-            "tool_version": null,
-            "type": "data_input",
-            "uuid": "5407ef23-e8fb-4728-9b35-8b46efb6c452",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "423478ba-f98e-411b-b072-c9dca7826a1d"
-                }
-            ]
-        },
-        "3": {
-            "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_apply/retip_apply/0.5.4+galaxy2",
-            "errors": null,
-            "id": 3,
-            "input_connections": {
-                "descr_train": {
-                    "id": 0,
-                    "output_name": "output"
-                },
-                "input_smiles": {
-                    "id": 2,
-                    "output_name": "output"
-                },
-                "model_h5": {
-                    "id": 1,
-                    "output_name": "output"
-                }
-            },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool Retip prediction",
-                    "name": "descr_train"
-                },
-                {
-                    "description": "runtime parameter for tool Retip prediction",
-                    "name": "input_smiles"
-                },
-                {
-                    "description": "runtime parameter for tool Retip prediction",
-                    "name": "model_h5"
-                }
-            ],
-            "label": null,
-            "name": "Retip prediction",
-            "outputs": [
-                {
-                    "name": "output1",
-                    "type": "input"
-                }
-            ],
-            "position": {
-                "left": 485,
-                "top": 141
-            },
-            "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_apply/retip_apply/0.5.4+galaxy2",
-            "tool_shed_repository": {
-                "changeset_revision": "d59ce34543a4",
-                "name": "retip_apply",
-                "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"descr_train\": {\"__class__\": \"RuntimeValue\"}, \"input_smiles\": {\"__class__\": \"RuntimeValue\"}, \"model_h5\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.5.4+galaxy2",
-            "type": "tool",
-            "uuid": "441d075d-c670-4477-b1b0-a0c6c832f6f0",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output1",
-                    "uuid": "69e07ea6-46d0-478c-97eb-060e583f27f6"
-                }
-            ]
-        },
-        "4": {
-            "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_filter_rt/retip_filter_rt/0.5.4+galaxy0",
-            "errors": null,
-            "id": 4,
-            "input_connections": {
-                "input_smiles": {
-                    "id": 3,
-                    "output_name": "output1"
-                }
-            },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool Retip filter",
-                    "name": "input_smiles"
-                }
-            ],
-            "label": null,
-            "name": "Retip filter",
-            "outputs": [
-                {
-                    "name": "output1",
-                    "type": "h5"
-                }
-            ],
-            "position": {
-                "left": 810,
-                "top": 194
-            },
-            "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/retip_filter_rt/retip_filter_rt/0.5.4+galaxy0",
-            "tool_shed_repository": {
-                "changeset_revision": "ddcf42d5c99c",
-                "name": "retip_filter_rt",
-                "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"filtering_mode\": \"absolute\", \"input_smiles\": {\"__class__\": \"RuntimeValue\"}, \"tolerance\": \"30\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.5.4+galaxy0",
-            "type": "tool",
-            "uuid": "5f75a8e4-a07b-4e01-9389-77b5e74d45c9",
-            "workflow_outputs": [
-                {
-                    "label": "output_filtered_rt",
-                    "output_name": "output1"
-                }
-            ]
-        }
-    },
-    "tags": [],
-    "uuid": "7f106ce9-05af-44d8-931a-b4ef21a5c682",
-    "version": 1
+   "a_galaxy_workflow":"true",
+   "annotation":"",
+   "format-version":"0.1",
+   "name":"example-workflow",
+   "steps":{
+      "0":{
+         "annotation":"",
+         "content_id":null,
+         "errors":null,
+         "id":0,
+         "input_connections":{
+            
+         },
+         "inputs":[
+            {
+               "description":"",
+               "name":"workflow_input"
+            }
+         ],
+         "label":"workflow_input",
+         "name":"Input dataset",
+         "outputs":[
+            
+         ],
+         "position":{
+            "left":0,
+            "top":6
+         },
+         "tool_id":null,
+         "tool_state":"{\"optional\": false, \"tag\": null}",
+         "tool_version":null,
+         "type":"data_input",
+         "uuid":"95aca84e-763b-4f59-ad0e-9896090d3052",
+         "workflow_outputs":[
+            {
+               "label":null,
+               "output_name":"output",
+               "uuid":"f515baa7-5449-4fda-87b0-4e0f441c6955"
+            }
+         ]
+      },
+      "1":{
+         "annotation":"",
+         "content_id":"toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.2.5+galaxy1",
+         "errors":null,
+         "id":1,
+         "input_connections":{
+            "input_file":{
+               "id":0,
+               "output_name":"output"
+            }
+         },
+         "inputs":[
+            {
+               "description":"runtime parameter for tool MSMetaEnhancer",
+               "name":"input_file"
+            }
+         ],
+         "label":null,
+         "name":"MSMetaEnhancer",
+         "outputs":[
+            {
+               "name":"output_file",
+               "type":"msp"
+            }
+         ],
+         "position":{
+            "left":331,
+            "top":0
+         },
+         "post_job_actions":{
+            "HideDatasetActionoutput_file":{
+               "action_arguments":{
+                  
+               },
+               "action_type":"HideDatasetAction",
+               "output_name":"output_file"
+            }
+         },
+         "tool_id":"toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.2.5+galaxy1",
+         "tool_shed_repository":{
+            "changeset_revision":"a2bf129850ea",
+            "name":"msmetaenhancer",
+            "owner":"recetox",
+            "tool_shed":"toolshed.g2.bx.psu.edu"
+         },
+         "tool_state":"{\"input_file\": {\"__class__\": \"RuntimeValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"false\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"compound_name canonical_smiles PubChem\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+         "tool_version":"0.2.5+galaxy1",
+         "type":"tool",
+         "uuid":"3eca4463-40ec-4ec0-8442-b51dc4637dba",
+         "workflow_outputs":[
+            
+         ]
+      },
+      "2":{
+         "annotation":"",
+         "content_id":"toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.2.5+galaxy1",
+         "errors":null,
+         "id":2,
+         "input_connections":{
+            "input_file":{
+               "id":1,
+               "output_name":"output_file"
+            }
+         },
+         "inputs":[
+            {
+               "description":"runtime parameter for tool MSMetaEnhancer",
+               "name":"input_file"
+            }
+         ],
+         "label":null,
+         "name":"MSMetaEnhancer",
+         "outputs":[
+            {
+               "name":"output_file",
+               "type":"msp"
+            }
+         ],
+         "position":{
+            "left":643,
+            "top":61
+         },
+         "post_job_actions":{
+            
+         },
+         "tool_id":"toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.2.5+galaxy1",
+         "tool_shed_repository":{
+            "changeset_revision":"a2bf129850ea",
+            "name":"msmetaenhancer",
+            "owner":"recetox",
+            "tool_shed":"toolshed.g2.bx.psu.edu"
+         },
+         "tool_state":"{\"input_file\": {\"__class__\": \"RuntimeValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"false\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"compound_name inchi PubChem\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+         "tool_version":"0.2.5+galaxy1",
+         "type":"tool",
+         "uuid":"e623a200-722f-484e-ba1a-664375604869",
+         "workflow_outputs":[
+            {
+               "label":"expected_output",
+               "output_name":"output_file",
+               "uuid":"0fd022e8-bcd8-40a4-9212-d6dadec095eb"
+            }
+         ]
+      }
+   },
+   "tags":[
+      
+   ],
+   "uuid":"7eddcbfa-0d9f-47d8-b004-536d0dca6c55",
+   "version":1
 }
