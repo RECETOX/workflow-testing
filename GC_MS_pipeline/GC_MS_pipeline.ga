@@ -102,7 +102,7 @@
         },
         "3": {
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/0.9.3+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/0.9.3+galaxy1",
             "errors": null,
             "id": 3,
             "input_connections": {
@@ -143,12 +143,12 @@
                 "y": 65.5
             },
             "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/0.9.3+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_unsupervised/recetox_aplcms_unsupervised/0.9.3+galaxy1",
             "tool_shed_repository": {
                 "changeset_revision": "7e0838248fbd",
                 "name": "recetox_aplcms_unsupervised",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"feature_detection\": {\"shape_model\": \"bi-Gaussian\", \"BIC_factor\": \"2.0\", \"peak_estim_method\": \"moment\", \"min_bandwidth\": null, \"max_bandwidth\": null, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\", \"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\", \"component_eliminate\": \"0.01\", \"moment_power\": \"1.0\"}, \"files\": {\"__class__\": \"ConnectedValue\"}, \"noise_filtering\": {\"min_exp\": \"2\", \"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"1e-05\", \"baseline_correct\": \"0.0\", \"baseline_correct_noise_percentile\": \"0.05\", \"intensity_weighted\": \"false\"}, \"peak_alignment\": {\"align_chr_tol\": null, \"align_mz_tol\": null, \"max_align_mz_diff\": \"0.01\"}, \"weak_signal_recovery\": {\"recover_mz_range\": null, \"recover_chr_range\": null, \"use_observed_range\": \"true\", \"recover_min_count\": \"3\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.9.3+galaxy1",
@@ -179,7 +179,7 @@
         },
         "4": {
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy0",
             "errors": null,
             "id": 4,
             "input_connections": {
@@ -208,12 +208,12 @@
                 "y": 285.5
             },
             "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/aplcms_to_ramclustr_converter/aplcms_to_ramclustr_converter/0.1.0+galaxy0",
             "tool_shed_repository": {
                 "changeset_revision": "9ea34e24474f",
                 "name": "aplcms_to_ramclustr_converter",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"aplcms_dataframe\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.1.0+galaxy0",
@@ -229,7 +229,7 @@
         },
         "5": {
             "annotation": "this is a ramclustr step annotation",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.2+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.2+galaxy0",
             "errors": null,
             "id": 5,
             "input_connections": {
@@ -270,12 +270,12 @@
                 "y": 324.5
             },
             "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.2+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.2+galaxy0",
             "tool_shed_repository": {
                 "changeset_revision": "15e173c5762c",
                 "name": "ramclustr",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"filetype\": {\"type_choice\": \"csv\", \"__current_case__\": 1, \"ms_csv\": {\"ms\": {\"__class__\": \"ConnectedValue\"}, \"idmsms\": {\"__class__\": \"RuntimeValue\"}, \"sample_name_column\": \"1\", \"feature_delimiter\": \"_\", \"retention_time_column\": \"2\", \"st\": \"1.0\"}, \"required\": {\"sr\": \"0.5\", \"deepSplit\": \"false\", \"blocksize\": \"2000\", \"mult\": \"5\", \"hmax\": \"0.3\", \"collapse\": \"true\", \"usePheno\": \"true\", \"normalize\": \"none\", \"qc_inj_range\": \"20\", \"minModuleSize\": \"2\", \"linkage\": \"average\", \"mzdec\": \"3\", \"cor_method\": \"pearson\", \"rt_only_low_n\": \"true\", \"replace_zeros\": \"true\", \"merge_msp\": \"true\"}, \"optional\": {\"fftempdir\": \"\", \"maxt\": null}, \"metadata\": {\"batch_order_qc\": {\"__class__\": \"RuntimeValue\"}}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.2.2+galaxy0",
@@ -365,7 +365,7 @@
         },
         "7": {
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.0+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.0+galaxy0",
             "errors": null,
             "id": 7,
             "input_connections": {
@@ -398,12 +398,12 @@
                 "y": 321.5
             },
             "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.0+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.0+galaxy0",
             "tool_shed_repository": {
                 "changeset_revision": "97c0aae5eb69",
                 "name": "riassigner",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"method\": \"kovats\", \"query_section\": {\"query\": {\"__class__\": \"ConnectedValue\"}, \"query_rt_units\": \"seconds\"}, \"reference_section\": {\"reference\": {\"__class__\": \"ConnectedValue\"}, \"reference_rt_units\": \"seconds\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.3.0+galaxy0",
@@ -419,7 +419,7 @@
         },
         "8": {
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.9.0+galaxy1",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.9.0+galaxy1",
             "errors": null,
             "id": 8,
             "input_connections": {
@@ -465,12 +465,12 @@
                 "y": 390.5
             },
             "post_job_actions": {},
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.9.0+galaxy1",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms/matchms/0.9.0+galaxy1",
             "tool_shed_repository": {
                 "changeset_revision": "57959596262d",
                 "name": "matchms",
                 "owner": "recetox",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"algorithm\": {\"tolerance\": \"0.1\", \"mz_power\": \"0.0\", \"intensity_power\": \"1.0\"}, \"queries\": {\"__class__\": \"RuntimeValue\"}, \"similarity_metric\": \"CosineGreedy\", \"symmetric\": {\"is_symmetric\": \"false\", \"__current_case__\": 0, \"references\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.9.0+galaxy1",
