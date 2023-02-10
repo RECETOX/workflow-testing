@@ -6,13 +6,13 @@
       elements:
         - identifier: element1
           class: File
-          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/recetox-aplcms/input/RCX_06_shortened.mzML
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/recetox-aplcms/input/RCX_06_shortened.mzML
         - identifier: element2
           class: File
-          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/recetox-aplcms/input/RCX_07_shortened.mzML
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/recetox-aplcms/input/RCX_07_shortened.mzML
         - identifier: element3
           class: File
-          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/recetox-aplcms/input/RCX_08_shortened.mzML
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/recetox-aplcms/input/RCX_08_shortened.mzML
   outputs:
     intensity_table:
       class: File
