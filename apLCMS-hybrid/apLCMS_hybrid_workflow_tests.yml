@@ -1,4 +1,4 @@
-- doc: Test outline for apLCMS-hybrid-workflow.ga
+- doc: Test outline for apLCMS_hybrid_workflow.ga
   job:
     Input Dataset Collection:
       class: Collection

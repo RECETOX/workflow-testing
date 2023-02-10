@@ -1,4 +1,4 @@
-- doc: Test outline for apLCMS-unsupervised-workflow.ga
+- doc: Test outline for apLCMS_unsupervised_workflow.ga
   job:
     Input Dataset Collection:
       class: Collection
