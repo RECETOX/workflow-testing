@@ -1,0 +1,39 @@
+- doc: Test outline for apLCMS_hybrid_workflow.ga
+  job:
+    Input Dataset Collection:
+      class: Collection
+      collection_type: list
+      elements:
+        - identifier: element1
+          class: File
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/recetox-aplcms/input/RCX_06_shortened.mzML
+        - identifier: element2
+          class: File
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/recetox-aplcms/input/RCX_07_shortened.mzML
+        - identifier: element3
+          class: File
+          path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/recetox-aplcms/input/RCX_08_shortened.mzML
+    known_table.parquet:
+      class: File
+      path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/recetox-aplcms/hybrid/known_table.parquet
+  outputs:
+    intensity_table:
+      class: File
+      path: test-data/intensity_table.parquet
+      compare: diff
+      lines_diff: 2
+    merged_known_table:
+      class: File
+      path: test-data/updated_known_table.parquet
+      compare: diff
+      lines_diff: 2
+    metadata_table:
+      class: File
+      path: test-data/metadata_table.parquet
+      compare: diff
+      lines_diff: 2
+    rt_table:
+      class: File
+      path: test-data/rt_table.parquet
+      compare: diff
+      lines_diff: 2
