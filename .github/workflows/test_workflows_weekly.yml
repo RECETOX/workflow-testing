@@ -2,7 +2,7 @@ name: Weekly global Workflow Linting and Tests
 on:
   schedule:
     # Run at 1am every Monday
-    - cron: '0 1 * * 1'
+    - cron: '0 9 * * 4'
 env:
   GALAXY_FORK: galaxyproject
   GALAXY_BRANCH: release_22.05
