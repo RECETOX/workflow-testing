@@ -1,0 +1,29 @@
+- doc: Test outline for GC_MS_pipeline_xcms.ga
+  job:
+    Reference compound list (alkanes):
+      class: File
+      path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy2-_Alkanes_20210325.csv_.csv
+    Reference spectra (RCX metabolites 20210817):
+      class: File
+      path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy1-_rcx_gc-orbitrap_metabolites_20210817.msp_.msp
+    sample_metadata.tsv:
+      class: File
+      path: test-data/sample_metadata.tsv
+    Input Dataset Collection:
+      class: Collection
+      collection_type: list
+      elements:
+        - identifier: el1
+          class: File
+          path: https://zenodo.org/record/6878356/files/8_qc_no_dil_milliq.raw
+        - identifier: el2
+          class: File
+          path: https://zenodo.org/record/6878356/files/21_qc_no_dil_milliq.raw
+        - identifier: el3
+          class: File
+          path: https://zenodo.org/record/6878356/files/29_qc_no_dil_milliq.raw
+  outputs:
+    matchms_scores:
+      file: test-data/matchms_scores.tsv
+      compare: sim_size
+      delta: 100

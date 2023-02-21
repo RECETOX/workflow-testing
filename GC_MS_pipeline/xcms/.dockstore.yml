@@ -1,0 +1,7 @@
+version: 1.2
+workflows:
+- name: main
+  primaryDescriptorPath: /GC_MS_pipeline_xcms.ga
+  subclass: Galaxy
+  testParameterFiles:
+  - /GC_MS_pipeline_xcms_tests.yml
