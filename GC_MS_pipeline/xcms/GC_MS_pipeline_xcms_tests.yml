@@ -13,13 +13,13 @@
       class: Collection
       collection_type: list
       elements:
-        - identifier: el1
+        - identifier: data_8.raw
           class: File
           path: https://zenodo.org/record/6878356/files/8_qc_no_dil_milliq.raw
-        - identifier: el2
+        - identifier: data_21.raw
           class: File
           path: https://zenodo.org/record/6878356/files/21_qc_no_dil_milliq.raw
-        - identifier: el3
+        - identifier: data_29.raw
           class: File
           path: https://zenodo.org/record/6878356/files/29_qc_no_dil_milliq.raw
   outputs:
