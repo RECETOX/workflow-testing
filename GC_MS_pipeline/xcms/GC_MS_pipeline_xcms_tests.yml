@@ -3,7 +3,7 @@
     Reference compound list (alkanes):
       class: File
       path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy2-_Alkanes_20210325.csv_.csv
-    Reference spectra (RCX metabolites 20210817):
+    Reference spectra:
       class: File
       path: https://gitlab.ics.muni.cz/umsa/umsa-files/-/raw/master/testdata/workflows/GC_MS_pipeline/Galaxy1-_rcx_gc-orbitrap_metabolites_20210817.msp_.msp
       filetype: msp
