@@ -146,7 +146,7 @@
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"BIC_factor\": \"2.0\", \"advanced\": {\"component_eliminate\": \"0.01\", \"shape_model\": {\"sigma_ratio_lim_min\": null, \"sigma_ratio_lim_max\": null}, \"sd_cut\": {\"sd_cut_bounds\": \"false\", \"__current_case__\": 0, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\"}, \"peak_estim\": {\"peak_estim_method\": \"EM\", \"__current_case__\": 1}}, \"bandwidth\": \"0.5\", \"max_bandwidth\": null, \"min_bandwidth\": null, \"profile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"BIC_factor\": \"2.0\", \"advanced\": {\"component_eliminate\": \"0.01\", \"shape_model\": {\"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\"}, \"sd_cut\": {\"sd_cut_bounds\": \"false\", \"__current_case__\": 0, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\"}, \"peak_estim\": {\"peak_estim_method\": \"EM\", \"__current_case__\": 1}}, \"bandwidth\": \"0.5\", \"max_bandwidth\": null, \"min_bandwidth\": null, \"profile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.10.3+galaxy0",
             "type": "tool",
             "uuid": "420170c0-ffd7-4fdc-9300-d15ab15ce78f",
