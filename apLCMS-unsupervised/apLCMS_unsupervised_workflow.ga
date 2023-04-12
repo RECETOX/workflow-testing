@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true",
     "annotation": "",
     "format-version": "0.1",
-    "name": "recetox-aplcms 0.10.3 unsupervised",
+    "name": "recetox-aplcms unsupervised",
     "steps": {
         "0": {
             "annotation": "",
@@ -735,17 +735,17 @@
             "uuid": "ffaf23cb-7e40-4018-b33e-c6c22de57b7a",
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "rt_table",
                     "output_name": "rt_file",
                     "uuid": "a6ea7547-c493-4a11-8d51-cf569088bb7b"
                 },
                 {
-                    "label": null,
+                    "label": "metadata_table",
                     "output_name": "metadata_file",
                     "uuid": "191a4100-f6bc-41cf-9f23-485f6988a352"
                 },
                 {
-                    "label": null,
+                    "label": "intensity_table",
                     "output_name": "intensity_file",
                     "uuid": "281ac72a-2621-4753-98b6-89fcfb488c72"
                 }
