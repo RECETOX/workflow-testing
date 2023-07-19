@@ -33,18 +33,18 @@
             "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
             "tool_version": null,
             "type": "data_collection_input",
-            "uuid": "9210463f-468a-478d-bc94-5e21542f75f9",
+            "uuid": "22693eaa-bb80-473f-8c94-4a9dd45ad910",
             "workflow_outputs": [
                 {
                     "label": null,
                     "output_name": "output",
-                    "uuid": "e88a16cc-75d3-4f8e-95fb-4ff4e8f2a60d"
+                    "uuid": "483dac66-6ca4-40f3-84bc-62ee02cf9252"
                 }
             ]
         },
         "1": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_remove_noise/recetox_aplcms_remove_noise/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_remove_noise/recetox_aplcms_remove_noise/0.12.0+galaxy2",
             "errors": null,
             "id": 1,
             "input_connections": {
@@ -84,22 +84,22 @@
                     "output_name": "output_file"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_remove_noise/recetox_aplcms_remove_noise/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_remove_noise/recetox_aplcms_remove_noise/0.12.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "e9e9677e8147",
+                "changeset_revision": "d90187b0f247",
                 "name": "recetox_aplcms_remove_noise",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"baseline_correct\": \"0.0\", \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_weighted\": \"false\", \"min_pres\": \"0.5\", \"min_run\": \"12.0\", \"mz_tol\": \"10.0\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_version": "0.12.0+galaxy2",
             "type": "tool",
-            "uuid": "4885ff8d-2764-4429-9609-ad60cdb1cbc6",
+            "uuid": "5fe1e802-61a7-40de-9621-cf1c3d0c57be",
             "workflow_outputs": []
         },
         "2": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/0.12.0+galaxy2",
             "errors": null,
             "id": 2,
             "input_connections": {
@@ -139,22 +139,22 @@
                     "output_name": "output_file"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_generate_feature_table/recetox_aplcms_generate_feature_table/0.12.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "e8962c8340f4",
+                "changeset_revision": "e7305ba0dd38",
                 "name": "recetox_aplcms_generate_feature_table",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"BIC_factor\": \"2.0\", \"advanced\": {\"component_eliminate\": \"0.01\", \"shape_model\": {\"sigma_ratio_lim_min\": \"0.01\", \"sigma_ratio_lim_max\": \"100.0\"}, \"sd_cut\": {\"sd_cut_bounds\": \"false\", \"__current_case__\": 0, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\"}, \"peak_estim\": {\"peak_estim_method\": \"EM\", \"__current_case__\": 1}}, \"bandwidth\": \"0.5\", \"max_bandwidth\": null, \"min_bandwidth\": null, \"profile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"BIC_factor\": \"2.0\", \"advanced\": {\"component_eliminate\": \"0.01\", \"shape_model\": {\"sigma_ratio_lim_min\": null, \"sigma_ratio_lim_max\": null}, \"sd_cut\": {\"sd_cut_bounds\": \"true\", \"__current_case__\": 0, \"sd_cut_min\": \"0.01\", \"sd_cut_max\": \"500.0\"}, \"peak_estim\": {\"peak_estim_method\": \"EM\", \"__current_case__\": 1}}, \"bandwidth\": \"0.5\", \"max_bandwidth\": null, \"min_bandwidth\": null, \"profile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy2",
             "type": "tool",
-            "uuid": "420170c0-ffd7-4fdc-9300-d15ab15ce78f",
+            "uuid": "ea84e28e-b130-4abf-84b4-59b826aa758f",
             "workflow_outputs": []
         },
         "3": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.12.0+galaxy2",
             "errors": null,
             "id": 3,
             "input_connections": {
@@ -175,10 +175,6 @@
                 {
                     "name": "clustered_feature_tables",
                     "type": "input"
-                },
-                {
-                    "name": "tolerances",
-                    "type": "parquet"
                 }
             ],
             "position": {
@@ -196,29 +192,24 @@
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
                     "output_name": "clustered_feature_tables"
-                },
-                "HideDatasetActiontolerances": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "tolerances"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.12.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "092bbb03a217",
+                "changeset_revision": "149b9cc7499b",
                 "name": "recetox_aplcms_compute_clusters",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"tolerances_input_method\": {\"input_method\": \"direct\", \"__current_case__\": 0, \"mz_tol_relative\": null, \"rt_tol_relative\": null}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_tol_relative_ppm\": \"10.0\", \"rt_tol\": \"5.0\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy2",
             "type": "tool",
-            "uuid": "17a28f80-6189-40e8-bea3-c752f06885e6",
+            "uuid": "f805f136-d1b4-4d2f-b529-5dfe997c3a3e",
             "workflow_outputs": []
         },
         "4": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_template/recetox_aplcms_compute_template/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_template/recetox_aplcms_compute_template/0.12.0+galaxy1",
             "errors": null,
             "id": 4,
             "input_connections": {
@@ -258,22 +249,22 @@
                     "output_name": "output_file"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_template/recetox_aplcms_compute_template/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_template/recetox_aplcms_compute_template/0.12.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "4ad1dd1c849b",
+                "changeset_revision": "481d769e2f7a",
                 "name": "recetox_aplcms_compute_template",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_version": "0.12.0+galaxy1",
             "type": "tool",
-            "uuid": "176f7ec7-c459-4396-b781-716ec81e0e97",
+            "uuid": "d2d9fbdb-1252-4258-8ecb-10d08a7b0042",
             "workflow_outputs": []
         },
         "5": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_correct_time/recetox_aplcms_correct_time/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_correct_time/recetox_aplcms_correct_time/0.12.0+galaxy2",
             "errors": null,
             "id": 5,
             "input_connections": {
@@ -284,10 +275,6 @@
                 "template": {
                     "id": 4,
                     "output_name": "output_file"
-                },
-                "tolerances": {
-                    "id": 3,
-                    "output_name": "tolerances"
                 }
             },
             "inputs": [
@@ -298,10 +285,6 @@
                 {
                     "description": "runtime parameter for tool recetox-aplcms - correct time",
                     "name": "template"
-                },
-                {
-                    "description": "runtime parameter for tool recetox-aplcms - correct time",
-                    "name": "tolerances"
                 }
             ],
             "label": null,
@@ -329,42 +312,34 @@
                     "output_name": "output_file"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_correct_time/recetox_aplcms_correct_time/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_correct_time/recetox_aplcms_correct_time/0.12.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "7b0bf5d403ba",
+                "changeset_revision": "02c772a49998",
                 "name": "recetox_aplcms_correct_time",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"features_table\": {\"__class__\": \"RuntimeValue\"}, \"template\": {\"__class__\": \"RuntimeValue\"}, \"tolerances\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"features_table\": {\"__class__\": \"RuntimeValue\"}, \"mz_tol_relative_ppm\": \"10.0\", \"rt_tol\": \"5.0\", \"template\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy2",
             "type": "tool",
-            "uuid": "cd2f0ffb-0c23-4b81-a8d2-cc530a277d51",
+            "uuid": "a4d0fd31-5f34-4df0-b817-9617c5fc2b58",
             "workflow_outputs": []
         },
         "6": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.12.0+galaxy2",
             "errors": null,
             "id": 6,
             "input_connections": {
                 "files": {
                     "id": 5,
                     "output_name": "output_file"
-                },
-                "tolerances_input_method|input_tolerances": {
-                    "id": 3,
-                    "output_name": "tolerances"
                 }
             },
             "inputs": [
                 {
                     "description": "runtime parameter for tool recetox-aplcms - compute clusters",
                     "name": "files"
-                },
-                {
-                    "description": "runtime parameter for tool recetox-aplcms - compute clusters",
-                    "name": "tolerances_input_method"
                 }
             ],
             "label": null,
@@ -373,10 +348,6 @@
                 {
                     "name": "clustered_feature_tables",
                     "type": "input"
-                },
-                {
-                    "name": "tolerances",
-                    "type": "parquet"
                 }
             ],
             "position": {
@@ -394,49 +365,36 @@
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
                     "output_name": "clustered_feature_tables"
-                },
-                "HideDatasetActiontolerances": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "tolerances"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.12.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "092bbb03a217",
+                "changeset_revision": "149b9cc7499b",
                 "name": "recetox_aplcms_compute_clusters",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"tolerances_input_method\": {\"input_method\": \"file\", \"__current_case__\": 1, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_tol_relative_ppm\": \"10.0\", \"rt_tol\": \"5.0\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy2",
             "type": "tool",
-            "uuid": "ff24e616-0a3f-492a-a907-b5b08e9b90f4",
+            "uuid": "34903cab-1797-40f8-aed2-3b2bde2803e6",
             "workflow_outputs": []
         },
         "7": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.12.0+galaxy1",
             "errors": null,
             "id": 7,
             "input_connections": {
                 "files": {
                     "id": 6,
                     "output_name": "clustered_feature_tables"
-                },
-                "input_tolerances": {
-                    "id": 6,
-                    "output_name": "tolerances"
                 }
             },
             "inputs": [
                 {
                     "description": "runtime parameter for tool recetox-aplcms - align features",
                     "name": "files"
-                },
-                {
-                    "description": "runtime parameter for tool recetox-aplcms - align features",
-                    "name": "input_tolerances"
                 }
             ],
             "label": null,
@@ -482,22 +440,22 @@
                     "output_name": "rt_file"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.12.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "1e2a13bcb5a7",
+                "changeset_revision": "7b42ee54d757",
                 "name": "recetox_aplcms_align_features",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}, \"min_occurrence\": \"2\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"min_occurrence\": \"2\", \"mz_tol_relative_ppm\": \"10.0\", \"rt_tol\": \"5.0\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy1",
             "type": "tool",
-            "uuid": "bcd03f47-49bf-4815-8e48-95632a771212",
+            "uuid": "21b738ec-8649-4643-95d0-1d2a5b415b78",
             "workflow_outputs": []
         },
         "8": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/0.12.0+galaxy2",
             "errors": null,
             "id": 8,
             "input_connections": {
@@ -524,10 +482,6 @@
                 "rt_file": {
                     "id": 7,
                     "output_name": "rt_file"
-                },
-                "tolerances": {
-                    "id": 6,
-                    "output_name": "tolerances"
                 }
             },
             "inputs": [
@@ -554,10 +508,6 @@
                 {
                     "description": "runtime parameter for tool recetox-aplcms - recover weaker signals",
                     "name": "rt_file"
-                },
-                {
-                    "description": "runtime parameter for tool recetox-aplcms - recover weaker signals",
-                    "name": "tolerances"
                 }
             ],
             "label": null,
@@ -585,42 +535,34 @@
                     "output_name": "output_file"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_recover_weaker_signals/recetox_aplcms_recover_weaker_signals/0.12.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "c69a12bfc2fb",
+                "changeset_revision": "99d118321d5f",
                 "name": "recetox_aplcms_recover_weaker_signals",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"bandwidth\": \"0.5\", \"corrected_files\": {\"__class__\": \"RuntimeValue\"}, \"extracted_files\": {\"__class__\": \"RuntimeValue\"}, \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_weighted\": \"false\", \"max_bandwidth\": null, \"metadata_file\": {\"__class__\": \"RuntimeValue\"}, \"min_bandwidth\": null, \"mz_tol\": \"10.0\", \"recover_min_count\": \"3\", \"recover_mz_range\": null, \"recover_rt_range\": null, \"rt_file\": {\"__class__\": \"RuntimeValue\"}, \"tolerances\": {\"__class__\": \"RuntimeValue\"}, \"use_observed_range\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"bandwidth\": \"0.5\", \"corrected_files\": {\"__class__\": \"RuntimeValue\"}, \"extracted_files\": {\"__class__\": \"RuntimeValue\"}, \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_file\": {\"__class__\": \"RuntimeValue\"}, \"intensity_weighted\": \"false\", \"max_bandwidth\": null, \"metadata_file\": {\"__class__\": \"RuntimeValue\"}, \"min_bandwidth\": null, \"mz_tol\": \"10.0\", \"mz_tol_relative_ppm\": \"10.0\", \"recover_min_count\": \"3\", \"recover_mz_range\": null, \"recover_rt_range\": null, \"rt_file\": {\"__class__\": \"RuntimeValue\"}, \"rt_tol\": \"5.0\", \"use_observed_range\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy2",
             "type": "tool",
-            "uuid": "6bcff6dd-4656-4e9e-ba14-ce9ea2445113",
+            "uuid": "aacd7b44-62bb-4657-b72e-dad3ab480b38",
             "workflow_outputs": []
         },
         "9": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.12.0+galaxy2",
             "errors": null,
             "id": 9,
             "input_connections": {
                 "files": {
                     "id": 8,
                     "output_name": "output_file"
-                },
-                "tolerances_input_method|input_tolerances": {
-                    "id": 6,
-                    "output_name": "tolerances"
                 }
             },
             "inputs": [
                 {
                     "description": "runtime parameter for tool recetox-aplcms - compute clusters",
                     "name": "files"
-                },
-                {
-                    "description": "runtime parameter for tool recetox-aplcms - compute clusters",
-                    "name": "tolerances_input_method"
                 }
             ],
             "label": null,
@@ -629,10 +571,6 @@
                 {
                     "name": "clustered_feature_tables",
                     "type": "input"
-                },
-                {
-                    "name": "tolerances",
-                    "type": "parquet"
                 }
             ],
             "position": {
@@ -650,51 +588,33 @@
                     "action_arguments": {},
                     "action_type": "HideDatasetAction",
                     "output_name": "clustered_feature_tables"
-                },
-                "HideDatasetActiontolerances": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "tolerances"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_compute_clusters/recetox_aplcms_compute_clusters/0.12.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "092bbb03a217",
+                "changeset_revision": "149b9cc7499b",
                 "name": "recetox_aplcms_compute_clusters",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_max_diff\": \"0.01\", \"mz_tol_absolute\": \"1e-05\", \"tolerances_input_method\": {\"input_method\": \"file\", \"__current_case__\": 1, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"mz_tol_relative_ppm\": \"10.0\", \"rt_tol\": \"5.0\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy2",
             "type": "tool",
-            "uuid": "bbf0aedc-6821-4ecd-ac1f-87f790ac5531",
+            "uuid": "bff186e0-97ab-4c3f-af4b-e56738c9d0fb",
             "workflow_outputs": []
         },
         "10": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.10.3+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.12.0+galaxy1",
             "errors": null,
             "id": 10,
             "input_connections": {
                 "files": {
                     "id": 9,
                     "output_name": "clustered_feature_tables"
-                },
-                "input_tolerances": {
-                    "id": 9,
-                    "output_name": "tolerances"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool recetox-aplcms - align features",
-                    "name": "files"
-                },
-                {
-                    "description": "runtime parameter for tool recetox-aplcms - align features",
-                    "name": "input_tolerances"
-                }
-            ],
+            "inputs": [],
             "label": null,
             "name": "recetox-aplcms - align features",
             "outputs": [
@@ -712,47 +632,47 @@
                 }
             ],
             "position": {
-                "bottom": 699.2000122070312,
-                "height": 327.20001220703125,
-                "left": 1258,
-                "right": 1458,
-                "top": 372,
+                "bottom": 704.7999877929688,
+                "height": 296.79998779296875,
+                "left": 912,
+                "right": 1112,
+                "top": 408,
                 "width": 200,
-                "x": 1258,
-                "y": 372
+                "x": 912,
+                "y": 408
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.10.3+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_aplcms_align_features/recetox_aplcms_align_features/0.12.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "1e2a13bcb5a7",
+                "changeset_revision": "7b42ee54d757",
                 "name": "recetox_aplcms_align_features",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"files\": {\"__class__\": \"RuntimeValue\"}, \"input_tolerances\": {\"__class__\": \"RuntimeValue\"}, \"min_occurrence\": \"2\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.10.3+galaxy0",
+            "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/mnt/volume/shared/galaxy/var/tool-data/shared/ucsc/chrom/?.len\", \"files\": {\"__class__\": \"ConnectedValue\"}, \"min_occurrence\": \"2\", \"mz_tol_relative_ppm\": \"10.0\", \"rt_tol\": \"5.0\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.12.0+galaxy1",
             "type": "tool",
-            "uuid": "ffaf23cb-7e40-4018-b33e-c6c22de57b7a",
+            "uuid": "5b800c0d-3955-4bbf-883f-b09ed1be225d",
             "workflow_outputs": [
                 {
                     "label": "rt_table",
                     "output_name": "rt_file",
-                    "uuid": "a6ea7547-c493-4a11-8d51-cf569088bb7b"
+                    "uuid": "6aa34950-0389-469c-951b-8266949daa6a"
                 },
                 {
                     "label": "metadata_table",
                     "output_name": "metadata_file",
-                    "uuid": "191a4100-f6bc-41cf-9f23-485f6988a352"
+                    "uuid": "ce18c895-823f-4cad-914d-f1832c1a9aa8"
                 },
                 {
                     "label": "intensity_table",
                     "output_name": "intensity_file",
-                    "uuid": "281ac72a-2621-4753-98b6-89fcfb488c72"
+                    "uuid": "bbc737c4-5424-46d3-a6af-c155781bbb24"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "770b0430-5212-4fbb-af1a-43d5c6734cce",
-    "version": 1
+    "uuid": "5037b391-2d58-4940-aa5c-dd3c229c767c",
+    "version": 3
 }
