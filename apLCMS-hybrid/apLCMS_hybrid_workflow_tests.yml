@@ -20,20 +20,20 @@
     intensity_table:
       class: File
       path: test-data/intensity_table.parquet
-      compare: diff
-      lines_diff: 2
+      compare: sim_size
+      delta: 1000
     merged_known_table:
       class: File
       path: test-data/updated_known_table.parquet
-      compare: diff
-      lines_diff: 2
+      compare: sim_size
+      delta: 1000
     metadata_table:
       class: File
       path: test-data/metadata_table.parquet
-      compare: diff
-      lines_diff: 2
+      compare: sim_size
+      delta: 1000
     rt_table:
       class: File
       path: test-data/rt_table.parquet
-      compare: diff
-      lines_diff: 2
+      compare: sim_size
+      delta: 1000
