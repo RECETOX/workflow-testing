@@ -1,0 +1,1147 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "MsFinder Workflow NIST/Wiley",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Spectral library file"
+                }
+            ],
+            "label": "Spectral library file",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": 156.21875,
+                "height": 81.21875,
+                "left": -4953,
+                "right": -4753,
+                "top": 75,
+                "width": 200,
+                "x": -4953,
+                "y": 75
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "eda0d2a6-0299-4367-8f7b-74cc869e055f",
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "input_file": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MSMetaEnhancer",
+                    "name": "input_file"
+                }
+            ],
+            "label": "MSMetaEnhancer: collect InChi using pubchem",
+            "name": "MSMetaEnhancer",
+            "outputs": [
+                {
+                    "name": "output_file",
+                    "type": "msp"
+                },
+                {
+                    "name": "log_file",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 235.9166717529297,
+                "height": 203.9166717529297,
+                "left": -4682.34375,
+                "right": -4482.34375,
+                "top": 32,
+                "width": 200,
+                "x": -4682.34375,
+                "y": 32
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "tool_shed_repository": {
+                "changeset_revision": "3e2cb0bc6959",
+                "name": "msmetaenhancer",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"input_file\": {\"__class__\": \"RuntimeValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"FALSE\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"compound_name inchi PubChem\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.3.0+galaxy3",
+            "type": "tool",
+            "uuid": "70360793-23df-411d-986c-2708408b772a",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_file",
+                    "uuid": "12ed3f21-a9f1-4450-bc5d-9b798dd785d5"
+                },
+                {
+                    "label": null,
+                    "output_name": "log_file",
+                    "uuid": "2e1f30c0-4625-4942-90d0-a4f30aceda32"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "input_file": {
+                    "id": 1,
+                    "output_name": "output_file"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MSMetaEnhancer",
+                    "name": "input_file"
+                }
+            ],
+            "label": "MSMetaEnhancer: collect Isomeric_smiles from IDSM",
+            "name": "MSMetaEnhancer",
+            "outputs": [
+                {
+                    "name": "output_file",
+                    "type": "msp"
+                },
+                {
+                    "name": "log_file",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "bottom": 275.3229217529297,
+                "height": 224.3229217529297,
+                "left": -4408.6875,
+                "right": -4208.6875,
+                "top": 51,
+                "width": 200,
+                "x": -4408.6875,
+                "y": 51
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "tool_shed_repository": {
+                "changeset_revision": "3e2cb0bc6959",
+                "name": "msmetaenhancer",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"input_file\": {\"__class__\": \"RuntimeValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"FALSE\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"inchi isomeric_smiles IDSM\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.3.0+galaxy3",
+            "type": "tool",
+            "uuid": "69fad1c5-e696-4d80-9363-15c38a99e3f3",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_file",
+                    "uuid": "063ce08f-c484-4e5f-a8ba-a8eac1d3eaba"
+                },
+                {
+                    "label": null,
+                    "output_name": "log_file",
+                    "uuid": "ba553f47-69fe-49b3-a209-1caccb82bace"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "infile": {
+                    "id": 2,
+                    "output_name": "output_file"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Replace",
+                    "name": "infile"
+                }
+            ],
+            "label": "Replace ISOMERIC_SMILES TO SMILES",
+            "name": "Replace",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 222.2916717529297,
+                "height": 112.29167175292969,
+                "left": -4131,
+                "right": -3931,
+                "top": 110,
+                "width": 200,
+                "x": -4131,
+                "y": 110
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
+            "tool_shed_repository": {
+                "changeset_revision": "d698c222f354",
+                "name": "text_processing",
+                "owner": "bgruening",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"find_and_replace\": [{\"__index__\": 0, \"find_pattern\": \"ISOMERIC_SMILES\", \"replace_pattern\": \"SMILES\", \"is_regex\": \"false\", \"global\": \"true\", \"caseinsensitive\": \"false\", \"wholewords\": \"true\", \"skip_first_line\": \"false\", \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}], \"infile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.1.4",
+            "type": "tool",
+            "uuid": "41311c7a-5362-4267-95cf-a60c72ef0c36",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "outfile",
+                    "uuid": "5a7ba0ab-7856-47a2-8a69-b30609ac86e5"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.24.0+galaxy2",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "spectra": {
+                    "id": 3,
+                    "output_name": "outfile"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms filtering",
+                    "name": "spectra"
+                }
+            ],
+            "label": "Matchms Filtering: require Inchi and Smile",
+            "name": "matchms filtering",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 260.1041717529297,
+                "height": 153.1041717529297,
+                "left": -3847.34375,
+                "right": -3647.34375,
+                "top": 107,
+                "width": 200,
+                "x": -3847.34375,
+                "y": 107
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.24.0+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "a75791758c34",
+                "name": "matchms_filtering",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"clean_metadata_is_true\": \"false\", \"default_filters_is_true\": \"false\", \"derive_precursor_mz_from_parent_mass\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"mz_range\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"normalise_intensities_is_true\": \"false\", \"reduce_to_top_n_peaks\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"relative_intensity\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"require_inchi_is_true\": \"true\", \"require_smiles_is_true\": \"true\", \"spectra\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy2",
+            "type": "tool",
+            "uuid": "94b35a5a-b6c4-441f-b867-731df123fbcf",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "334cf497-7656-48b4-bfb3-e5fe6288fce7"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_metadata_export/matchms_metadata_export/0.24.0+galaxy1",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "input_file": {
+                    "id": 4,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms metadata export",
+                    "name": "input_file"
+                }
+            ],
+            "label": "Metadata export",
+            "name": "matchms metadata export",
+            "outputs": [
+                {
+                    "name": "output_file",
+                    "type": "csv"
+                }
+            ],
+            "position": {
+                "bottom": 241.6979217529297,
+                "height": 132.6979217529297,
+                "left": -3573.6875,
+                "right": -3373.6875,
+                "top": 109,
+                "width": 200,
+                "x": -3573.6875,
+                "y": 109
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_metadata_export/matchms_metadata_export/0.24.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "82aaf2631875",
+                "name": "matchms_metadata_export",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"harmonize_metadata\": \"false\", \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy1",
+            "type": "tool",
+            "uuid": "15aac1ee-9401-489c-954d-0ea80af601b1",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_file",
+                    "uuid": "6dbd1091-303c-4a87-9a68-24c71f78525e"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "csv_to_tabular",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "csv": {
+                    "id": 5,
+                    "output_name": "output_file"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Convert CSV to tabular",
+                    "name": "csv"
+                }
+            ],
+            "label": "Convert CSV to tabular",
+            "name": "Convert CSV to tabular",
+            "outputs": [
+                {
+                    "name": "tabular",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 228.6979217529297,
+                "height": 132.6979217529297,
+                "left": -3290,
+                "right": -3090,
+                "top": 96,
+                "width": 200,
+                "x": -3290,
+                "y": 96
+            },
+            "post_job_actions": {},
+            "tool_id": "csv_to_tabular",
+            "tool_state": "{\"csv\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "928b92f1-2b07-4e99-979b-8bea09bb1857",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "tabular",
+                    "uuid": "b8a76e7c-b6ad-4166-89ad-639e9f0c582d"
+                }
+            ]
+        },
+        "7": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/column_remove_by_header/column_remove_by_header/1.0",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "input_tabular": {
+                    "id": 6,
+                    "output_name": "tabular"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Remove columns",
+                    "name": "input_tabular"
+                }
+            ],
+            "label": "Extract smiles column",
+            "name": "Remove columns",
+            "outputs": [
+                {
+                    "name": "output_tabular",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 209.2916717529297,
+                "height": 112.29167175292969,
+                "left": -3012.34375,
+                "right": -2812.34375,
+                "top": 97,
+                "width": 200,
+                "x": -3012.34375,
+                "y": 97
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/column_remove_by_header/column_remove_by_header/1.0",
+            "tool_shed_repository": {
+                "changeset_revision": "2040e4c2750a",
+                "name": "column_remove_by_header",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"headers\": [{\"__index__\": 0, \"name\": \"smiles\"}], \"input_tabular\": {\"__class__\": \"RuntimeValue\"}, \"keep_columns\": \"true\", \"strip_characters\": \"#\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0",
+            "type": "tool",
+            "uuid": "7bc6a58d-b853-4e5e-98ab-e2df9e6996b3",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_tabular",
+                    "uuid": "a0a05968-ce9b-43cc-a6c8-e81a2aac6fd1"
+                }
+            ]
+        },
+        "8": {
+            "annotation": "",
+            "content_id": "tabular_to_csv",
+            "errors": null,
+            "id": 8,
+            "input_connections": {
+                "tabular": {
+                    "id": 7,
+                    "output_name": "output_tabular"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Convert tabular to CSV",
+                    "name": "tabular"
+                }
+            ],
+            "label": "Convert tabular to CSV",
+            "name": "Convert tabular to CSV",
+            "outputs": [
+                {
+                    "name": "csv",
+                    "type": "csv"
+                }
+            ],
+            "position": {
+                "bottom": 219.6979217529297,
+                "height": 132.6979217529297,
+                "left": -2730.6875,
+                "right": -2530.6875,
+                "top": 87,
+                "width": 200,
+                "x": -2730.6875,
+                "y": 87
+            },
+            "post_job_actions": {},
+            "tool_id": "tabular_to_csv",
+            "tool_state": "{\"tabular\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0",
+            "type": "tool",
+            "uuid": "c4186674-a4b1-4233-9b2e-650e9bd47c4a",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "csv",
+                    "uuid": "4a25d804-49fa-40bc-9d0b-df44b8ef7359"
+                }
+            ]
+        },
+        "9": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/rem_complex/rem_complex/1.0.0+galaxy2",
+            "errors": null,
+            "id": 9,
+            "input_connections": {
+                "input": {
+                    "id": 8,
+                    "output_name": "csv"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Remove coordination complexes",
+                    "name": "input"
+                }
+            ],
+            "label": "Remove coordination complexes",
+            "name": "Remove coordination complexes",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 219.2916717529297,
+                "height": 112.29167175292969,
+                "left": -2454,
+                "right": -2254,
+                "top": 107,
+                "width": 200,
+                "x": -2454,
+                "y": 107
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/rem_complex/rem_complex/1.0.0+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "1dc9f5a3163d",
+                "name": "rem_complex",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"input\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0+galaxy2",
+            "type": "tool",
+            "uuid": "09ab8867-5d9c-4244-b82b-3d0233041d54",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "6c9d49f9-53ca-427c-b2e0-6b1ecb0ff802"
+                }
+            ]
+        },
+        "10": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_subsetting/matchms_subsetting/0.24.0+galaxy5",
+            "errors": null,
+            "id": 10,
+            "input_connections": {
+                "list_of_identifiers": {
+                    "id": 9,
+                    "output_name": "output"
+                },
+                "spectral_library": {
+                    "id": 4,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms subsetting",
+                    "name": "list_of_identifiers"
+                },
+                {
+                    "description": "runtime parameter for tool matchms subsetting",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "Subset spectra based of rem_complex output",
+            "name": "matchms subsetting",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 274.1041717529297,
+                "height": 163.1041717529297,
+                "left": -2175.34375,
+                "right": -1975.34375,
+                "top": 111,
+                "width": 200,
+                "x": -2175.34375,
+                "y": 111
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_subsetting/matchms_subsetting/0.24.0+galaxy5",
+            "tool_shed_repository": {
+                "changeset_revision": "d8525504d332",
+                "name": "matchms_subsetting",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"list_of_identifiers\": {\"__class__\": \"RuntimeValue\"}, \"mode\": \"include\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy5",
+            "type": "tool",
+            "uuid": "86b5f1c6-1628-4618-8070-bb372e05a276",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "3d449386-5443-47b7-b01a-e5bf9d591b2a"
+                }
+            ]
+        },
+        "11": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "errors": null,
+            "id": 11,
+            "input_connections": {
+                "spectral_library": {
+                    "id": 10,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms remove key",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "Matchms remove key: remove existing ionmode key",
+            "name": "matchms remove key",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 234.1041717529297,
+                "height": 153.1041717529297,
+                "left": -1900.6875,
+                "right": -1700.6875,
+                "top": 81,
+                "width": 200,
+                "x": -1900.6875,
+                "y": 81
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "51ac25987e83",
+                "name": "matchms_remove_key",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"key\": \"ionmode\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy0",
+            "type": "tool",
+            "uuid": "2aa65457-7b98-45ae-b967-50269f940322",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "947b05ea-92aa-4306-a388-9963cd8b9fb3"
+                }
+            ]
+        },
+        "12": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "errors": null,
+            "id": 12,
+            "input_connections": {
+                "spectral_library": {
+                    "id": 11,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms remove key",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "Matchms remove key: remove existing adduct key",
+            "name": "matchms remove key",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 279.1041717529297,
+                "height": 153.1041717529297,
+                "left": -1618,
+                "right": -1418,
+                "top": 126,
+                "width": 200,
+                "x": -1618,
+                "y": 126
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "51ac25987e83",
+                "name": "matchms_remove_key",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"key\": \"adduct\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy0",
+            "type": "tool",
+            "uuid": "1cde6a26-d454-4664-8948-100dac40efb3",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "f0d455b9-f699-49be-9c27-cde8fed281fe"
+                }
+            ]
+        },
+        "13": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "errors": null,
+            "id": 13,
+            "input_connections": {
+                "spectral_library": {
+                    "id": 12,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms remove key",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "Matchms remove key: remove existing precursor_mz key",
+            "name": "matchms remove key",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 270.1041717529297,
+                "height": 153.1041717529297,
+                "left": -1345.34375,
+                "right": -1145.34375,
+                "top": 117,
+                "width": 200,
+                "x": -1345.34375,
+                "y": 117
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "51ac25987e83",
+                "name": "matchms_remove_key",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"key\": \"precursor_mz\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy0",
+            "type": "tool",
+            "uuid": "0e874594-f9ae-4535-9123-82d541af8e8c",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "e54320f8-01d1-4f44-ba48-e76392ed95df"
+                }
+            ]
+        },
+        "14": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
+            "errors": null,
+            "id": 14,
+            "input_connections": {
+                "spectral_library": {
+                    "id": 13,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms add key",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "Matchms add key: add ionmode key",
+            "name": "matchms add key",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 250.6979217529297,
+                "height": 132.6979217529297,
+                "left": -1061.6875,
+                "right": -861.6875,
+                "top": 118,
+                "width": 200,
+                "x": -1061.6875,
+                "y": 118
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "d88b20d27caa",
+                "name": "matchms_add_key",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"key\": \"ionmode\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"value\": \"positive\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy1",
+            "type": "tool",
+            "uuid": "89543349-4917-4bc0-bc35-6557d627c247",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "5afb15fb-45d8-452d-be77-91aceaefd735"
+                }
+            ]
+        },
+        "15": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
+            "errors": null,
+            "id": 15,
+            "input_connections": {
+                "spectral_library": {
+                    "id": 14,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms add key",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "Matchms add key: add adduct key",
+            "name": "matchms add key",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 269.6979217529297,
+                "height": 132.6979217529297,
+                "left": -782,
+                "right": -582,
+                "top": 137,
+                "width": 200,
+                "x": -782,
+                "y": 137
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "d88b20d27caa",
+                "name": "matchms_add_key",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"key\": \"adduct\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"value\": \" [M+]\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy1",
+            "type": "tool",
+            "uuid": "1c65bca9-504b-4d47-97e8-3250ab0cd767",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "0863188c-1c9f-4db2-b075-280dac205bd3"
+                }
+            ]
+        },
+        "16": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
+            "errors": null,
+            "id": 16,
+            "input_connections": {
+                "spectral_library": {
+                    "id": 15,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms add key",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "Matchms add key: add charge key",
+            "name": "matchms add key",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 264.6979217529297,
+                "height": 132.6979217529297,
+                "left": -501.34375,
+                "right": -301.34375,
+                "top": 132,
+                "width": 200,
+                "x": -501.34375,
+                "y": 132
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "d88b20d27caa",
+                "name": "matchms_add_key",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"key\": \"charge\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"value\": \"+1\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy1",
+            "type": "tool",
+            "uuid": "f8741138-4cc2-4233-bd5d-48df78c4f757",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "8893cd99-ed62-4c5a-8438-b0d74a7d65ad"
+                }
+            ]
+        },
+        "17": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.24.0+galaxy2",
+            "errors": null,
+            "id": 17,
+            "input_connections": {
+                "spectra": {
+                    "id": 16,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms filtering",
+                    "name": "spectra"
+                }
+            ],
+            "label": "Matchms filtering: add precursor_mz",
+            "name": "matchms filtering",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 269.6979217529297,
+                "height": 132.6979217529297,
+                "left": -224.6875,
+                "right": -24.6875,
+                "top": 137,
+                "width": 200,
+                "x": -224.6875,
+                "y": 137
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.24.0+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "a75791758c34",
+                "name": "matchms_filtering",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"clean_metadata_is_true\": \"false\", \"default_filters_is_true\": \"false\", \"derive_precursor_mz_from_parent_mass\": {\"is_true\": \"TRUE\", \"__current_case__\": 0, \"estimate_from_adduct\": \"true\"}, \"mz_range\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"normalise_intensities_is_true\": \"false\", \"reduce_to_top_n_peaks\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"relative_intensity\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"require_inchi_is_true\": \"false\", \"require_smiles_is_true\": \"false\", \"spectra\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy2",
+            "type": "tool",
+            "uuid": "4816d2f8-f903-48b9-919c-bc0523b4dca5",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "7ba4bc65-284a-4b37-a656-294e50eaa6d0"
+                }
+            ]
+        },
+        "18": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_convert/matchms_convert/0.24.0+galaxy0",
+            "errors": null,
+            "id": 18,
+            "input_connections": {
+                "spectral_library": {
+                    "id": 17,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms convert",
+                    "name": "spectral_library"
+                }
+            ],
+            "label": "matchms convert to riken",
+            "name": "matchms convert",
+            "outputs": [
+                {
+                    "name": "converted_library",
+                    "type": "msp"
+                }
+            ],
+            "position": {
+                "bottom": 263.6979217529297,
+                "height": 132.6979217529297,
+                "left": 55,
+                "right": 255,
+                "top": 131,
+                "width": 200,
+                "x": 55,
+                "y": 131
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_convert/matchms_convert/0.24.0+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "72759b974615",
+                "name": "matchms_convert",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"harmonization_metadata\": \"false\", \"output_file\": {\"output_format\": \"msp\", \"__current_case__\": 0, \"export_peak_comments\": \"true\", \"export_style\": \"riken\"}, \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.24.0+galaxy0",
+            "type": "tool",
+            "uuid": "c530690b-3e58-4b87-bf55-52f431557551",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "converted_library",
+                    "uuid": "c02b28cc-76be-447d-980a-842b48157a4a"
+                }
+            ]
+        },
+        "19": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/v3.5.2+galaxy4",
+            "errors": null,
+            "id": 19,
+            "input_connections": {
+                "input_data": {
+                    "id": 18,
+                    "output_name": "converted_library"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "RECETOX MsFinder",
+            "outputs": [
+                {
+                    "name": "output",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 311.5104217529297,
+                "height": 173.5104217529297,
+                "left": 332.65625,
+                "right": 532.65625,
+                "top": 138,
+                "width": 200,
+                "x": 332.65625,
+                "y": 138
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/v3.5.2+galaxy4",
+            "tool_shed_repository": {
+                "changeset_revision": "e7eff0c9baa3",
+                "name": "recetox_msfinder",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"ElementProbabilityCheck\": \"true\", \"IsTmsMeoxDerivative\": \"false\", \"IsUseEiFragmentDB\": \"false\", \"IsotopicAbundanceTolerance\": \"20\", \"LewisAndSeniorCheck\": \"true\", \"MassToleranceType\": \"Da\", \"Ms1Tolerance\": \"0.5\", \"Ms2Tolerance\": \"0.5\", \"RelativeAbundanceCutOff\": \"1\", \"StructurePredictionTimeOut\": \"-1\", \"TreeDepth\": \"2\", \"__input_ext\": \"msp\", \"chromInfo\": \"/home/zargham/git/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"element_ratio_check\": \"ExtendedRange=TRUE\", \"element_selection_option\": [\"Ocheck=True\", \"Ncheck=True\", \"Pcheck=True\", \"Scheck=True\", \"Fcheck=True\", \"ClCheck=True\", \"BrCheck=True\", \"Icheck=True\", \"SiCheck=True\"], \"input_data\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "v3.5.2+galaxy4",
+            "type": "tool",
+            "uuid": "d4c0d258-5f81-4b65-a4b4-ffd82021e9dd",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "c02fbae6-eca8-4578-87bb-9d2d64c658e1"
+                }
+            ]
+        },
+        "20": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/use_theoretical_mz_annotations/use_theoretical_mz_annotations/1.0.0+galaxy1",
+            "errors": null,
+            "id": 20,
+            "input_connections": {
+                "input": {
+                    "id": 19,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "use theoretical m/z values",
+            "outputs": [
+                {
+                    "name": "output_data",
+                    "type": "input"
+                }
+            ],
+            "position": {
+                "bottom": 297.1041717529297,
+                "height": 153.1041717529297,
+                "left": 617,
+                "right": 817,
+                "top": 144,
+                "width": 200,
+                "x": 617,
+                "y": 144
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/use_theoretical_mz_annotations/use_theoretical_mz_annotations/1.0.0+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "e0cac9994a72",
+                "name": "use_theoretical_mz_annotations",
+                "owner": "recetox",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"only_theoretical_annotated\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.0.0+galaxy1",
+            "type": "tool",
+            "uuid": "0047fad4-9965-4efa-8435-74c9fd9df2f2",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output_data",
+                    "uuid": "b7c5a042-224d-4bc7-84a7-70ffb4a01214"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "525d9cb8-8c9f-4fde-8d18-0aa9f3e53700",
+    "version": 2
+}
