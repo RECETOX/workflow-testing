@@ -276,7 +276,7 @@
         },
         "7": {
             "annotation": "Produce preparation input files for production runs",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/5.2.1+galaxy2",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/5.2.1+galaxy3",
             "errors": null,
             "id": 7,
             "input_connections": {
@@ -311,19 +311,24 @@
                 "top": 0
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/5.2.1+galaxy2",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/5.2.1+galaxy3",
             "tool_shed_repository": {
-                "changeset_revision": "6c118de4b735",
+                "changeset_revision": "c1f752721827",
                 "name": "qcxms_neutral_run",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"QC_Level\": {\"__class__\": \"ConnectedValue\"}, \"keywords\": {\"tmax\": \"20.0\", \"tinit\": \"500.0\", \"ieeatm\": \"0.6\", \"ntraj\": null}, \"mol\": {\"__class__\": \"ConnectedValue\"}, \"store_extended_output\": false, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "5.2.1+galaxy2",
+            "tool_version": "5.2.1+galaxy3",
             "type": "tool",
             "uuid": "6aa75cd8-8d14-40b1-8192-f28a6b7ea6d4",
             "when": null,
             "workflow_outputs": [
+                {
+                    "label": "[.start] output",
+                    "output_name": "coords2",
+                    "uuid": "dc4811ad-6cff-42cc-a2f8-52ab585f47fe"
+                },
                 {
                     "label": "[.in] output",
                     "output_name": "coords1",
@@ -333,11 +338,6 @@
                     "label": "[.xyz] output",
                     "output_name": "coords3",
                     "uuid": "969b3e2f-fbee-48f9-829a-c0032580e6f8"
-                },
-                {
-                    "label": "[.start] output",
-                    "output_name": "coords2",
-                    "uuid": "dc4811ad-6cff-42cc-a2f8-52ab585f47fe"
                 }
             ]
         },
@@ -429,7 +429,7 @@
         },
         "10": {
             "annotation": "Produce simulated mass spectra into MSP file format.",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_getres/qcxms_getres/5.2.1+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_getres/qcxms_getres/5.2.1+galaxy1",
             "errors": null,
             "id": 10,
             "input_connections": {
@@ -456,15 +456,15 @@
                 "top": 241.30914012156083
             },
             "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_getres/qcxms_getres/5.2.1+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/qcxms_getres/qcxms_getres/5.2.1+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "ef51824f6d04",
+                "changeset_revision": "af8839475b43",
                 "name": "qcxms_getres",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"mol\": {\"__class__\": \"ConnectedValue\"}, \"mol|__identifier__\": \"molecule1\", \"res_files\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "5.2.1+galaxy0",
+            "tool_state": "{\"mol\": {\"__class__\": \"ConnectedValue\"}, \"res_files\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "5.2.1+galaxy1",
             "type": "tool",
             "uuid": "3b4e1353-4d54-4e6f-b1f2-ba8e7329b641",
             "when": null,
@@ -483,6 +483,6 @@
         "GC-MS",
         "Metabolomics"
     ],
-    "uuid": "f8988aa8-7798-46ea-adf6-ee92eb55ca7a",
-    "version": 62
+    "uuid": "ebe8524f-8378-4b57-8115-e377cb6e6d5d",
+    "version": 64
 }
