@@ -1,8 +1,9 @@
 {
     "a_galaxy_workflow": "true",
     "annotation": "",
+    "comments": [],
     "format-version": "0.1",
-    "name": "MsFinder Workflow GOLM",
+    "name": "MsFinder Workflow GOLM (imported from uploaded file)",
     "steps": {
         "0": {
             "annotation": "",
@@ -20,25 +21,20 @@
             "name": "Input dataset",
             "outputs": [],
             "position": {
-                "bottom": 90.71875,
-                "height": 81.21875,
-                "left": -5533,
-                "right": -5333,
-                "top": 9.5,
-                "width": 200,
-                "x": -5533,
-                "y": 9.5
+                "left": 0,
+                "top": 17
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false}",
+            "tool_state": "{\"optional\": false, \"tag\": null}",
             "tool_version": null,
             "type": "data_input",
             "uuid": "eda0d2a6-0299-4367-8f7b-74cc869e055f",
+            "when": null,
             "workflow_outputs": []
         },
         "1": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.4.0+galaxy1",
             "errors": null,
             "id": 1,
             "input_connections": {
@@ -61,43 +57,38 @@
                 }
             ],
             "position": {
-                "bottom": 189.4166717529297,
-                "height": 203.9166717529297,
-                "left": -5254.34375,
-                "right": -5054.34375,
-                "top": -14.5,
-                "width": 200,
-                "x": -5254.34375,
-                "y": -14.5
+                "left": 280,
+                "top": 0
             },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "post_job_actions": {
+                "HideDatasetActionlog_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log_file"
+                },
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.4.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "3e2cb0bc6959",
+                "changeset_revision": "b5467dead5b1",
                 "name": "msmetaenhancer",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"input_file\": {\"__class__\": \"ConnectedValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"FALSE\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"compound_name inchi PubChem\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.3.0+galaxy3",
+            "tool_version": "0.4.0+galaxy1",
             "type": "tool",
             "uuid": "70360793-23df-411d-986c-2708408b772a",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_file",
-                    "uuid": "5cb0717f-ead1-4623-85c9-f277a2c62d31"
-                },
-                {
-                    "label": null,
-                    "output_name": "log_file",
-                    "uuid": "0fbaea49-dc49-49d3-ba70-11619dbaf421"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "2": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.4.0+galaxy1",
             "errors": null,
             "id": 2,
             "input_connections": {
@@ -120,43 +111,38 @@
                 }
             ],
             "position": {
-                "bottom": 239.8229217529297,
-                "height": 224.3229217529297,
-                "left": -4975.6875,
-                "right": -4775.6875,
-                "top": 15.5,
-                "width": 200,
-                "x": -4975.6875,
-                "y": 15.5
+                "left": 560,
+                "top": 34
             },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "post_job_actions": {
+                "HideDatasetActionlog_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log_file"
+                },
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.4.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "3e2cb0bc6959",
+                "changeset_revision": "b5467dead5b1",
                 "name": "msmetaenhancer",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
             "tool_state": "{\"input_file\": {\"__class__\": \"ConnectedValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"FALSE\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"inchi isomeric_smiles IDSM\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.3.0+galaxy3",
+            "tool_version": "0.4.0+galaxy1",
             "type": "tool",
             "uuid": "69fad1c5-e696-4d80-9363-15c38a99e3f3",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_file",
-                    "uuid": "d1f90ff1-0712-44a8-808e-a375e436d2ee"
-                },
-                {
-                    "label": null,
-                    "output_name": "log_file",
-                    "uuid": "0b89586c-809f-4f0a-adf4-73f4d2617aa6"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "3": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.4.0+galaxy1",
             "errors": null,
             "id": 3,
             "input_connections": {
@@ -165,13 +151,8 @@
                     "output_name": "output_file"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool MSMetaEnhancer",
-                    "name": "input_file"
-                }
-            ],
-            "label": "MSMetaEnhancer: collect NOMINAL_MASS using RDkit",
+            "inputs": [],
+            "label": "MSMetaEnhancer: collect MW using RDkit",
             "name": "MSMetaEnhancer",
             "outputs": [
                 {
@@ -184,39 +165,34 @@
                 }
             ],
             "position": {
-                "bottom": 279.8229217529297,
-                "height": 224.3229217529297,
-                "left": -4697,
-                "right": -4497,
-                "top": 55.5,
-                "width": 200,
-                "x": -4697,
-                "y": 55.5
+                "left": 840,
+                "top": 34
             },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.3.0+galaxy3",
+            "post_job_actions": {
+                "HideDatasetActionlog_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log_file"
+                },
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/msmetaenhancer/msmetaenhancer/0.4.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "3e2cb0bc6959",
+                "changeset_revision": "b5467dead5b1",
                 "name": "msmetaenhancer",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"input_file\": {\"__class__\": \"RuntimeValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"FALSE\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"isomeric_smiles mw RDKit\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.3.0+galaxy3",
+            "tool_state": "{\"input_file\": {\"__class__\": \"ConnectedValue\"}, \"jobs\": null, \"options\": {\"logging\": {\"output_log\": \"FALSE\", \"__current_case__\": 1}}, \"ordered_jobs\": [{\"__index__\": 0, \"ordered_jobs_select\": \"formula mw RDKit\"}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.4.0+galaxy1",
             "type": "tool",
             "uuid": "6981e2ec-32ae-450c-a710-4095bc76c2a0",
-            "workflow_outputs": [
-                {
-                    "label": "MSMetaEnhancer on input dataset(s)",
-                    "output_name": "output_file",
-                    "uuid": "f1791874-7d54-4504-993e-731f68528ad1"
-                },
-                {
-                    "label": "Log of MSMetaEnhancer on input dataset(s)",
-                    "output_name": "log_file",
-                    "uuid": "378c468b-8f62-4bca-b974-f3131279334d"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "4": {
             "annotation": "",
@@ -229,12 +205,7 @@
                     "output_name": "output_file"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool Replace",
-                    "name": "infile"
-                }
-            ],
+            "inputs": [],
             "label": "Replace ISOMERIC_SMILES TO SMILES",
             "name": "Replace",
             "outputs": [
@@ -244,16 +215,16 @@
                 }
             ],
             "position": {
-                "bottom": 223.7916717529297,
-                "height": 112.29167175292969,
-                "left": -4418.34375,
-                "right": -4218.34375,
-                "top": 111.5,
-                "width": 200,
-                "x": -4418.34375,
-                "y": 111.5
+                "left": 1120,
+                "top": 111
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
             "tool_shed_repository": {
                 "changeset_revision": "d698c222f354",
@@ -261,17 +232,12 @@
                 "owner": "bgruening",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"find_and_replace\": [{\"__index__\": 0, \"find_pattern\": \"ISOMERIC_SMILES\", \"replace_pattern\": \"SMILES\", \"is_regex\": \"false\", \"global\": \"true\", \"caseinsensitive\": \"false\", \"wholewords\": \"true\", \"skip_first_line\": \"false\", \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}], \"infile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"find_and_replace\": [{\"__index__\": 0, \"find_pattern\": \"ISOMERIC_SMILES\", \"replace_pattern\": \"SMILES\", \"is_regex\": false, \"global\": true, \"caseinsensitive\": false, \"wholewords\": true, \"skip_first_line\": false, \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}], \"infile\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.1.4",
             "type": "tool",
             "uuid": "41311c7a-5362-4267-95cf-a60c72ef0c36",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "outfile",
-                    "uuid": "ca6b3d40-2a73-4945-93b4-df4f7f9f15e1"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "5": {
             "annotation": "",
@@ -284,13 +250,8 @@
                     "output_name": "outfile"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool Replace",
-                    "name": "infile"
-                }
-            ],
-            "label": "Replace NOMINAL_MASS TO PARENT_MASS",
+            "inputs": [],
+            "label": "Replace MW TO PARENT_MASS",
             "name": "Replace",
             "outputs": [
                 {
@@ -299,16 +260,16 @@
                 }
             ],
             "position": {
-                "bottom": 233.1979217529297,
-                "height": 132.6979217529297,
-                "left": -4139.6875,
-                "right": -3939.6875,
-                "top": 100.5,
-                "width": 200,
-                "x": -4139.6875,
-                "y": 100.5
+                "left": 1400,
+                "top": 121
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
             "tool_shed_repository": {
                 "changeset_revision": "d698c222f354",
@@ -316,17 +277,12 @@
                 "owner": "bgruening",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"find_and_replace\": [{\"__index__\": 0, \"find_pattern\": \"NOMINAL_MASS\", \"replace_pattern\": \"PARENT_MASS\", \"is_regex\": \"false\", \"global\": \"true\", \"caseinsensitive\": \"false\", \"wholewords\": \"true\", \"skip_first_line\": \"false\", \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}], \"infile\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"find_and_replace\": [{\"__index__\": 0, \"find_pattern\": \"MW\", \"replace_pattern\": \"PARENT_MASS\", \"is_regex\": false, \"global\": true, \"caseinsensitive\": false, \"wholewords\": true, \"skip_first_line\": false, \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}], \"infile\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.1.4",
             "type": "tool",
             "uuid": "a94388fa-e906-43c6-94d6-c4909793f413",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "outfile",
-                    "uuid": "9dbdba37-dd1a-4fc2-ae82-62725dd06294"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "6": {
             "annotation": "",
@@ -339,12 +295,7 @@
                     "output_name": "outfile"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool matchms filtering",
-                    "name": "spectra"
-                }
-            ],
+            "inputs": [],
             "label": "Matchms Filtering: require Inchi and Smile",
             "name": "matchms filtering",
             "outputs": [
@@ -354,34 +305,29 @@
                 }
             ],
             "position": {
-                "bottom": 243.6041717529297,
-                "height": 153.1041717529297,
-                "left": -3861,
-                "right": -3661,
-                "top": 90.5,
-                "width": 200,
-                "x": -3861,
-                "y": 90.5
+                "left": 1680,
+                "top": 111
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.24.0+galaxy2",
             "tool_shed_repository": {
-                "changeset_revision": "a75791758c34",
+                "changeset_revision": "c5076cc15e8c",
                 "name": "matchms_filtering",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"clean_metadata_is_true\": \"false\", \"default_filters_is_true\": \"false\", \"derive_precursor_mz_from_parent_mass\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"mz_range\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"normalise_intensities_is_true\": \"false\", \"reduce_to_top_n_peaks\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"relative_intensity\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"require_inchi_is_true\": \"true\", \"require_smiles_is_true\": \"true\", \"spectra\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"clean_metadata_is_true\": false, \"default_filters_is_true\": false, \"derive_precursor_mz_from_parent_mass\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"mz_range\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"normalise_intensities_is_true\": false, \"reduce_to_top_n_peaks\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"relative_intensity\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"require_inchi_is_true\": true, \"require_smiles_is_true\": true, \"spectra\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.24.0+galaxy2",
             "type": "tool",
             "uuid": "94b35a5a-b6c4-441f-b867-731df123fbcf",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "74f0060a-89b9-4513-9ede-815560c86387"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "7": {
             "annotation": "",
@@ -404,34 +350,29 @@
                 }
             ],
             "position": {
-                "bottom": 233.1979217529297,
-                "height": 132.6979217529297,
-                "left": -3582.34375,
-                "right": -3382.34375,
-                "top": 100.5,
-                "width": 200,
-                "x": -3582.34375,
-                "y": 100.5
+                "left": 1960,
+                "top": 121
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_file"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_metadata_export/matchms_metadata_export/0.24.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "82aaf2631875",
+                "changeset_revision": "786df5cf7dec",
                 "name": "matchms_metadata_export",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"harmonize_metadata\": \"false\", \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"harmonize_metadata\": false, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.24.0+galaxy1",
             "type": "tool",
             "uuid": "15aac1ee-9401-489c-954d-0ea80af601b1",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_file",
-                    "uuid": "e1b70202-5b79-4087-b3d1-f5ed940b6e1a"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "8": {
             "annotation": "",
@@ -454,28 +395,23 @@
                 }
             ],
             "position": {
-                "bottom": 233.1979217529297,
-                "height": 132.6979217529297,
-                "left": -3303.6875,
-                "right": -3103.6875,
-                "top": 100.5,
-                "width": 200,
-                "x": -3303.6875,
-                "y": 100.5
+                "left": 2240,
+                "top": 111
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActiontabular": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tabular"
+                }
+            },
             "tool_id": "csv_to_tabular",
             "tool_state": "{\"csv\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.0.0",
             "type": "tool",
             "uuid": "928b92f1-2b07-4e99-979b-8bea09bb1857",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "tabular",
-                    "uuid": "df7acf30-81c3-4824-bd0b-2362befb5247"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "9": {
             "annotation": "",
@@ -498,16 +434,16 @@
                 }
             ],
             "position": {
-                "bottom": 223.7916717529297,
-                "height": 112.29167175292969,
-                "left": -3025,
-                "right": -2825,
-                "top": 111.5,
-                "width": 200,
-                "x": -3025,
-                "y": 111.5
+                "left": 2520,
+                "top": 111
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput_tabular": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_tabular"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/column_remove_by_header/column_remove_by_header/1.0",
             "tool_shed_repository": {
                 "changeset_revision": "2040e4c2750a",
@@ -515,17 +451,12 @@
                 "owner": "iuc",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"headers\": [{\"__index__\": 0, \"name\": \"smiles\"}], \"input_tabular\": {\"__class__\": \"ConnectedValue\"}, \"keep_columns\": \"true\", \"strip_characters\": \"#\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"headers\": [{\"__index__\": 0, \"name\": \"smiles\"}], \"input_tabular\": {\"__class__\": \"ConnectedValue\"}, \"keep_columns\": true, \"strip_characters\": \"#\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.0",
             "type": "tool",
             "uuid": "7bc6a58d-b853-4e5e-98ab-e2df9e6996b3",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output_tabular",
-                    "uuid": "514be152-3c94-48de-836b-c76d7077ddbf"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "10": {
             "annotation": "",
@@ -548,28 +479,23 @@
                 }
             ],
             "position": {
-                "bottom": 233.1979217529297,
-                "height": 132.6979217529297,
-                "left": -2746.34375,
-                "right": -2546.34375,
-                "top": 100.5,
-                "width": 200,
-                "x": -2746.34375,
-                "y": 100.5
+                "left": 2800,
+                "top": 111
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActioncsv": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "csv"
+                }
+            },
             "tool_id": "tabular_to_csv",
             "tool_state": "{\"tabular\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.0.0",
             "type": "tool",
             "uuid": "c4186674-a4b1-4233-9b2e-650e9bd47c4a",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "csv",
-                    "uuid": "d7fd6385-6d72-4f8d-8df7-76e8619c20ae"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "11": {
             "annotation": "",
@@ -592,16 +518,16 @@
                 }
             ],
             "position": {
-                "bottom": 223.7916717529297,
-                "height": 112.29167175292969,
-                "left": -2467.666748046875,
-                "right": -2267.666748046875,
-                "top": 111.5,
-                "width": 200,
-                "x": -2467.666748046875,
-                "y": 111.5
+                "left": 3080,
+                "top": 121
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/rem_complex/rem_complex/1.0.0+galaxy2",
             "tool_shed_repository": {
                 "changeset_revision": "1dc9f5a3163d",
@@ -613,13 +539,8 @@
             "tool_version": "1.0.0+galaxy2",
             "type": "tool",
             "uuid": "09ab8867-5d9c-4244-b82b-3d0233041d54",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "8c2b14f4-e22f-4402-a9a3-22e82bf5cced"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "12": {
             "annotation": "",
@@ -646,19 +567,19 @@
                 }
             ],
             "position": {
-                "bottom": 278.6041717529297,
-                "height": 163.1041717529297,
-                "left": -2189,
-                "right": -1989,
-                "top": 115.5,
-                "width": 200,
-                "x": -2189,
-                "y": 115.5
+                "left": 3360,
+                "top": 126
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_subsetting/matchms_subsetting/0.24.0+galaxy5",
             "tool_shed_repository": {
-                "changeset_revision": "d8525504d332",
+                "changeset_revision": "d11b27e59dfa",
                 "name": "matchms_subsetting",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
@@ -667,13 +588,8 @@
             "tool_version": "0.24.0+galaxy5",
             "type": "tool",
             "uuid": "86b5f1c6-1628-4618-8070-bb372e05a276",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "0a656690-07a8-4a00-bd1a-fd9e09d985d3"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "13": {
             "annotation": "",
@@ -696,16 +612,16 @@
                 }
             ],
             "position": {
-                "bottom": 273.6041717529297,
-                "height": 153.1041717529297,
-                "left": -1910.3333740234375,
-                "right": -1710.3333740234375,
-                "top": 120.5,
-                "width": 200,
-                "x": -1910.3333740234375,
-                "y": 120.5
+                "left": 3640,
+                "top": 142
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
             "tool_shed_repository": {
                 "changeset_revision": "51ac25987e83",
@@ -717,13 +633,8 @@
             "tool_version": "0.24.0+galaxy0",
             "type": "tool",
             "uuid": "2aa65457-7b98-45ae-b967-50269f940322",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "a7cff9af-0d2a-48a9-8223-428bac950c72"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "14": {
             "annotation": "",
@@ -746,16 +657,16 @@
                 }
             ],
             "position": {
-                "bottom": 273.6041717529297,
-                "height": 153.1041717529297,
-                "left": -1631.666748046875,
-                "right": -1431.666748046875,
-                "top": 120.5,
-                "width": 200,
-                "x": -1631.666748046875,
-                "y": 120.5
+                "left": 3920,
+                "top": 142
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
             "tool_shed_repository": {
                 "changeset_revision": "51ac25987e83",
@@ -767,17 +678,12 @@
             "tool_version": "0.24.0+galaxy0",
             "type": "tool",
             "uuid": "1cde6a26-d454-4664-8948-100dac40efb3",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "d48c05aa-8a83-44e2-a220-ddbba5dd2bb8"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "15": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.25.0+galaxy0",
             "errors": null,
             "id": 15,
             "input_connections": {
@@ -796,34 +702,29 @@
                 }
             ],
             "position": {
-                "bottom": 273.6041717529297,
-                "height": 153.1041717529297,
-                "left": -1353,
-                "right": -1153,
-                "top": 120.5,
-                "width": 200,
-                "x": -1353,
-                "y": 120.5
+                "left": 4200,
+                "top": 142
             },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.24.0+galaxy0",
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_remove_key/matchms_remove_key/0.25.0+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "51ac25987e83",
+                "changeset_revision": "19367db5cf3c",
                 "name": "matchms_remove_key",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"key\": \"precursor_mz\", \"spectral_library\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.24.0+galaxy0",
+            "tool_state": "{\"attribute_repeat\": [{\"__index__\": 0, \"key\": \"precursor_mz\"}], \"spectral_library\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.25.0+galaxy0",
             "type": "tool",
-            "uuid": "0e874594-f9ae-4535-9123-82d541af8e8c",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "b827128a-67cf-47fe-8b84-befb3ef08a4b"
-                }
-            ]
+            "uuid": "8bcdd67b-5989-42a4-aff6-f24a1cac7a1b",
+            "when": null,
+            "workflow_outputs": []
         },
         "16": {
             "annotation": "",
@@ -846,16 +747,16 @@
                 }
             ],
             "position": {
-                "bottom": 263.1979217529297,
-                "height": 132.6979217529297,
-                "left": -1074.3333740234375,
-                "right": -874.3333740234375,
-                "top": 130.5,
-                "width": 200,
-                "x": -1074.3333740234375,
-                "y": 130.5
+                "left": 4480,
+                "top": 152
             },
-            "post_job_actions": {},
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
             "tool_shed_repository": {
                 "changeset_revision": "d88b20d27caa",
@@ -867,13 +768,8 @@
             "tool_version": "0.24.0+galaxy1",
             "type": "tool",
             "uuid": "89543349-4917-4bc0-bc35-6557d627c247",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "4f5f0190-8f51-4e10-aeda-7d571e06ce32"
-                }
-            ]
+            "when": null,
+            "workflow_outputs": []
         },
         "17": {
             "annotation": "",
@@ -886,7 +782,12 @@
                     "output_name": "output"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool matchms add key",
+                    "name": "spectral_library"
+                }
+            ],
             "label": "Matchms add key: add adduct key",
             "name": "matchms add key",
             "outputs": [
@@ -896,66 +797,16 @@
                 }
             ],
             "position": {
-                "bottom": 263.1979217529297,
-                "height": 132.6979217529297,
-                "left": -795.6666870117188,
-                "right": -595.6666870117188,
-                "top": 130.5,
-                "width": 200,
-                "x": -795.6666870117188,
-                "y": 130.5
+                "left": 4760,
+                "top": 152
             },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
-            "tool_shed_repository": {
-                "changeset_revision": "d88b20d27caa",
-                "name": "matchms_add_key",
-                "owner": "recetox",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"key\": \"adduct\", \"spectral_library\": {\"__class__\": \"ConnectedValue\"}, \"value\": \" [M+]\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.24.0+galaxy1",
-            "type": "tool",
-            "uuid": "1c65bca9-504b-4d47-97e8-3250ab0cd767",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "bb3c3c97-86a1-4e3c-878e-7fd7bc1c4013"
-                }
-            ]
-        },
-        "18": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
-            "errors": null,
-            "id": 18,
-            "input_connections": {
-                "spectral_library": {
-                    "id": 17,
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
                     "output_name": "output"
                 }
             },
-            "inputs": [],
-            "label": "Matchms add key: add charge key",
-            "name": "matchms add key",
-            "outputs": [
-                {
-                    "name": "output",
-                    "type": "msp"
-                }
-            ],
-            "position": {
-                "bottom": 263.1979217529297,
-                "height": 132.6979217529297,
-                "left": -517,
-                "right": -317,
-                "top": 130.5,
-                "width": 200,
-                "x": -517,
-                "y": 130.5
-            },
-            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_add_key/matchms_add_key/0.24.0+galaxy1",
             "tool_shed_repository": {
                 "changeset_revision": "d88b20d27caa",
@@ -963,26 +814,21 @@
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"key\": \"charge\", \"spectral_library\": {\"__class__\": \"ConnectedValue\"}, \"value\": \"+1\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"key\": \"adduct\", \"spectral_library\": {\"__class__\": \"RuntimeValue\"}, \"value\": \"[M]+\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.24.0+galaxy1",
             "type": "tool",
-            "uuid": "f8741138-4cc2-4233-bd5d-48df78c4f757",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "6696f5b9-324d-456c-b450-000cfd9f2a94"
-                }
-            ]
+            "uuid": "1c65bca9-504b-4d47-97e8-3250ab0cd767",
+            "when": null,
+            "workflow_outputs": []
         },
-        "19": {
+        "18": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.24.0+galaxy2",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.25.0+galaxy1",
             "errors": null,
-            "id": 19,
+            "id": 18,
             "input_connections": {
                 "spectra": {
-                    "id": 18,
+                    "id": 17,
                     "output_name": "output"
                 }
             },
@@ -996,43 +842,38 @@
                 }
             ],
             "position": {
-                "bottom": 263.1979217529297,
-                "height": 132.6979217529297,
-                "left": -238.33334350585938,
-                "right": -38.333343505859375,
-                "top": 130.5,
-                "width": 200,
-                "x": -238.33334350585938,
-                "y": 130.5
+                "left": 5040,
+                "top": 152
             },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.24.0+galaxy2",
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_filtering/matchms_filtering/0.25.0+galaxy1",
             "tool_shed_repository": {
-                "changeset_revision": "a75791758c34",
+                "changeset_revision": "07cac38cbd29",
                 "name": "matchms_filtering",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"clean_metadata_is_true\": \"false\", \"default_filters_is_true\": \"false\", \"derive_precursor_mz_from_parent_mass\": {\"is_true\": \"TRUE\", \"__current_case__\": 0, \"estimate_from_adduct\": \"true\"}, \"mz_range\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"normalise_intensities_is_true\": \"false\", \"reduce_to_top_n_peaks\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"relative_intensity\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"require_inchi_is_true\": \"false\", \"require_smiles_is_true\": \"false\", \"spectra\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.24.0+galaxy2",
+            "tool_state": "{\"clean_metadata_is_true\": false, \"default_filters_is_true\": false, \"derive_precursor_mz_from_parent_mass\": {\"is_true\": \"TRUE\", \"__current_case__\": 0, \"estimate_from_adduct\": true}, \"mz_range\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"normalise_intensities_is_true\": false, \"reduce_to_top_n_peaks\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"relative_intensity\": {\"is_true\": \"FALSE\", \"__current_case__\": 1}, \"spectra\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.25.0+galaxy1",
             "type": "tool",
-            "uuid": "4816d2f8-f903-48b9-919c-bc0523b4dca5",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "15c96644-4fb4-4e76-91f1-789f59becf89"
-                }
-            ]
+            "uuid": "40c98730-8a0a-4c86-b5b2-4b764b8993b7",
+            "when": null,
+            "workflow_outputs": []
         },
-        "20": {
+        "19": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_convert/matchms_convert/0.24.0+galaxy0",
             "errors": null,
-            "id": 20,
+            "id": 19,
             "input_connections": {
                 "spectral_library": {
-                    "id": 19,
+                    "id": 18,
                     "output_name": "output"
                 }
             },
@@ -1046,43 +887,38 @@
                 }
             ],
             "position": {
-                "bottom": 263.1979217529297,
-                "height": 132.6979217529297,
-                "left": 40.333335876464844,
-                "right": 240.33333587646484,
-                "top": 130.5,
-                "width": 200,
-                "x": 40.333335876464844,
-                "y": 130.5
+                "left": 5320,
+                "top": 142
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_convert/matchms_convert/0.24.0+galaxy0",
             "tool_shed_repository": {
-                "changeset_revision": "72759b974615",
+                "changeset_revision": "fb09ed49c70e",
                 "name": "matchms_convert",
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"harmonization_metadata\": \"false\", \"output_file\": {\"output_format\": \"msp\", \"__current_case__\": 0, \"export_peak_comments\": \"true\", \"export_style\": \"riken\"}, \"spectral_library\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"harmonization_metadata\": false, \"output_file\": {\"output_format\": \"msp\", \"__current_case__\": 0, \"export_peak_comments\": true, \"export_style\": \"riken\"}, \"spectral_library\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.24.0+galaxy0",
             "type": "tool",
             "uuid": "c530690b-3e58-4b87-bf55-52f431557551",
+            "when": null,
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "converted_library",
                     "output_name": "converted_library",
-                    "uuid": "2060b4dd-aa94-4e2c-a456-1af2522a8ab2"
+                    "uuid": "87628373-d562-4017-ad60-fded694c87bc"
                 }
             ]
         },
-        "21": {
+        "20": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/v3.5.2+galaxy4",
             "errors": null,
-            "id": 21,
+            "id": 20,
             "input_connections": {
                 "input_data": {
-                    "id": 20,
+                    "id": 19,
                     "output_name": "converted_library"
                 }
             },
@@ -1096,14 +932,8 @@
                 }
             ],
             "position": {
-                "bottom": 284.0104217529297,
-                "height": 173.5104217529297,
-                "left": 319,
-                "right": 519,
-                "top": 110.5,
-                "width": 200,
-                "x": 319,
-                "y": 110.5
+                "left": 5600,
+                "top": 131
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/recetox_msfinder/recetox_msfinder/v3.5.2+galaxy4",
@@ -1113,30 +943,36 @@
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"ElementProbabilityCheck\": \"true\", \"IsTmsMeoxDerivative\": \"false\", \"IsUseEiFragmentDB\": \"false\", \"IsotopicAbundanceTolerance\": \"20\", \"LewisAndSeniorCheck\": \"true\", \"MassToleranceType\": \"Da\", \"Ms1Tolerance\": \"0.5\", \"Ms2Tolerance\": \"0.5\", \"RelativeAbundanceCutOff\": \"1\", \"StructurePredictionTimeOut\": \"-1\", \"TreeDepth\": \"2\", \"__input_ext\": \"msp\", \"chromInfo\": \"/home/zargham/git/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"element_ratio_check\": \"ExtendedRange=TRUE\", \"element_selection_option\": [\"Ocheck=True\", \"Ncheck=True\", \"Pcheck=True\", \"Scheck=True\", \"Fcheck=True\", \"ClCheck=True\", \"BrCheck=True\", \"Icheck=True\", \"SiCheck=True\"], \"input_data\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"ElementProbabilityCheck\": true, \"IsTmsMeoxDerivative\": false, \"IsUseEiFragmentDB\": false, \"IsotopicAbundanceTolerance\": \"20\", \"LewisAndSeniorCheck\": true, \"MassToleranceType\": \"Da\", \"Ms1Tolerance\": \"0.5\", \"Ms2Tolerance\": \"0.5\", \"RelativeAbundanceCutOff\": \"1\", \"StructurePredictionTimeOut\": \"-1\", \"TreeDepth\": \"2\", \"__input_ext\": \"msp\", \"chromInfo\": \"/home/zargham/git/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"element_ratio_check\": \"ExtendedRange=TRUE\", \"element_selection_option\": [\"Ocheck=True\", \"Ncheck=True\", \"Pcheck=True\", \"Scheck=True\", \"Fcheck=True\", \"ClCheck=True\", \"BrCheck=True\", \"Icheck=True\", \"SiCheck=True\"], \"input_data\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "v3.5.2+galaxy4",
             "type": "tool",
             "uuid": "d4c0d258-5f81-4b65-a4b4-ffd82021e9dd",
+            "when": null,
             "workflow_outputs": [
                 {
-                    "label": null,
+                    "label": "output",
                     "output_name": "output",
-                    "uuid": "d71c147f-b683-417a-9a38-2915fe502837"
+                    "uuid": "f700e562-775c-4115-95db-69e0f19adecc"
                 }
             ]
         },
-        "22": {
+        "21": {
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/recetox/use_theoretical_mz_annotations/use_theoretical_mz_annotations/1.0.0+galaxy1",
             "errors": null,
-            "id": 22,
+            "id": 21,
             "input_connections": {
                 "input": {
-                    "id": 21,
+                    "id": 20,
                     "output_name": "output"
                 }
             },
-            "inputs": [],
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool use theoretical m/z values",
+                    "name": "input"
+                }
+            ],
             "label": null,
             "name": "use theoretical m/z values",
             "outputs": [
@@ -1146,14 +982,8 @@
                 }
             ],
             "position": {
-                "bottom": 302.6041717529297,
-                "height": 153.1041717529297,
-                "left": 597.6666870117188,
-                "right": 797.6666870117188,
-                "top": 149.5,
-                "width": 200,
-                "x": 597.6666870117188,
-                "y": 149.5
+                "left": 5880,
+                "top": 160
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/use_theoretical_mz_annotations/use_theoretical_mz_annotations/1.0.0+galaxy1",
@@ -1163,10 +993,11 @@
                 "owner": "recetox",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"only_theoretical_annotated\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"input\": {\"__class__\": \"RuntimeValue\"}, \"only_theoretical_annotated\": true, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.0.0+galaxy1",
             "type": "tool",
             "uuid": "0047fad4-9965-4efa-8435-74c9fd9df2f2",
+            "when": null,
             "workflow_outputs": [
                 {
                     "label": null,
@@ -1177,6 +1008,6 @@
         }
     },
     "tags": [],
-    "uuid": "5597fc8f-73fb-4805-9e90-804f5bdc4f23",
-    "version": 4
+    "uuid": "8b4dbfe5-752a-4cbd-9b72-a4d57254a6cf",
+    "version": 8
 }
